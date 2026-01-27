@@ -63,7 +63,7 @@
   <img width="704" height="312" alt="image" src="https://github.com/user-attachments/assets/4bee78eb-054a-4e0e-8b2e-365026b49927" />
   <img width="645" height="292" alt="image" src="https://github.com/user-attachments/assets/aa73f758-4f3a-4ebd-9f26-b32835daa5a9" />
 - Pilih Done, lalu klik enter
-  <img width="800" height="601" alt="image" src="https://github.com/user-attachments/assets/4ba83a3d-8064-4894-978e-0bf6b6879a65" />
+ <img width="800" height="601" alt="image" src="https://github.com/user-attachments/assets/4ba83a3d-8064-4894-978e-0bf6b6879a65" />
 - Konfirmasi dengan pilih Continue, lalu klik enter
   <img width="796" height="598" alt="image" src="https://github.com/user-attachments/assets/6757e399-5fe7-4f10-9033-146a0f930b02" />
 
