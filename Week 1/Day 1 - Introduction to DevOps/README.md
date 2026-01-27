@@ -31,11 +31,20 @@
   <img width="809" height="605" alt="image" src="https://github.com/user-attachments/assets/e04cdfb5-3f18-48d8-a934-19be17b40346" />
 - Pilih tipe instalasi (Biarkan di Ubuntu Server), lalu klik enter
   <img width="802" height="600" alt="image" src="https://github.com/user-attachments/assets/06149584-c603-4703-a175-66134d93ead3" />
+- Di halaman Network configuration, pilih serperti yang ada di gambar, lalu klik enter untuk meng-_edit_ konfigurasi network
+  <img width="798" height="598" alt="image" src="https://github.com/user-attachments/assets/7b632244-0285-4745-9277-420f5f23d515" />
+- Pilih Edit IPV4, lalu klik enter
+  <img width="801" height="600" alt="image" src="https://github.com/user-attachments/assets/f996f25c-9801-494c-81f0-f9d9de089e64" />
+- Klik enter di IPV4 method, lalu pilih Manual dan klik enter lagi
+  <img width="801" height="597" alt="image" src="https://github.com/user-attachments/assets/49cbee92-5eb8-4eaf-a2f7-ef11f38fa768" />
+  <img width="595" height="134" alt="image" src="https://github.com/user-attachments/assets/a64648fc-a4cc-446e-bb8c-8558a4d3688c" />
+- Di sini samakan konfigurasi dengan yang ada di laptop, cek dengan ketik "ipconfig" di command prompt di device yang kita gunakan, setelah diisi pilih save dan klik enter
+  <img width="801" height="600" alt="image" src="https://github.com/user-attachments/assets/62906eb6-e0da-41bf-a8c4-023ece6d6a3c" />
+  <img width="842" height="166" alt="image" src="https://github.com/user-attachments/assets/54ce6875-6ba9-401c-8236-1b4c9778687e" />
+  <img width="806" height="609" alt="image" src="https://github.com/user-attachments/assets/ab5eb93a-d633-4049-b076-4d8de1a25628" />
+- Pilih done, lalu klik enter
+  <img width="809" height="602" alt="image" src="https://github.com/user-attachments/assets/ded13572-6183-40e2-bfc4-7628a1321b2e" />
+- Proxy address dan Mirror address kita lewatkan saja dengan langsung pilih Done lalu klik enter
+  <img width="799" height="600" alt="image" src="https://github.com/user-attachments/assets/519f10a9-84d9-42aa-a6eb-ccaca7314515" />
+  <img width="799" height="595" alt="image" src="https://github.com/user-attachments/assets/95faa199-1691-4e9a-8277-6f487affce04" />
   
-
-
-
-
-<h2>3. Menggunakan IP Address xxx.xxx.xxx.208 untuk server VM</h2>
-
-<h2>4. Memastikan Server Ubuntu ada jaringan dengan test ping 8.8.8.8 / ping google.com</h2>
