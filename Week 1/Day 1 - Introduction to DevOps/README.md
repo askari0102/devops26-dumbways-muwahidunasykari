@@ -4,16 +4,20 @@
 
 <h2>2. Step-by-step install Ubuntu Server 22.04.5 LTS dengan VirtualBox</h2>
 
-**1.** Download software virtualization dan .iso ubuntu yang akan digunakan, di sini saya akan menggunakan [VirtualBox](https://www.virtualbox.org/wiki/Downloads) versi 7.2.4 yang terbaru dan [Ubuntu Server versi 22.04.5 LTS](https://ubuntu.com/download/server)
+- Download software virtualization dan .iso ubuntu yang akan digunakan, di sini saya akan menggunakan [VirtualBox](https://www.virtualbox.org/wiki/Downloads) versi 7.2.4 yang terbaru dan [Ubuntu Server versi 22.04.5 LTS](https://ubuntu.com/download/server)
    Karena saya menggunakan OS Windows 11, saya download package virtual box untuk windows
    <img width="1709" height="739" alt="image" src="https://github.com/user-attachments/assets/fb7d5fae-679f-4428-9d53-25f409b8f4c2" />
    Ubuntu versi 22.04.5 adalah rilisan lama, jadi scroll ke bawah lalu di _Previous Releases_ klik Download 22.04.5 LTS. LTS sendiri adalah singkatan dari _Long-Term-Support_, jadi walaupun versi rilisan lama tetap di maintaned masih dapat _Security Updates_ dan _Bug Fixes_
    <img width="1535" height="387" alt="image" src="https://github.com/user-attachments/assets/9eb82678-23dc-448b-8e2e-c52646ce74bc" />
-
-**2. ** Install VirtualBox, akan ada warning kalau koneksi network akan putus selama instalasi 
+- Install VirtualBox, akan ada warning kalau koneksi network akan putus selama instalasi 
    <img width="610" height="484" alt="image" src="https://github.com/user-attachments/assets/31b9f239-c070-49e8-9ec2-72f2d033d06e" />
+- Buka VirtualBox yang sudah terinstall
+  <img width="950" height="929" alt="image" src="https://github.com/user-attachments/assets/6dc9ce2f-e5f9-4920-8032-c0abb4e0ad17" />
+- Klik New lalu isi VN Name, pilih lokasi folder penyimpanan VM dan pilih file .iso yang sudah didownload tadi. Pastikan Proceed with Unattended Installation tidak dicentang
+  <img width="1012" height="499" alt="image" src="https://github.com/user-attachments/assets/62a500bf-4df4-4813-8467-6ada05fc9b91" />
+- Pilih spesifikasi virtual hardware yang akan digunakan
+  <img width="1015" height="502" alt="image" src="https://github.com/user-attachments/assets/7225a201-06de-413d-bbd5-ffc5adcc61dc" />
 
-   
 
 <h2>3. Menggunakan IP Address xxx.xxx.xxx.208 untuk server VM</h2>
 
