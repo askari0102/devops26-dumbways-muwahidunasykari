@@ -47,4 +47,28 @@
 - Proxy address dan Mirror address kita lewatkan saja dengan langsung pilih Done lalu klik enter
   <img width="799" height="600" alt="image" src="https://github.com/user-attachments/assets/519f10a9-84d9-42aa-a6eb-ccaca7314515" />
   <img width="799" height="595" alt="image" src="https://github.com/user-attachments/assets/95faa199-1691-4e9a-8277-6f487affce04" />
+  <img width="796" height="581" alt="image" src="https://github.com/user-attachments/assets/1815f86d-258c-4584-a0ef-a3a4b74e83de" />
+- Di halaman _Guided storage configuration_, pilih _Custom storage layout_, lalu pilih Done dan klik enter 
+  <img width="798" height="596" alt="image" src="https://github.com/user-attachments/assets/555842ac-2e5d-4068-96a2-579a930cc270" />
+- Pilih free space lalu klik enter, pilih Add GPT Partition, input size yang diinginkan lalu pilih Create
+  <img width="792" height="597" alt="image" src="https://github.com/user-attachments/assets/d503b750-6a51-401b-885e-4ee45edcba23" />
+  <img width="718" height="135" alt="image" src="https://github.com/user-attachments/assets/2fe30f37-564d-403f-9670-fa5788483043" />
+  <img width="793" height="595" alt="image" src="https://github.com/user-attachments/assets/e4f4413d-1744-4b55-a622-072dee0c69c4" />
+- Pilih free space dan Add GPT Partition lagi
+  <img width="797" height="458" alt="image" src="https://github.com/user-attachments/assets/c8908a42-239b-4b7f-b59b-2674d31f95c2" />
+- Input size yang diinginkan, lalu pilih format dan klik enter
+  <img width="796" height="596" alt="image" src="https://github.com/user-attachments/assets/f6378073-fb91-4d3c-945d-1a8388189967" />
+- Di format pilih swap, lalu klik enter dan Create
+  <img width="661" height="298" alt="image" src="https://github.com/user-attachments/assets/ab749b05-8e67-4070-9061-95a130712d56" />
+  <img width="704" height="312" alt="image" src="https://github.com/user-attachments/assets/4bee78eb-054a-4e0e-8b2e-365026b49927" />
+  <img width="645" height="292" alt="image" src="https://github.com/user-attachments/assets/aa73f758-4f3a-4ebd-9f26-b32835daa5a9" />
+- Pilih Done, lalu klik enter
+  <img width="793" height="601" alt="image" src="https://github.com/user-attachments/assets/a441612e-3964-463b-8efd-cd39dcc81e37" />
+- Konfirmasi dengan pilih Continue lalu klik enter
+  <img width="601" height="224" alt="image" src="https://github.com/user-attachments/assets/76e5a455-ef46-456a-8422-022404d1d328" />
+- 
+
   
+
+
+
