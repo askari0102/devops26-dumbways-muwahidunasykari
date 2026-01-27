@@ -1,6 +1,6 @@
 <h2>1. Definisi DevOps</h2>
 
-   DevOps adalah penghubung antara tim development dan tim operasi yang bertugas untuk mempercepat dan meningkatkan efisiensi proses development hingga rilis produk ke publik dengan mengetest dan memastikan aplikasi atau program sudah sesuai kebutuhan dan sesuai standar untuk dirilis.
+   DevOps adalah penghubung antara tim development dan tim operasi yang bertugas untuk mempercepat dan meningkatkan efisiensi proses development hingga rilis produk ke publik memastikan aplikasi atau program sudah sesuai kebutuhan dan sesuai standar untuk dirilis.
 
 <h2>2. Step-by-step install Ubuntu Server 22.04.5 LTS dengan VirtualBox</h2>
 
@@ -16,7 +16,13 @@
 - Klik New lalu isi VN Name, pilih lokasi folder penyimpanan VM dan pilih file .iso yang sudah didownload tadi. Pastikan Proceed with Unattended Installation tidak dicentang
   <img width="1016" height="500" alt="image" src="https://github.com/user-attachments/assets/a3c949dc-7ee4-4729-975a-a515edc3e406" />
 - Pilih spesifikasi virtual hardware yang akan digunakan
-  <img width="1015" height="502" alt="image" src="https://github.com/user-attachments/assets/7225a201-06de-413d-bbd5-ffc5adcc61dc" />
+  <img width="1014" height="502" alt="image" src="https://github.com/user-attachments/assets/5da26168-4ee0-4db1-90f5-43ec2c563261" />
+- Akan ada summary dari konfigurasi yang sudah disetup tadi, klik finish
+  <img width="1011" height="505" alt="image" src="https://github.com/user-attachments/assets/666a66aa-887a-4f9e-ae33-c83db25ba75f" />
+
+  
+
+
 
 
 <h2>3. Menggunakan IP Address xxx.xxx.xxx.208 untuk server VM</h2>
