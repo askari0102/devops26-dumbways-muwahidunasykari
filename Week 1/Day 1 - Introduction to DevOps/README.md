@@ -14,7 +14,7 @@
 - Buka VirtualBox yang sudah terinstall
   <img width="950" height="929" alt="image" src="https://github.com/user-attachments/assets/6dc9ce2f-e5f9-4920-8032-c0abb4e0ad17" />
 - Klik New lalu isi VN Name, pilih lokasi folder penyimpanan VM dan pilih file .iso yang sudah didownload tadi. Pastikan Proceed with Unattended Installation tidak dicentang
-  <img width="1012" height="499" alt="image" src="https://github.com/user-attachments/assets/62a500bf-4df4-4813-8467-6ada05fc9b91" />
+  <img width="1016" height="500" alt="image" src="https://github.com/user-attachments/assets/a3c949dc-7ee4-4729-975a-a515edc3e406" />
 - Pilih spesifikasi virtual hardware yang akan digunakan
   <img width="1015" height="502" alt="image" src="https://github.com/user-attachments/assets/7225a201-06de-413d-bbd5-ffc5adcc61dc" />
 
