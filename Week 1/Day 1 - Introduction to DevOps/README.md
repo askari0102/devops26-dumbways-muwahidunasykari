@@ -63,12 +63,26 @@
   <img width="704" height="312" alt="image" src="https://github.com/user-attachments/assets/4bee78eb-054a-4e0e-8b2e-365026b49927" />
   <img width="645" height="292" alt="image" src="https://github.com/user-attachments/assets/aa73f758-4f3a-4ebd-9f26-b32835daa5a9" />
 - Pilih Done, lalu klik enter
- <img width="800" height="601" alt="image" src="https://github.com/user-attachments/assets/4ba83a3d-8064-4894-978e-0bf6b6879a65" />
+  
+  <img width="800" height="601" alt="image" src="https://github.com/user-attachments/assets/4ba83a3d-8064-4894-978e-0bf6b6879a65" />
 - Konfirmasi dengan pilih Continue, lalu klik enter
   <img width="796" height="598" alt="image" src="https://github.com/user-attachments/assets/6757e399-5fe7-4f10-9033-146a0f930b02" />
+- Lengkapi data di Profile Configuration, lalu pilih Done dan klik enter
+  <img width="799" height="595" alt="image" src="https://github.com/user-attachments/assets/e1f1ea60-ed93-4c84-a2dd-f32402458137" />
+- Pilih "Skip Ubuntu Pro setup for now", lalu klik continue
+  <img width="808" height="599" alt="image" src="https://github.com/user-attachments/assets/7573a62d-6844-4cda-9066-527799ed4df8" />
+- Di SSH configuration tidak usah pilih Install OpenSSH server dan langsung pilih Done saja
+  <img width="793" height="593" alt="image" src="https://github.com/user-attachments/assets/6e209d2e-a7d6-4b36-b228-88ae687f64a4" />
+- Di Featured server snaps langsung pilih Done saja dan tidak perlu ada yang dipilih 
+  <img width="793" height="599" alt="image" src="https://github.com/user-attachments/assets/96fc6aa3-b31d-4bab-9aa6-2f198a6a5d29" />
+- Proses instalasi sedang berjalan, setelah Installation complete, langsung pilih Reboot now
+  <img width="799" height="596" alt="image" src="https://github.com/user-attachments/assets/ed477839-7429-4237-9733-8fecc89582b7" />
+
 
 
   
 
+KENDALA
 
+<img width="799" height="604" alt="image" src="https://github.com/user-attachments/assets/741c4f5f-324c-4430-b2c5-77946dd72a37" />
 
