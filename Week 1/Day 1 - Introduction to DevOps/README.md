@@ -77,12 +77,24 @@
   <img width="793" height="599" alt="image" src="https://github.com/user-attachments/assets/96fc6aa3-b31d-4bab-9aa6-2f198a6a5d29" />
 - Proses instalasi sedang berjalan, setelah Installation complete, langsung pilih Reboot now
   <img width="799" height="596" alt="image" src="https://github.com/user-attachments/assets/ed477839-7429-4237-9733-8fecc89582b7" />
-
+  <img width="800" height="601" alt="image" src="https://github.com/user-attachments/assets/1b761f46-cd13-47b8-b70a-12520afa2eee" />
+- Akan ada error seperti berikut, tapi biarkan saja dan klik Enter
+  
+  <img width="527" height="96" alt="image" src="https://github.com/user-attachments/assets/33e17bdc-ce80-43b1-b733-a3503807c251" />
+- Setelah reboot selesai, login dengan usename dan password yang sudah dibuat sebelumnya
+  <img width="550" height="152" alt="image" src="https://github.com/user-attachments/assets/dcacc964-4e6f-478a-8aad-50a31fd599da" />
+ 
 
 
   
 
-KENDALA
+<h2>KENDALA</h2>
 
+Pop-up destructive muncul berkali kali
 <img width="799" height="604" alt="image" src="https://github.com/user-attachments/assets/741c4f5f-324c-4430-b2c5-77946dd72a37" />
+
+Instalasi stuck berjam-jam
+
+<img width="799" height="590" alt="image" src="https://github.com/user-attachments/assets/4e796a9b-f421-46e5-a066-6104f85bbbb7" />
+
 
