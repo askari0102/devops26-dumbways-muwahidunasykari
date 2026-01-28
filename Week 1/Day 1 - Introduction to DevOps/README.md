@@ -41,7 +41,9 @@
 - Di sini samakan konfigurasi dengan yang ada di laptop, cek dengan ketik "ipconfig" di command prompt di device yang kita gunakan, setelah diisi pilih save dan klik enter
   <img width="801" height="600" alt="image" src="https://github.com/user-attachments/assets/62906eb6-e0da-41bf-a8c4-023ece6d6a3c" />
   <img width="842" height="166" alt="image" src="https://github.com/user-attachments/assets/54ce6875-6ba9-401c-8236-1b4c9778687e" />
-  <img width="806" height="609" alt="image" src="https://github.com/user-attachments/assets/ab5eb93a-d633-4049-b076-4d8de1a25628" />
+  <img width="799" height="598" alt="image" src="https://github.com/user-attachments/assets/aa8a6115-f02e-404d-9c39-1a6ef65f4295" />
+
+
 - Pilih done, lalu klik enter
   <img width="809" height="602" alt="image" src="https://github.com/user-attachments/assets/ded13572-6183-40e2-bfc4-7628a1321b2e" />
 - Proxy address dan Mirror address kita lewatkan saja dengan langsung pilih Done lalu klik enter
