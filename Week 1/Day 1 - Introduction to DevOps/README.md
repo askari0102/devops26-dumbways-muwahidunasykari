@@ -85,7 +85,9 @@
   <img width="527" height="96" alt="image" src="https://github.com/user-attachments/assets/33e17bdc-ce80-43b1-b733-a3503807c251" />
 - Setelah reboot selesai, login dengan usename dan password yang sudah dibuat sebelumnya
   <img width="550" height="152" alt="image" src="https://github.com/user-attachments/assets/dcacc964-4e6f-478a-8aad-50a31fd599da" />
- 
+- Lakukan ping ke google untuk mengecek apakah VM terkoneksi ke internet
+  <img width="497" height="133" alt="image" src="https://github.com/user-attachments/assets/8bc05af7-41e7-4af6-9e77-07d622561ee5" />
+
 
 
   
