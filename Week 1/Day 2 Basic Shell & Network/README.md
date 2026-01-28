@@ -3,7 +3,8 @@ IP Class C : 192.168.4.xxx
 CIDR Block : 192.168.11.0/24</h3>
 
 Tidak bisa diterapkan langsung karena IP host yang diberikan (192.168.4.xxx) tidak termasuk dalam network 192.168.11.0/24, Agar jaringan valid, IP host saya ubah mengikuti CIDR.
-<img width="763" height="359" alt="image" src="https://github.com/user-attachments/assets/fa33c6d0-6179-4166-94b3-85d89b20885b" />
+<img width="760" height="438" alt="image" src="https://github.com/user-attachments/assets/f16114a0-f7e4-446c-9e1c-89a783ac3169" />
+
 
 | Device    | IP Address      | Gateway       | Subnet Mask       |
 |-----------|----------------|---------------|-----------------|
