@@ -1,7 +1,11 @@
 <h2>1. Akses server menggunakan terminal (Windows Terminal/PuTTY/etc)</h2>
 
-Download open-ssh di ubuntu server dengan command "sudo apt install openssh-server"
+1. Download open-ssh di ubuntu server dengan command "sudo apt install openssh-server"
 <img width="795" height="600" alt="image" src="https://github.com/user-attachments/assets/bf8c4734-2552-41ed-9446-af112995a7ef" />
+
+2. Jalankan command "sudo systemctl status ssh"
+<img width="743" height="294" alt="image" src="https://github.com/user-attachments/assets/035922bf-316a-490b-81c4-dc3bd29f31d5" />
+
 
 
 <h2>2. Konfigurasi ssh kalian agar bisa di akses hanya menggunakan publickey (password opsional, bisa dimatikan)</h2>
