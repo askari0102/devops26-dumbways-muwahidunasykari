@@ -6,7 +6,7 @@
 2. Download open-ssh di ubuntu server dengan command `sudo apt install openssh-server`
 <img width="795" height="600" alt="image" src="https://github.com/user-attachments/assets/bf8c4734-2552-41ed-9446-af112995a7ef" />
 
-3. Jalankan command `sudo systemctl status ssh` untuk melihat status aplikasi yang sedang berjalan di server. Kalau status belum running, bisa jalankan "sudo systemctl start/restart ssh"
+3. Jalankan command `sudo systemctl status ssh` untuk melihat status aplikasi yang sedang berjalan di server. Kalau status belum running, bisa jalankan `sudo systemctl start ssh` atau `sudo systemctl restart ssh`
 <img width="743" height="294" alt="image" src="https://github.com/user-attachments/assets/035922bf-316a-490b-81c4-dc3bd29f31d5" />
 
 4. Di Windows terminal, jalankan `ssh username@IP_server`, ganti `username` dan `IP_server` dengan username/IP ubuntu server, ketika diminta verifikasi fingerprint ketik "yes" lalu enter dan masukkan password ubuntu server kita
