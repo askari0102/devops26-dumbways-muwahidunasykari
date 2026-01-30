@@ -66,7 +66,28 @@
 
 <h2>3. Buat step by step penggunaan text manipulation (grep, sed, cat, echo)</h2>
 
-1. 
+1. - `cat` adalah command untuk melihat isi dari suatu file
+<img width="463" height="44" alt="image" src="https://github.com/user-attachments/assets/0b5f2543-82f6-4180-9b8d-f1be7d70e916" />
+
+   - `cat` bisa juga digunakan untuk membuat file baru atau menimpa file lama dengan cepat dengan menggunakan `>` lalu `namafile`. Jadi `cat > namafile`
+<img width="424" height="185" alt="image" src="https://github.com/user-attachments/assets/597f1f84-7df8-4fc5-afc1-e16d76202ec5" />
+
+   - `cat` juga dapat digunakan untuk menggabungkan isi dari 2 file menjadi 1 dengan command `cat namafile1 namafile2 > namafile3`
+  <img width="537" height="215" alt="image" src="https://github.com/user-attachments/assets/69cdae29-cccd-45f6-8211-14a2cb1bfd7d" />
+
+2. `sed` digunakan untuk mengubah atau memanipulasi teks di file langsung dengan command/perintah. Di sini saya mau mengganti "hello" yang ada di file1 dengan "hai". Jalankan command `sed -i 's/hello/hai/g' file1`. Terlihat "hello" sudah berubah menjadi "hai" tapi "Hello" tetap sama, itu karena `sed` case-sensitive, jadi Hello &ne; hello.
+<img width="653" height="152" alt="image" src="https://github.com/user-attachments/assets/5437e418-f9dd-4241-996f-88bee552f93c" />
+
+3. - `grep` adalah command untuk mencari teks/pola di suatu file. Bisa juga untuk mencari semua file yang mengandung suatu kata dengan `*`.
+<img width="493" height="54" alt="image" src="https://github.com/user-attachments/assets/8abc0dbc-cc3a-48e9-892e-4be36a6e631f" />
+<img width="503" height="92" alt="image" src="https://github.com/user-attachments/assets/fcdecaf4-dd66-4935-b561-40c02f54a1e7" />
+
+   - `grep` juga bisa digunakan untuk mencari berapa banyak line yang mengandung teks/pola yang dicari dengan menambah `c`. 
+<img width="462" height="45" alt="image" src="https://github.com/user-attachments/assets/a3ad3748-7adb-42a7-a464-bf59eceb4480" />
+
+
+
+
 
 <h2>4. Nyalakan ufw dengan memberikan akses untuk port 22, 80, 443, 3000, 5000, 6969!</h2>
 
