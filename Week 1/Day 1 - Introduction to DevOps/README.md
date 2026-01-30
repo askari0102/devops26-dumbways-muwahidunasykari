@@ -88,17 +88,3 @@
 - Lakukan ping ke google untuk mengecek apakah VM terkoneksi ke internet
   <img width="497" height="133" alt="image" src="https://github.com/user-attachments/assets/8bc05af7-41e7-4af6-9e77-07d622561ee5" />
 
-
-
-  
-
-<h2>KENDALA</h2>
-
-Pop-up destructive muncul berkali kali
-<img width="799" height="604" alt="image" src="https://github.com/user-attachments/assets/741c4f5f-324c-4430-b2c5-77946dd72a37" />
-
-Instalasi stuck berjam-jam
-
-<img width="799" height="590" alt="image" src="https://github.com/user-attachments/assets/4e796a9b-f421-46e5-a066-6104f85bbbb7" />
-
-
