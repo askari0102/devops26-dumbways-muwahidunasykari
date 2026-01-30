@@ -102,3 +102,15 @@
 
 <h2>4. Nyalakan ufw dengan memberikan akses untuk port 22, 80, 443, 3000, 5000, 6969!</h2>
 
+1. Aktifkan ufw dengan command `sudo ufw enable`
+<img width="970" height="70" alt="image" src="https://github.com/user-attachments/assets/f7bc928f-e91c-4a93-8e2c-677f830ee3c1" />
+
+2. Untuk memberikan akses, jalankan command `sudo ufw allow "Port"`, ganti "Port" dengan port yang mau kita beri akses. Untuk cek jalankan command `sudo ufw status`
+<img width="632" height="419" alt="image" src="https://github.com/user-attachments/assets/a7440721-7efa-478d-b001-01bd7d81afd6" />
+
+<img width="714" height="449" alt="image" src="https://github.com/user-attachments/assets/b4be0213-c821-4c93-975e-91029cd55bcb" />
+
+3. Untuk menolak akses, tinggal ubah `allow` menjadi `deny`. Di sini saya coba tolak akses port 5432 jadi command yang dijalankan `sudo ufw deny 5432`
+<img width="651" height="500" alt="image" src="https://github.com/user-attachments/assets/a25c21ad-b677-476f-aac0-a5ac8290fee7" />
+
+<h2>Challenge: Jalankan tugas nomor 3 & 4 di day 3 dalam bentuk script BASH! Scriptnya bisa menyalakan/menambahkan, dan juga bisa mematikan/menghapus konfigurasinya (No. 1) </h2>
