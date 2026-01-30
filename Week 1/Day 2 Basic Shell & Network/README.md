@@ -39,8 +39,8 @@ Shell adalah versi minimalis dari program antarmuka yang menghubungkan user deng
 | `vim <file>` | Membuka file dengan text editor vim (alternatif nano) |
 | `grep <text> <file>` | Mencari text dalam file |
 | `find <path> -name <nama>` | Mencari file atau direktori berdasarkan nama |
-| `chmod <mode> <file>` | Mengubah permission file atau direktori |
-| `chown <user>:<group> <file>` | Mengubah kepemilikan file atau direktori |
+| `chmod` | Mengubah permission file atau direktori |
+| `chown` | Mengubah kepemilikan file atau direktori |
 | `history` | Menampilkan perintah-perintah yang pernah dijalankan |
 | `apt update` / `apt upgrade` | Memperbarui daftar paket dan meng-upgrade aplikasi (Debian/Ubuntu) |
 | `top` | Memantau proses yang berjalan secara real-time |
