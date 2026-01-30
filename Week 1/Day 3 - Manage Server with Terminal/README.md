@@ -44,7 +44,25 @@
 8. Berhasil akses server dengan key tanpa perlu menggunakan password
 <img width="971" height="690" alt="image" src="https://github.com/user-attachments/assets/f55ae6ef-397e-432e-bcb1-394425fe1b5d" />
 
-9. Untuk setting agar server hanya menerima key dan bukan password
+9. Untuk setting agar server hanya menerima key dan bukan password, jalankan command `cd /etc/ssh` untuk masuk ke direktori ssh, dan command `ls` untuk lihat isi direktori, terlihat ada file dengan nama "sshd_config"
+<img width="1435" height="145" alt="image" src="https://github.com/user-attachments/assets/12cdcf58-5543-43ea-97d1-f01fef4348e9" />
+
+10. Jalankan command `sudo nano sshd_config` untuk meng-edit file "sshd_config" tersebut, lalu klik Ctrl+W dan ketik "PasswordAuthentication"
+<img width="1477" height="706" alt="image" src="https://github.com/user-attachments/assets/5a3d40d5-e35c-41bd-9482-0d4d92e92993" />
+
+11. Hapus `#` dan ubah `yes` menjadi `no`, lalu klik Ctrl+O untuk save dan Ctrl+X untuk keluar
+<img width="805" height="93" alt="image" src="https://github.com/user-attachments/assets/f1beb5e2-9606-4b1f-a734-c99f8e8cb61e" />
+
+12. Restart SSH dengan command `sudo systemctl restart ssh`
+<img width="667" height="58" alt="image" src="https://github.com/user-attachments/assets/a5b66bc7-eb4c-4ee1-8aca-ef579750c2bb" />
+
+13. Keluar dari server dengan klik Ctrl+D. Untuk men-cek apakah server sudah menolak login yang bukan dengan tanpa key, di sini saya coba pindahkan keynya terlebih dahulu ke folder lain
+<img width="510" height="71" alt="image" src="https://github.com/user-attachments/assets/f2671fb1-7047-4d25-a502-e31d20527214" />
+<img width="1678" height="118" alt="image" src="https://github.com/user-attachments/assets/fa5f86b9-2651-477e-845f-a847204ba6cc" />
+
+14. Saat mencoba akses server dengan `ssh username@IP_server`, akses akan ditolak karena tidak memiliki key
+<img width="692" height="53" alt="image" src="https://github.com/user-attachments/assets/c54c1712-a053-423c-8cde-3a5061050127" />
+
 
 <h2>3. Buat step by step penggunaan text manipulation (grep, sed, cat, echo)</h2>
 
