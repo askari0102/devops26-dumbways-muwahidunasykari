@@ -44,9 +44,11 @@
 8. Berhasil akses server dengan key tanpa perlu menggunakan password
 <img width="971" height="690" alt="image" src="https://github.com/user-attachments/assets/f55ae6ef-397e-432e-bcb1-394425fe1b5d" />
 
+9. Untuk setting agar server hanya menerima key dan bukan password
 
 <h2>3. Buat step by step penggunaan text manipulation (grep, sed, cat, echo)</h2>
 
+1. 
 
 <h2>4. Nyalakan ufw dengan memberikan akses untuk port 22, 80, 443, 3000, 5000, 6969!</h2>
 
