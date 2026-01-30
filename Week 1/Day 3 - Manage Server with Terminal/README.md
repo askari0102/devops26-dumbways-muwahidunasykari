@@ -70,8 +70,3 @@
 
 <h2>4. Nyalakan ufw dengan memberikan akses untuk port 22, 80, 443, 3000, 5000, 6969!</h2>
 
-
-<h3>Kendala</h3>
-Failed to fetch saat mau install open-ssh server, disarankan untuk menjalankan apt-get update atau coba dengan --fix-missing.
-Solved dengan menjalankan command `sudo apt-get update` terlebih dahulu
-<img width="806" height="584" alt="image" src="https://github.com/user-attachments/assets/3443a7b8-d91e-43dc-b57b-3db2fd3486dc" />
