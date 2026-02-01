@@ -114,3 +114,34 @@
 <img width="651" height="500" alt="image" src="https://github.com/user-attachments/assets/a25c21ad-b677-476f-aac0-a5ac8290fee7" />
 
 <h2>Challenge: Jalankan tugas nomor 3 & 4 di day 3 dalam bentuk script BASH! Scriptnya bisa menyalakan/menambahkan, dan juga bisa mematikan/menghapus konfigurasinya (No. 1) </h2>
+
+- Text Manipulation
+   1. Pertama saya akan buat file .txt yang nantinya akan dimodifikasi menggunakan script, dengan command `echo` seperti berikut
+     <img width="971" height="106" alt="image" src="https://github.com/user-attachments/assets/1b2c3c56-89d4-469f-936d-99b0a4a266a9" />
+     
+   2. Buat script dengan text editor _vim_ dengan command `vim namafile.sh`
+      <img width="433" height="32" alt="image" src="https://github.com/user-attachments/assets/3dac6f9a-34eb-44a4-8057-d543f3efc474" />
+      
+   3. Klik I untuk ke mode insert/tulis, lalu ketik _shebang_ untuk bashnya dan sebagai berikut. Setelah selesai ketik Esc untuk keluar dari mode insert lalu ketik `:wq` untuk save dan keluar
+      <img width="760" height="865" alt="image" src="https://github.com/user-attachments/assets/8f83c728-4c91-4741-b159-6b1ba412d0d3" />
+
+   4. Jalankan script dengan `./namafile.sh`. Scriptnya akan menampilkan isi file .txt. saat ini dan akan meminta perintah. Setelah kita input scriptnya akan menampilkan hasil file yang sudah dimodifikasi
+
+       <img width="577" height="449" alt="image" src="https://github.com/user-attachments/assets/81246aaf-1ba9-4534-bf7b-8ba52d2cf344" />
+       <img width="526" height="429" alt="image" src="https://github.com/user-attachments/assets/42685052-bb4b-4e6d-9696-39316d3bfa68" />
+       <img width="504" height="395" alt="image" src="https://github.com/user-attachments/assets/17c9dd3a-c446-493e-86af-f3c9457bb8d6" />
+
+- Ufw
+  1. Buat script dengan text editor _vim_ dengan command `vim namafile.sh`
+     
+      <img width="439" height="37" alt="image" src="https://github.com/user-attachments/assets/da7608e3-2008-4449-a800-92abdafa9c12" />
+      
+  2. Tulis script sebagai berikut. Lalu jalankan scriptnya
+     <img width="779" height="531" alt="image" src="https://github.com/user-attachments/assets/9b848f1f-4e10-42f4-9e1a-c61e3d9f2652" />
+     <img width="962" height="731" alt="image" src="https://github.com/user-attachments/assets/f5ad00a3-74fa-4997-ab88-f6051cdeb7ab" />
+
+     
+
+
+      
+
