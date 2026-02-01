@@ -123,7 +123,8 @@
       <img width="433" height="32" alt="image" src="https://github.com/user-attachments/assets/3dac6f9a-34eb-44a4-8057-d543f3efc474" />
       
    3. Klik I untuk ke mode insert/tulis, lalu ketik _shebang_ untuk bashnya dan sebagai berikut. Setelah selesai ketik Esc untuk keluar dari mode insert lalu ketik `:wq` untuk save dan keluar
-      <img width="760" height="865" alt="image" src="https://github.com/user-attachments/assets/8f83c728-4c91-4741-b159-6b1ba412d0d3" />
+      <img width="763" height="704" alt="image" src="https://github.com/user-attachments/assets/30d6132b-19d4-448c-8123-1fb75df46f65" />
+
 
    4. Jalankan script dengan `./namafile.sh`. Scriptnya akan menampilkan isi file .txt. saat ini dan akan meminta perintah. Setelah kita input scriptnya akan menampilkan hasil file yang sudah dimodifikasi. Di sini di awal terlihat isi file berbeda dengan yang ada di step 1, itu karena saya sudah mencoba-coba scriptnya terlebih dahulu, tapi tetap scriptnya akan menampilkan isi file saat ini sebelum menerima input perintah.
 
