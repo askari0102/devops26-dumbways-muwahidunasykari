@@ -1,1 +1,2 @@
-
+<h2>1. Penjelasan tentang git</h2>
+Git adalah salah satu version control system yang digunakan untuk mengelola dan mencatat setiap perubahan pada file atau kode program yang terdistribusi (_Distributed Version Control System_). Disebut terdistribusi karena setiap orang yang terlibat dalam proyek memiliki salinan database git, sehingga pengelolaan proyek dapat dilakukan secara offline maupun online.
