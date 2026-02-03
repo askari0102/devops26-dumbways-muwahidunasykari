@@ -27,10 +27,21 @@ Git adalah salah satu version control system yang digunakan untuk mengelola dan 
 5. Jalankan command `ssh git@github.com -T` untuk mengetest apakah key sudah terhubung ke github. Jika ada keterangan "_You've successfully authenticated_" berarti sudah berhasil terhubung.
    <img width="1137" height="166" alt="image" src="https://github.com/user-attachments/assets/a221af2a-e94a-4265-8a40-47f1baa4355e" />
 
-6. Balik ke home dengan `cd ..`, lalu buat direktori baru. Masuk ke direktori tersebut dan buat 3 file berisi text yang nantinya akan ditambahkan ke repositori yang sudah dibuat.
+6. Kembali ke home dengan `cd ..`, lalu buat direktori baru. Masuk ke direktori tersebut dan buat 3 file berisi text yang nantinya akan ditambahkan ke repositori yang sudah dibuat.
    <img width="721" height="496" alt="image" src="https://github.com/user-attachments/assets/ba66a30f-e61a-4dc5-9a88-95d586c1d016" />
 
+7. Buat repositori dengan command `git init nama_repositori` lalu copy 3 file tadi ke dalam repositori yang baru dibuat
+   <img width="1262" height="509" alt="image" src="https://github.com/user-attachments/assets/a35daac4-e0d9-4c75-bc5a-f960524519bc" />
+   <img width="867" height="55" alt="image" src="https://github.com/user-attachments/assets/8dd07c07-6f37-4515-a1b2-28eed850ad09" />
 
+8. Buat sebuah file dengan nama `.gitignore` yang didalamnya nanti akan kita isi dengan daftar file atau direktori yang ingin diabaikan oleh Git. Jalankan `git status` untuk melihat status saat ini, file4 tidak muncul karena sudah dimasukkan ke `.gitignore`.
+   <img width="1006" height="22" alt="image" src="https://github.com/user-attachments/assets/0b483071-ffd4-4feb-867e-7e6ba19e2483" />
+
+   <img width="320" height="63" alt="image" src="https://github.com/user-attachments/assets/b159a2d1-bce6-44d5-af1b-bd7fccfb26c7" />
+   <img width="1021" height="378" alt="image" src="https://github.com/user-attachments/assets/1f2e0901-8ec1-42d8-88bc-647aaa4a4549" />
+
+9. Jalankan `git status` lagi untuk melihat status file-file saat ini, terlihat masih "_Untracked_". Jalankan `git add namafile` untuk memasukkan file ke _staging area_ agar siap di-commit. Bisa juga menggunakan `git add .` untuk menandai semua file yang ada di repositori sekaligus.
+    <img width="952" height="600" alt="image" src="https://github.com/user-attachments/assets/b51775dc-4e17-4e80-b6d7-65d19125a33f" />
 
 
 
