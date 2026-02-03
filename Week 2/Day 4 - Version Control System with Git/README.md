@@ -2,7 +2,10 @@
 Git adalah salah satu version control system yang digunakan untuk mengelola dan mencatat setiap perubahan pada file atau kode program yang terdistribusi (Distributed Version Control System). Disebut terdistribusi karena setiap orang yang terlibat dalam proyek memiliki salinan database git, sehingga pengelolaan proyek dapat dilakukan secara offline maupun online.
 
 <h2>2. Buat sebuah repository bernama "devops26-dumbways-nama", lalu tambahkan 3 file yang berisi text</h2>
+Buat repositori dengan command `git init nama_repositori` lalu buat file-file dengan `touch` atau pindahkan file-file dari direktori lain dengan `cp`.
 
+
+<h2>3. Manage repository tugas kalian menggunakan terminal!</h2>
 1. Pertama jalankan command `git config --global user.name username` dan `git config --global user.email email` untuk menghubungkan github dengan git server, samakan username dan email dengan yang sedang digunakan di github. Jalankan command `git config --list` untuk melihat confignya.
    <img width="945" height="119" alt="image" src="https://github.com/user-attachments/assets/bde154c9-154e-4649-ba15-5a79dad4717c" />
 
