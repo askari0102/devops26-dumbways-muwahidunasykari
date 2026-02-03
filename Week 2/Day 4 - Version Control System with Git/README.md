@@ -43,8 +43,13 @@ Git adalah salah satu version control system yang digunakan untuk mengelola dan 
 9. Jalankan `git status` lagi untuk melihat status file-file saat ini, terlihat masih "_Untracked_". Jalankan `git add namafile` untuk memasukkan file ke _staging area_ agar siap di-commit. Bisa juga menggunakan `git add .` untuk menandai semua file yang ada di repositori sekaligus.
     <img width="952" height="600" alt="image" src="https://github.com/user-attachments/assets/b51775dc-4e17-4e80-b6d7-65d19125a33f" />
 
+10. Lakukan commit pada file yang sudah di-staging menggunakan `git commit -m "Komentar"` untuk menyimpan perubahan ke repositori beserta keterangan perubahan.
+    <img width="1197" height="237" alt="image" src="https://github.com/user-attachments/assets/3b7f8a76-0515-4079-8697-6a99b8f21480" />
+
+11. Jika kita melakukan perubahan pada salah satu file yang sudah di-commit tadi, akan terlihat statusnya menjadi _modified_. Untuk menyimpan perubahan, gunakan `git add namafile` lalu lakukan commit dengan git commit -m "pesan commit". Jika perubahan tidak ingin disimpan, jalankan `git restore namafile` untuk mengembalikan file seperti sebelumnya.
+    <img width="916" height="34" alt="image" src="https://github.com/user-attachments/assets/dd25f00f-c4b4-43a3-a2f1-94d14940b38b" />
+    <img width="467" height="80" alt="image" src="https://github.com/user-attachments/assets/dea45de7-e0f9-4673-990e-c3af5bc93896" />
+    <img width="898" height="195" alt="image" src="https://github.com/user-attachments/assets/7edb7cb6-2b35-4674-9c2c-70720e552d9a" />
+    <img width="1132" height="310" alt="image" src="https://github.com/user-attachments/assets/154b788e-3fb5-4ad6-a209-72af7cf65acf" />
 
 
-
-
-   
