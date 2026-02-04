@@ -4,7 +4,7 @@ Git adalah salah satu version control system yang digunakan untuk mengelola dan 
 
 <h2>2. Buat sebuah repository bernama "devops26-dumbways-nama", lalu tambahkan 3 file yang berisi text</h2>
 
-1. Pertama, jalankan command `git config --global user.name username` dan `git config --global user.email email` untuk mengatur identitas user Git di server. Pastikan username dan email sesuai dengan akun Github. Jalankan command `Git config --list` untuk melihat confignya.
+1. Pertama, jalankan command `git config --global user.name username` dan `git config --global user.email email` untuk mengatur identitas user Git di server. Pastikan username dan email sesuai dengan akun Github. Jalankan command `git config --list` untuk melihat confignya.
    <img width="945" height="119" alt="image" src="https://Github.com/user-attachments/assets/bde154c9-154e-4649-ba15-5a79dad4717c" />
 
 2. Jalankan `ssh-keygen` untuk men-generate sepasang key ssh, lalu masuk ke direktori .ssh.
