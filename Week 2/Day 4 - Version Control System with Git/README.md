@@ -4,13 +4,6 @@ Git adalah salah satu version control system yang digunakan untuk mengelola dan 
 
 <h2>2. Buat sebuah repository bernama "devops26-dumbways-nama", lalu tambahkan 3 file yang berisi text</h2>
 
-Buat repository dengan command `git init nama_repository` lalu buat file-filenya dengan `touch` atau pindahkan file-file yang sudah dibuat dari direktori lain dengan `cp`.
-<img width="896" height="36" alt="image" src="https://github.com/user-attachments/assets/9a05db10-bca0-4878-bd71-86ac816b7d07" />
-<img width="930" height="250" alt="image" src="https://github.com/user-attachments/assets/49eaf13a-fc2f-4865-bdad-872f70e2020e" />
-
-
-<h2>3. Manage repository tugas kalian menggunakan terminal!</h2>
-
 1. Pertama jalankan command `git config --global user.name username` dan `git config --global user.email email` untuk menghubungkan github dengan git server, samakan username dan email dengan yang sedang digunakan di github. Jalankan command `git config --list` untuk melihat confignya.
    <img width="945" height="119" alt="image" src="https://github.com/user-attachments/assets/bde154c9-154e-4649-ba15-5a79dad4717c" />
 
@@ -42,40 +35,40 @@ Buat repository dengan command `git init nama_repository` lalu buat file-filenya
    <img width="1262" height="509" alt="image" src="https://github.com/user-attachments/assets/a35daac4-e0d9-4c75-bc5a-f960524519bc" />
    <img width="867" height="55" alt="image" src="https://github.com/user-attachments/assets/8dd07c07-6f37-4515-a1b2-28eed850ad09" />
 
-8. Buat sebuah file dengan nama `.gitignore` yang didalamnya nanti akan kita isi dengan daftar file atau direktori yang ingin diabaikan oleh Git. Jalankan `git status` untuk melihat status saat ini, file4 tidak muncul karena sudah dimasukkan ke `.gitignore`.
+8. Di halaman github klik ikon +, lalu pilih "_New Repository_"
+   <img width="1893" height="83" alt="image" src="https://github.com/user-attachments/assets/14172744-8db5-4610-9fed-758af1017255" />
+   <img width="243" height="381" alt="image" src="https://github.com/user-attachments/assets/bc64483e-1ca5-4aa9-bd67-4eda0dbceaa7" />
+
+9. Masukkan nama repository di github, sesuai dengan nama repository lokal yang sudah dibuat tadi, lalu klik _Create Repository_. Di sini karena saya sudah ada repository dengan nama yang sama, saya coba buat repository dengan nama lain terlebih dahulu
+   <img width="939" height="798" alt="image" src="https://github.com/user-attachments/assets/a9a77dbe-7965-49a3-85f8-fa4233799f50" />
+
+10. Setelah repository dibuat, akan muncul halaman _Quick Setup_. Klik ssh lalu pilih opsi kedua ("…or push an existing repository from the command line") dan copy commandnya. Di sini saya modifikasi commandnya agar sesuai dengan nama repository awal yang sudah dibuat. Fungsi commandnya adalah untuk menghubungkan repository lokal dengan repository remote di github.
+    <img width="1518" height="664" alt="image" src="https://github.com/user-attachments/assets/e808807e-dbdb-4db9-81ae-2b369b390e36" />
+
+11. Jalankan commandnya di terminal. Untuk command `git branch -M main` dan `git push -u origin main` ubah `main` menjadi `master` untuk tetap berada di branch `master`.
+   <img width="1469" height="566" alt="image" src="https://github.com/user-attachments/assets/33bf7345-5b7c-4a13-8796-2fe57c1bf120" />
+
+<h2>3. Manage repository tugas kalian menggunakan terminal!</h2>
+
+1. Buat sebuah file dengan nama `.gitignore` yang didalamnya nanti akan kita isi dengan daftar file atau direktori yang ingin diabaikan oleh Git. Jalankan `git status` untuk melihat status saat ini, file4 tidak muncul karena sudah dimasukkan ke `.gitignore`.
    <img width="1006" height="22" alt="image" src="https://github.com/user-attachments/assets/0b483071-ffd4-4feb-867e-7e6ba19e2483" />
 
    <img width="320" height="63" alt="image" src="https://github.com/user-attachments/assets/b159a2d1-bce6-44d5-af1b-bd7fccfb26c7" />
    <img width="1021" height="378" alt="image" src="https://github.com/user-attachments/assets/1f2e0901-8ec1-42d8-88bc-647aaa4a4549" />
 
-9. Jalankan `git status` lagi untuk melihat status file-file saat ini, terlihat masih "_Untracked_". Jalankan `git add namafile` untuk memasukkan file ke _staging area_ agar siap di-commit. Bisa juga menggunakan `git add .` untuk menandai semua file yang ada di repository sekaligus.
-    <img width="952" height="600" alt="image" src="https://github.com/user-attachments/assets/b51775dc-4e17-4e80-b6d7-65d19125a33f" />
+2. Jalankan `git status` lagi untuk melihat status file-file saat ini, terlihat masih "_Untracked_". Jalankan `git add namafile` untuk memasukkan file ke _staging area_ agar siap di-commit. Bisa juga menggunakan `git add .` untuk menandai semua file yang ada di repository sekaligus.
+   <img width="952" height="600" alt="image" src="https://github.com/user-attachments/assets/b51775dc-4e17-4e80-b6d7-65d19125a33f" />
 
-10. Lakukan commit pada file yang sudah di-staging menggunakan `git commit -m "Komentar"` untuk menyimpan perubahan ke repository beserta keterangan perubahan.
-    <img width="1197" height="237" alt="image" src="https://github.com/user-attachments/assets/3b7f8a76-0515-4079-8697-6a99b8f21480" />
+3. Lakukan commit pada file yang sudah di-staging menggunakan `git commit -m "Komentar"` untuk menyimpan perubahan ke repository beserta keterangan perubahan.
+   <img width="1197" height="237" alt="image" src="https://github.com/user-attachments/assets/3b7f8a76-0515-4079-8697-6a99b8f21480" />
 
-11. Jika kita melakukan perubahan pada salah satu file yang sudah di-commit tadi, akan terlihat statusnya menjadi _modified_. Untuk menyimpan perubahan, gunakan `git add namafile` lalu lakukan commit dengan git commit -m "pesan commit". Jika perubahan tidak ingin disimpan, jalankan `git restore namafile` untuk mengembalikan file seperti sebelumnya.
-    <img width="916" height="34" alt="image" src="https://github.com/user-attachments/assets/dd25f00f-c4b4-43a3-a2f1-94d14940b38b" />
-    <img width="467" height="80" alt="image" src="https://github.com/user-attachments/assets/dea45de7-e0f9-4673-990e-c3af5bc93896" />
-    <img width="898" height="195" alt="image" src="https://github.com/user-attachments/assets/7edb7cb6-2b35-4674-9c2c-70720e552d9a" />
-    <img width="1132" height="310" alt="image" src="https://github.com/user-attachments/assets/154b788e-3fb5-4ad6-a209-72af7cf65acf" />
+4. Jika kita melakukan perubahan pada salah satu file yang sudah di-commit tadi, akan terlihat statusnya menjadi _modified_. Untuk menyimpan perubahan, gunakan `git add namafile` lalu lakukan commit dengan git commit -m "pesan commit". Jika perubahan tidak ingin disimpan, jalankan `git restore namafile` untuk mengembalikan file seperti sebelumnya.
+   <img width="916" height="34" alt="image" src="https://github.com/user-attachments/assets/dd25f00f-c4b4-43a3-a2f1-94d14940b38b" />
+   <img width="467" height="80" alt="image" src="https://github.com/user-attachments/assets/dea45de7-e0f9-4673-990e-c3af5bc93896" />
+   <img width="898" height="195" alt="image" src="https://github.com/user-attachments/assets/7edb7cb6-2b35-4674-9c2c-70720e552d9a" />
+   <img width="1132" height="310" alt="image" src="https://github.com/user-attachments/assets/154b788e-3fb5-4ad6-a209-72af7cf65acf" />
 
-12. Di halaman github klik ikon +, lalu pilih "_New Repository_"
-    <img width="1893" height="83" alt="image" src="https://github.com/user-attachments/assets/14172744-8db5-4610-9fed-758af1017255" />
-    <img width="243" height="381" alt="image" src="https://github.com/user-attachments/assets/bc64483e-1ca5-4aa9-bd67-4eda0dbceaa7" />
-
-13. Masukkan nama repository di github, sesuai dengan nama repository lokal yang sudah dibuat tadi, lalu klik _Create Repository_. Di sini karena saya sudah ada repository dengan nama yang sama, saya coba buat repository dengan nama lain terlebih dahulu
-    <img width="939" height="798" alt="image" src="https://github.com/user-attachments/assets/a9a77dbe-7965-49a3-85f8-fa4233799f50" />
-
-14. Setelah repository dibuat, akan muncul halaman _Quick Setup_. Klik ssh lalu pilih opsi kedua ("…or push an existing repository from the command line") dan copy commandnya. Di sini saya modifikasi commandnya agar sesuai dengan nama repository awal yang sudah dibuat. Fungsi commandnya adalah untuk menghubungkan repository lokal dengan repository remote di github.
-    <img width="1518" height="664" alt="image" src="https://github.com/user-attachments/assets/e808807e-dbdb-4db9-81ae-2b369b390e36" />
-
-
-15. Jalankan commandnya di terminal. Untuk command `git branch -M main` dan `git push -u origin main` ubah `main` menjadi `master` untuk tetap berada di branch `master`.
-    <img width="1469" height="566" alt="image" src="https://github.com/user-attachments/assets/33bf7345-5b7c-4a13-8796-2fe57c1bf120" />
-
-16. Masuk ke repository di github, lalu ubah branch dari _main_ ke _master_. Akan terlihat sudah berhasil menambahkan file-filenya ke github.
-    <img width="1172" height="615" alt="image" src="https://github.com/user-attachments/assets/7bba6bd9-7a80-4584-93cc-4865d1b99e28" />
+5. Jalankan command `git push origin master` untuk push hasil commit ke github.
 
 <h2>4. Demokan cara untuk mencari perubahan text pada suatu file di GitHub!</h2>
 
