@@ -69,6 +69,7 @@ Git adalah salah satu version control system yang digunakan untuk mengelola dan 
    <img width="1132" height="310" alt="image" src="https://github.com/user-attachments/assets/154b788e-3fb5-4ad6-a209-72af7cf65acf" />
 
 5. Jalankan command `git push origin master` untuk push hasil commit ke github.
+   <img width="1112" height="35" alt="image" src="https://github.com/user-attachments/assets/1fb92f8f-6540-4e01-909b-6fc1f424c8b3" />
 
 <h2>4. Demokan cara untuk mencari perubahan text pada suatu file di GitHub!</h2>
 
