@@ -50,13 +50,13 @@ Git adalah salah satu version control system yang digunakan untuk mengelola dan 
 
 <h2>3. Manage repository tugas kalian menggunakan terminal!</h2>
 
-1. Buat sebuah file dengan nama `.gitignore` yang didalamnya nanti akan kita isi dengan daftar file atau direktori yang ingin diabaikan oleh Git. Jalankan `git status` untuk melihat status saat ini, file4 tidak muncul karena sudah dimasukkan ke `.gitignore`.
+1. Buat sebuah file dengan nama `.gitignore` untuk menyimpan daftar file atau direktori yang ingin diabaikan oleh Git. Isi file `.gitignore` dengan nama file/direktori yang ingin di-ignore, misalnya `file4` . Jalankan `git status` untuk melihat status saat ini, `file4` tidak muncul karena sudah dimasukkan ke `.gitignore`.
    <img width="1006" height="22" alt="image" src="https://Github.com/user-attachments/assets/0b483071-ffd4-4feb-867e-7e6ba19e2483" />
 
    <img width="320" height="63" alt="image" src="https://Github.com/user-attachments/assets/b159a2d1-bce6-44d5-af1b-bd7fccfb26c7" />
    <img width="1021" height="378" alt="image" src="https://Github.com/user-attachments/assets/1f2e0901-8ec1-42d8-88bc-647aaa4a4549" />
 
-2. Jalankan `git status` lagi untuk melihat status file-file saat ini, terlihat masih "_Untracked_". Jalankan `git add namafile` untuk memasukkan file ke _staging area_ agar siap di-commit. Bisa juga menggunakan `git add .` untuk menandai semua file yang ada di repository sekaligus.
+2. Jalankan `git status` lagi untuk melihat status file-file saat ini, terlihat masih "_Untracked_". Jalankan `git add namafile` untuk menandai file di staging. Bisa juga menggunakan `git add .` untuk menandai semua file yang ada di repository sekaligus.
    <img width="952" height="600" alt="image" src="https://Github.com/user-attachments/assets/b51775dc-4e17-4e80-b6d7-65d19125a33f" />
 
 3. Lakukan commit pada file yang sudah di-staging menggunakan `git commit -m "Komentar"` untuk menyimpan perubahan ke repository beserta keterangan perubahan.
@@ -73,4 +73,20 @@ Git adalah salah satu version control system yang digunakan untuk mengelola dan 
 
 <h2>4. Demokan cara untuk mencari perubahan text pada suatu file di GitHub!</h2>
 
+1. Masuk ke Github dan buka repository yang sudah dibua. 
+   
+   <img width="330" height="305" alt="image" src="https://github.com/user-attachments/assets/a8cc0149-cdc0-4af9-884a-0efbafc445af" />
+   
+2. Perhatikan daftar file, jika file yang tadi dipush belum terlihat, periksa branch saat ini. Klik dropdown branch dan ganti dari main ke master.
+   <img width="938" height="383" alt="image" src="https://github.com/user-attachments/assets/c8253480-92a5-4808-aa01-aaa549c0ad35" />
+   <img width="324" height="296" alt="image" src="https://github.com/user-attachments/assets/555b9fd6-c4ef-4eaa-a231-ae27b918fa7b" />
+   <img width="928" height="430" alt="image" src="https://github.com/user-attachments/assets/e888c3ee-4c41-4e9b-ad9d-fb2bb0a44b8c" />
+
+3. Klik "2 commits" di pojok kanan atas untuk melihat daftar commit yang sudah dibuat.
+   <img width="904" height="60" alt="image" src="https://github.com/user-attachments/assets/d5507065-26c5-4d35-9dff-73b7200e43d3" />
+   <img width="1361" height="306" alt="image" src="https://github.com/user-attachments/assets/41d818c4-bb0c-45bd-b11d-2354983bedb2" />
+
+4. Untuk melihat perubahan yang dilakukan di setiap commit, cukup klik commit yang diinginkan.
+   <img width="1887" height="558" alt="image" src="https://github.com/user-attachments/assets/b54f5f35-e69d-480b-9cd4-f311f1902dd4" />
+   <img width="1871" height="254" alt="image" src="https://github.com/user-attachments/assets/4eeb9106-a455-4deb-9dd7-f9217774447f" />
 
