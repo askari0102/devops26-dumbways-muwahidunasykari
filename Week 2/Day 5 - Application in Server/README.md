@@ -21,9 +21,45 @@
    <img width="677" height="36" alt="image" src="https://github.com/user-attachments/assets/ff420a5c-be6a-400d-86ea-e947509dfe9f" />
    <img width="1907" height="1023" alt="image" src="https://github.com/user-attachments/assets/9489dc8a-7b37-4899-bab1-9d09facb0501" />
 
-
-
 <h2>Python (Deploy app menampilkan text nama kalian!, Berjalan di port 5000 & bisa dibuka melalui web)</h2>
 
+1. Install Python dengan `sudo apt install python3`, kalau sudah ada langsung install pip dengan `sudo apt install python3-pip`
+   <img width="903" height="282" alt="image" src="https://github.com/user-attachments/assets/228b3c00-02b4-4ae2-8b86-fe22fa96d124" />
+
+2. Buat direktori `python` lalu masuk ke direktori tersebut
+   
+   <img width="506" height="77" alt="image" src="https://github.com/user-attachments/assets/04aca768-ee8e-469a-8bb8-b005f6584932" />
+
+3. Install flask dengan command `pip install flask`
+   <img width="1474" height="576" alt="image" src="https://github.com/user-attachments/assets/726726c8-f86b-413b-ac38-3510309c7d18" />
+
+4. Buat file baru `index.py` dengan text editor. Lalu isi filenya dengan seperti berikut
+   <img width="524" height="37" alt="image" src="https://github.com/user-attachments/assets/d209d460-bee2-4efa-8d8e-28be6d5c7bc4" />
+   <img width="497" height="257" alt="image" src="https://github.com/user-attachments/assets/905ed796-f742-4770-9c31-5c7e44058cb8" />
+
+5. Jalankan aplikasi dengan command `python3 nama_aplikasi.py`
+   <img width="1466" height="197" alt="image" src="https://github.com/user-attachments/assets/106ece28-cb01-4d84-b7b3-ad827a32b19f" />
+
+6. Akses aplikasi dengan di browser dengan `IP_Server:5000` atau seperti yang tertampil di terminal di step sebelumnya
+   <img width="1318" height="179" alt="image" src="https://github.com/user-attachments/assets/23f57719-2caa-4115-b725-d4dd71a99e22" />
 
 <h2>Golang (Deploy app menampilkan text "Golang geming!")</h2>
+
+
+
+<h2>Challenge</h2>
+
+- **Aplikasi Node.js dan Python berjalan di background**
+1. Jalankan aplikasi dengan menambahkan `&` di akhir. Jadi di sini saya jalankan `npm start &` dan `python3 index.py &`. Output aplikasi tetap akan muncul di terminal, tapi terminal tetap bisa digunakan untuk perintah lain, dan proses akan terus berjalan selama terminal tetap terbuka
+   
+   <img width="635" height="66" alt="image" src="https://github.com/user-attachments/assets/b4669a1c-9aec-4e81-b225-48d4345c315f" />
+   <img width="1479" height="260" alt="image" src="https://github.com/user-attachments/assets/17a9a905-edcd-4744-98a1-559b24f19395" />
+
+3. Cek aplikasi yang sedang berjalan menggunakan command `jobs`. Jalankan aplikasi di browser, keduanya bisa terbuka.
+   <img width="880" height="70" alt="image" src="https://github.com/user-attachments/assets/2ce046c9-13d1-40e8-a25b-b27e8a7e093d" />
+   <img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/15ea5bde-aea0-4fec-8dce-ee58e362660a" />
+
+4. Untuk menghentikan aplikasi yang sedang berjalan, cek lagi dengan `jobs`. Dari daftar aplikasi yang sedang running tersebut, perhatikan nomor job yang ingin dihentikan. Kemudian hentikan aplikasi menggunakan command `kill %<nomor_job>`
+   <img width="863" height="268" alt="image" src="https://github.com/user-attachments/assets/8c062e60-e28a-403e-a634-5066d361b63d" />
+
+  
