@@ -1,3 +1,6 @@
+Pastikan Firewall menyala terlebih dahulu dengan command `sudo ufw enable`. Untuk cek status jalankan `sudo ufw status`
+<img width="983" height="565" alt="image" src="https://github.com/user-attachments/assets/cbd2459c-194a-4460-aa99-94f220ad0f96" />
+
 <h2>NodeJS (Deploy app wayshub-frontend, Berjalan di port 3000, Menggunakan NodeJS 10 & 12)</h2>
 
 1. Kunjungi halaman download [Node.js](https://nodejs.org/en/download), pilih versi Node.js, OS Linux, dan metode instalasi NVM dan pilih npm, lalu salin command yang disediakan.
@@ -40,13 +43,31 @@
 5. Jalankan aplikasi dengan command `python3 nama_aplikasi.py`
    <img width="1466" height="197" alt="image" src="https://github.com/user-attachments/assets/106ece28-cb01-4d84-b7b3-ad827a32b19f" />
 
-6. Akses aplikasi dengan di browser dengan `IP_Server:5000` atau seperti yang tertampil di terminal di step sebelumnya
+6. Akses aplikasi dengan di browser dengan `IP_Server:5000` atau seperti yang tertampil di terminal di step sebelumnya. Kalau tidak bisa buka di browser kasih akses ke port 5000 terlebih dahulu.
    <img width="1318" height="179" alt="image" src="https://github.com/user-attachments/assets/23f57719-2caa-4115-b725-d4dd71a99e22" />
 
 <h2>Golang (Deploy app menampilkan text "Golang geming!")</h2>
 
+1. Buka halaman download Golang di https://go.dev/dl/. Cari versi yang diinginkan, lalu copy linknya.
+   <img width="1805" height="856" alt="image" src="https://github.com/user-attachments/assets/8fbfef75-4fc5-4069-a602-4b8754287b03" />
 
+2. Di terminal gunakan command `wget` diikuti link yang sudah dicopy untuk mendownload file Go.
+   <img width="1478" height="382" alt="image" src="https://github.com/user-attachments/assets/d3b4926f-1d39-4016-82ba-f40145b0cbcf" />
 
+3. Buka halaman dokumentasi instalasi Golang di https://go.dev/doc/install, pilih OS Linux, lalu salin commandnya.
+   <img width="1571" height="1013" alt="image" src="https://github.com/user-attachments/assets/70017b56-fca5-4ae5-9477-a0350a2af66e" />
+
+4. Jalankan command yang sudah di copy dari halaman dokumentasi. untuk command pertama jalankan sebagai root dengan menjalankan `sudo su` terlebih dahulu, setelah selesai keluar dari root shell dengan Ctrl+D.
+   <img width="1331" height="213" alt="image" src="https://github.com/user-attachments/assets/d05a3c35-d9c9-429c-8811-b59468968beb" />
+
+5. Buat direktori baru lalu masuk ke direktori tersebut. Buat file dengan nama index.go
+   <img width="508" height="82" alt="image" src="https://github.com/user-attachments/assets/06fcdb01-2a31-4f7f-abe3-c019fb2dedff" />
+
+6. Isi file seperti berikut lalu save. Jalankan aplikasi dengan command `go run index.go`
+   <img width="479" height="262" alt="image" src="https://github.com/user-attachments/assets/a66c1c71-03c1-4a01-ac85-36034cf86531" />
+   <img width="547" height="47" alt="image" src="https://github.com/user-attachments/assets/1bec9994-7182-4973-8244-d4e7001f7b37" />
+
+   
 <h2>Challenge</h2>
 
 - **Aplikasi Node.js dan Python berjalan di background**
@@ -62,4 +83,8 @@
 4. Untuk menghentikan aplikasi yang sedang berjalan, cek lagi dengan `jobs`. Dari daftar aplikasi yang sedang running tersebut, perhatikan nomor job yang ingin dihentikan. Kemudian hentikan aplikasi menggunakan command `kill %<nomor_job>`
    <img width="863" height="268" alt="image" src="https://github.com/user-attachments/assets/8c062e60-e28a-403e-a634-5066d361b63d" />
 
-  
+- **Golang bisa dibuka di browser kalian, menampilkan text "Jangan lupa sahur baby gurl rawr"**
+
+1. Buat file baru di direktori `golang`, lalu isi filenya seperti berikut
+   <img width="544" height="53" alt="image" src="https://github.com/user-attachments/assets/91e8addd-886f-4384-9121-abca60ee5b4e" />
+
