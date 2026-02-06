@@ -73,7 +73,7 @@ Git adalah salah satu version control system yang digunakan untuk mengelola dan 
 
 <h2>4. Demokan cara untuk mencari perubahan text pada suatu file di GitHub!</h2>
 
-1. Masuk ke Github dan buka repository yang sudah dibua. 
+1. Masuk ke Github dan buka repository yang sudah dibuat. 
    
    <img width="330" height="305" alt="image" src="https://github.com/user-attachments/assets/a8cc0149-cdc0-4af9-884a-0efbafc445af" />
    
