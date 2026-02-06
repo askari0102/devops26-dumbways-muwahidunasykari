@@ -4,7 +4,7 @@
 
 1. Client mengirim request berupa HTTP/HTTPS ke server.
 2. Nginx menerima request dan cek aturan routing dan load balancing.
-3. Ngix meneruskan request ke backend server yang sesuai.
+3. Nginx meneruskan request ke backend server yang sesuai.
 4. Backend memproses request.
 5. Backend mengirim response ke Nginx.
 6. Nginx meneruskan response ke client.
