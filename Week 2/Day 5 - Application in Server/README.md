@@ -87,4 +87,10 @@ Pastikan Firewall menyala terlebih dahulu dengan command `sudo ufw enable`. Untu
 
 1. Buat file baru di direktori `golang`, lalu isi filenya seperti berikut
    <img width="544" height="53" alt="image" src="https://github.com/user-attachments/assets/91e8addd-886f-4384-9121-abca60ee5b4e" />
+   <img width="902" height="393" alt="image" src="https://github.com/user-attachments/assets/5d1155d2-4505-4f16-80eb-978ac81f9b8e" />
+
+2. Kasih akses ke port 4000, jalankan aplikasi, lalu cek dengan browser.
+   <img width="561" height="92" alt="image" src="https://github.com/user-attachments/assets/3f583b65-7145-4247-a04f-3e408b452b60" />
+   <img width="559" height="35" alt="image" src="https://github.com/user-attachments/assets/b79e1d06-0808-42ad-be88-34ecf63896cf" />
+   <img width="1055" height="420" alt="image" src="https://github.com/user-attachments/assets/6e562984-ddb6-482e-9987-b1e925035747" />
 
