@@ -3,7 +3,7 @@
 <img width="767" height="555" alt="image" src="https://github.com/user-attachments/assets/372927c2-c5c7-4f2a-afd8-da60558fa24f" />
 
 1. Client mengirim request berupa HTTP/HTTPS ke server.
-2. Nginx menerima request dan cek aturan routing dan load balancing.
+2. Nginx menerima request dan cek aturan routing/load balancing.
 3. Nginx meneruskan request ke backend server yang sesuai.
 4. Backend memproses request.
 5. Backend mengirim response ke Nginx.
