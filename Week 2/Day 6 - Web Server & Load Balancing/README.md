@@ -48,8 +48,37 @@
     <img width="1917" height="1022" alt="image" src="https://github.com/user-attachments/assets/aa3aec2f-d62e-4263-a783-5b72c6641dca" />
 
 
-<h2>Challenge</h2>
+<h2>Challenge: Terapkan Load Balancing untuk wayshub-frontend menggunakan 2 server dengan spek yang sama. Gunakan 2 dari 3 pilihan method (Round Robin, IP Hash, Least Connections)</h2>
 
-1. Load Balancing menggunakan Round Robin
+1. Siapkan 1 VM lagi dengan spek yang sama, di sini saya beri IP `192.168.0.209` dan setup semua yang dibutuhkan.
    
+   | VM   | IP Address       | Role                          |
+   |----- |------------------|-------------------------------|
+   | VM 1 | 192.168.0.208    | Load Balancer + Backend 1     |
+   | VM 2 | 192.168.0.209    | Backend 2                     |
+
+2. Jalankan aplikasi di kedua VM
+   <img width="1457" height="363" alt="image" src="https://github.com/user-attachments/assets/7eebfc4f-c618-4be2-abd0-230af79e77ea" />
+   <img width="1472" height="364" alt="image" src="https://github.com/user-attachments/assets/6a86a707-a1fb-4d6a-b569-a107580a7090" />
+
+3. Edit konfigurasi nginx sebelumnya yang sudah ada dan isi seperti berikut
+   - **Round Robin**
+   <img width="940" height="527" alt="image" src="https://github.com/user-attachments/assets/b1aaa2c5-5638-436e-bc80-7e24220813f6" />
+   
+   - Untuk **Least Connection** tinggal tambahkan line `least_conn;` di `upstream`
+   <img width="928" height="172" alt="image" src="https://github.com/user-attachments/assets/373998e0-55e9-442f-9375-c272081b3e75" />
+
+
+5. Cek konfigurasi nginx apakah sudah benar dengan `sudo nginx -t` lalu reload dengan `sudo systemctl reload nginx`
+   <img width="891" height="89" alt="image" src="https://github.com/user-attachments/assets/c91ac8d4-d910-4584-a736-5ec0c00dd992" />
+
+6. Buka domain di browser, untuk cek sedang akses server yang mana bisa klik `F12` lalu pilih tab network dan refresh pagenya.
+   <img width="1918" height="901" alt="image" src="https://github.com/user-attachments/assets/686180d4-661e-4198-b3e5-e3238c8f3e86" />
+   <img width="1914" height="893" alt="image" src="https://github.com/user-attachments/assets/5dfdc297-35e2-4e58-9d0e-9cb6edef3f18" />
+
+
+
+
+
+
 
