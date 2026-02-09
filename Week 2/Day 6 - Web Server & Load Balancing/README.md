@@ -2,6 +2,7 @@
 
 <img width="767" height="555" alt="image" src="https://github.com/user-attachments/assets/372927c2-c5c7-4f2a-afd8-da60558fa24f" />
 
+Reverse proxy adalah server yang berdiri di depan backend server untuk menerima request dari client dan meneruskannya ke backend
 1. Client mengirim request berupa HTTP/HTTPS ke server.
 2. Nginx menerima request dan cek aturan routing/load balancing.
 3. Nginx meneruskan request ke backend server yang sesuai.
