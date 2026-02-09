@@ -1,6 +1,6 @@
 <h2>1. Penjelasan tentang Git</h2>
 
-Git adalah salah satu version control system yang digunakan untuk mengelola dan mencatat setiap perubahan pada file atau kode program yang terdistribusi _(Distributed Version Control System)_. Disebut terdistribusi karena setiap orang yang terlibat dalam proyek memiliki salinan database Git, sehingga pengelolaan proyek dapat dilakukan secara offline maupun online.
+Git adalah salah satu version control system yang digunakan untuk mengelola dan mencatat setiap perubahan pada file atau kode program yang terdistribusi _(Distributed Version Control System)_. Disebut terdistribusi karena setiap orang yang terlibat dalam proyek memiliki salinan repository Git, sehingga pengelolaan proyek dapat dilakukan secara offline maupun online.
 
 <h2>2. Buat sebuah repository bernama "devops26-dumbways-nama", lalu tambahkan 3 file yang berisi text</h2>
 
