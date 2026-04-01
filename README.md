@@ -14,4 +14,4 @@
 - Day 6 - [Web Server & Load Balancing + Challenge](https://github.com/askari0102/devops26-dumbways-muwahidunasykari/tree/main/Week%202/Day%206%20-%20Web%20Server%20%26%20Load%20Balancing)
 
 **Week 3**
-[Cloud Computing & Database Management](https://github.com/askari0102/devops26-dumbways-muwahidunasykari/tree/main/Week%203)
+- [Cloud Computing & Database Management](https://github.com/askari0102/devops26-dumbways-muwahidunasykari/tree/main/Week%203)
