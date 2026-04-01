@@ -10,7 +10,8 @@
 
 5.  Run `sudo apt update` and `sudo apt install mysql-server` to install MySQL on the Appserver.
 
-   <img width="1085" height="141" alt="image" src="https://github.com/user-attachments/assets/c24275e9-37c4-4638-9502-6ea1eba37e35" />
-   <img width="973" height="93" alt="image" src="https://github.com/user-attachments/assets/3022388c-28e1-4da3-a0d9-09da2e399669" />
+      <img width="1085" height="141" alt="image" src="https://github.com/user-attachments/assets/c24275e9-37c4-4638-9502-6ea1eba37e35" />
+   
+      <img width="973" height="93" alt="image" src="https://github.com/user-attachments/assets/3022388c-28e1-4da3-a0d9-09da2e399669" />
 
 
