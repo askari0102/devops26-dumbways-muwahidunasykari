@@ -1,5 +1,8 @@
 # devops26-dumbways-muwahidunasykari
 
+**Stage 2**
+
+------
 **Week 1**
 - Day 1 - [Introduction to DevOps](https://github.com/askari0102/devops26-dumbways-muwahidunasykari/tree/main/Week%201/Day%201%20-%20Introduction%20to%20DevOps)
 - Day 2 - [Basic Shell & Network](https://github.com/askari0102/devops26-dumbways-muwahidunasykari/tree/main/Week%201/Day%202%20Basic%20Shell%20%26%20Network)
@@ -9,3 +12,6 @@
 - Day 4 - [Version Control System](https://github.com/askari0102/devops26-dumbways-muwahidunasykari/tree/main/Week%202/Day%204%20-%20Version%20Control%20System%20with%20Git)
 - Day 5 - [Application in Server + Challenge](https://github.com/askari0102/devops26-dumbways-muwahidunasykari/tree/main/Week%202/Day%205%20-%20Application%20in%20Server)
 - Day 6 - [Web Server & Load Balancing + Challenge](https://github.com/askari0102/devops26-dumbways-muwahidunasykari/tree/main/Week%202/Day%206%20-%20Web%20Server%20%26%20Load%20Balancing)
+
+**Week 3**
+[Cloud Computing & Database Management](https://github.com/askari0102/devops26-dumbways-muwahidunasykari/tree/main/Week%203)
