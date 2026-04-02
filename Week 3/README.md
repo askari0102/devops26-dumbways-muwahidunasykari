@@ -77,3 +77,28 @@
 
 19. Run `sequelize db:create` and `sequelize db:migrate` to create and migrate the database with all it's tables.
     <img width="821" height="631" alt="image" src="https://github.com/user-attachments/assets/c1ff4309-dd9f-4443-8d96-6161124c8b5f" />
+
+20. Go to the frontend directory and open "api.js" file in /src/config/.
+    <img width="817" height="118" alt="image" src="https://github.com/user-attachments/assets/6bda76ed-9860-478a-8781-8ab7f69b19ef" />
+
+21. Edit the baseURL to the server's IP address.
+    <img width="908" height="422" alt="image" src="https://github.com/user-attachments/assets/69215235-f48d-4901-84a6-41fe5a35ddc3" />
+
+22. Install pm2 with `npm install -g pm2`
+    <img width="772" height="97" alt="image" src="https://github.com/user-attachments/assets/634f3ae7-6606-4358-90a2-e13530c433cf" />
+
+23. Go to the frontend directory and run `pm2 init simple` and open the newly created "ecosystem.config.js"
+    <img width="875" height="118" alt="image" src="https://github.com/user-attachments/assets/75cd6182-2149-4db5-a399-2231722c0718" />
+
+24. Change the name to "Frontend" and script to "npm start"
+    <img width="434" height="154" alt="image" src="https://github.com/user-attachments/assets/5d588d3e-3b76-4315-8295-51ed26f29138" />
+
+25. Do the same in the backend directory as well 
+    <img width="362" height="145" alt="image" src="https://github.com/user-attachments/assets/4db62221-ba0d-4d8b-b6a1-9f08345ecae5" />
+
+26. Run `pm2 start` on both frontend and backend directories. If one of them displayed as "errored" then you first need to run "pm2 delete all" to delete all process in pm2, then run `pm2 start` again.
+    <img width="973" height="428" alt="image" src="https://github.com/user-attachments/assets/4f94cbd1-9168-4cc5-88c1-4e65a5781641" />
+
+
+
+
