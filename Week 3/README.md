@@ -71,6 +71,7 @@
 22. Edit the file to match the database. Don't forget to change the "host" to the IP address of the Appserver.
     <img width="533" height="240" alt="image" src="https://github.com/user-attachments/assets/cc95fcf0-f6a8-4163-a3ab-e81b86c18856" />
 
-18. Go back to the backend directory and run `npm i -g sequelize-cli` to integrate the database to the backend.
+18. Run `npm install` to install dependencies, then run `npm i -g sequelize-cli` to integrate the database to the backend.
+    <img width="701" height="31" alt="image" src="https://github.com/user-attachments/assets/40631226-c4ae-4f07-a46d-e9f6c1ab1923" />
     <img width="1470" height="234" alt="image" src="https://github.com/user-attachments/assets/5e399d54-f995-4954-94fc-f7eb4bf9dedc" />
 
