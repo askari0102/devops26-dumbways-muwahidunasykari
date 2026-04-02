@@ -113,6 +113,8 @@
 31. Create shortcut of the files with `sudo ln -s /etc/nginx/sites-available/myapp.conf /etc/nginx/sites-enabled/`
     <img width="1458" height="143" alt="image" src="https://github.com/user-attachments/assets/faedc89d-3d74-4139-b22f-968b8395b79c" />
 
+32. In your local computer, add the IP address and domain to the hosts 
+
 
     
 
