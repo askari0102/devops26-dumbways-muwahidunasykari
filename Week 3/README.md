@@ -78,29 +78,39 @@
 19. Run `sequelize db:create` and `sequelize db:migrate` to create and migrate the database with all it's tables.
     <img width="821" height="631" alt="image" src="https://github.com/user-attachments/assets/c1ff4309-dd9f-4443-8d96-6161124c8b5f" />
 
-20. Go to the frontend directory and open "api.js" file in /src/config/.
-    <img width="817" height="118" alt="image" src="https://github.com/user-attachments/assets/6bda76ed-9860-478a-8781-8ab7f69b19ef" />
+20. Go to the frontend directory and run `npm install` to install dependencies for the frontend.
+    <img width="692" height="27" alt="image" src="https://github.com/user-attachments/assets/b8ba68d5-05df-4a65-9166-5eab490c75c7" />
+    
+22. Open "api.js" file in /src/config/.
+    <img width="1005" height="120" alt="image" src="https://github.com/user-attachments/assets/3a1c8a3b-d973-43a2-a835-e679e9641269" />
 
-21. Edit the baseURL to the server's IP address.
+23. Edit the baseURL to the server's IP address.
     <img width="908" height="422" alt="image" src="https://github.com/user-attachments/assets/69215235-f48d-4901-84a6-41fe5a35ddc3" />
 
-22. Install pm2 with `npm install -g pm2`
+24. Install pm2 with `npm install -g pm2`
     <img width="772" height="97" alt="image" src="https://github.com/user-attachments/assets/634f3ae7-6606-4358-90a2-e13530c433cf" />
 
-23. Go to the frontend directory and run `pm2 init simple` and open the newly created "ecosystem.config.js"
+25. Go to the frontend directory and run `pm2 init simple` and open the newly created "ecosystem.config.js"
     <img width="875" height="118" alt="image" src="https://github.com/user-attachments/assets/75cd6182-2149-4db5-a399-2231722c0718" />
 
-24. Change the name to "Frontend" and script to "npm start"
+26. Change the name to "Frontend" and script to "npm start"
     
     <img width="434" height="154" alt="image" src="https://github.com/user-attachments/assets/5d588d3e-3b76-4315-8295-51ed26f29138" />
 
-26. Do the same in the backend directory as well
+27. Do the same in the backend directory as well
     
     <img width="362" height="145" alt="image" src="https://github.com/user-attachments/assets/4db62221-ba0d-4d8b-b6a1-9f08345ecae5" />
 
-28. Run `pm2 start` on both frontend and backend directories. If one of them displayed as "errored" then you first need to run `pm2 delete all` to delete all process in pm2, then run `pm2 start` again.
+28. Run `pm2 start` on both frontend and backend directories.
     <img width="973" height="428" alt="image" src="https://github.com/user-attachments/assets/4f94cbd1-9168-4cc5-88c1-4e65a5781641" />
 
+29. Install nginx with `sudo apt install nginx`
+    <img width="783" height="142" alt="image" src="https://github.com/user-attachments/assets/2a64d252-96ca-4709-a700-91495c4cb92c" />
+
+30. Go to `/etc/nginx/sites-available` and create two .conf files for frontend and backend.
+    <img width="651" height="197" alt="image" src="https://github.com/user-attachments/assets/3df19e0b-3978-4841-a403-294dcdd7f3d5" />
+
+    
 
 
 
