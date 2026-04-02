@@ -98,7 +98,7 @@
     
     <img width="362" height="145" alt="image" src="https://github.com/user-attachments/assets/4db62221-ba0d-4d8b-b6a1-9f08345ecae5" />
 
-28. Run `pm2 start` on both frontend and backend directories. If one of them displayed as "errored" then you first need to run "pm2 delete all" to delete all process in pm2, then run `pm2 start` again.
+28. Run `pm2 start` on both frontend and backend directories. If one of them displayed as "errored" then you first need to run `pm2 delete all` to delete all process in pm2, then run `pm2 start` again.
     <img width="973" height="428" alt="image" src="https://github.com/user-attachments/assets/4f94cbd1-9168-4cc5-88c1-4e65a5781641" />
 
 
