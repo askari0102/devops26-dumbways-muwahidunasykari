@@ -107,8 +107,12 @@
 29. Install nginx with `sudo apt install nginx`
     <img width="783" height="142" alt="image" src="https://github.com/user-attachments/assets/2a64d252-96ca-4709-a700-91495c4cb92c" />
 
-30. Go to `/etc/nginx/sites-available` and create two .conf files for frontend and backend.
-    <img width="651" height="197" alt="image" src="https://github.com/user-attachments/assets/3df19e0b-3978-4841-a403-294dcdd7f3d5" />
+30. Go to `/etc/nginx/sites-available` and create two .conf files for the frontend and the backend.
+    <img width="774" height="419" alt="image" src="https://github.com/user-attachments/assets/d92607f3-15c9-4202-a665-92f473fa0d69" />
+
+31. Create shortcut of the files with `sudo ln -s /etc/nginx/sites-available/myapp.conf /etc/nginx/sites-enabled/`
+    <img width="1458" height="143" alt="image" src="https://github.com/user-attachments/assets/faedc89d-3d74-4139-b22f-968b8395b79c" />
+
 
     
 
