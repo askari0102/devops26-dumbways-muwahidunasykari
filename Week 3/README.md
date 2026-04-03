@@ -116,7 +116,7 @@
 32. In your local computer, add the IP address and domain to the hosts 
 
 
-**Registering Domain on Cloudflare and Setting up Certbot**
+**Registering Domain on Cloudflare**
 
 ------
 
@@ -126,5 +126,24 @@
 2. Click "Add record" and input your IP address and the desired name. Add two records, one for the main website and one for api. (The IP in the image is just an example and not the actual IP of the server).
    <img width="1405" height="323" alt="image" src="https://github.com/user-attachments/assets/7f3f6911-d36f-4895-9fda-4000b72576ad" />
 
+3. You can now access the app with a public domain.
+   <img width="1919" height="928" alt="image" src="https://github.com/user-attachments/assets/a44adbec-1438-43dd-99f6-6462a9b3ad24" />
+
+**Setting up Certbot**
+
+-------
+
+1. Install certbot with `sudo snap install --classic certbot`
+   <img width="745" height="48" alt="image" src="https://github.com/user-attachments/assets/27ea3b3f-f765-4b44-96e4-1138a4a24d7b" />
+
+2. Run `sudo certbot --nginx`. You will be asked several things, like your email address and whether you agree to the ToS, etc.
+   <img width="1011" height="488" alt="image" src="https://github.com/user-attachments/assets/d546adcb-978c-42a4-899c-bfb4b30bb417" />
+   <img width="1467" height="554" alt="image" src="https://github.com/user-attachments/assets/e0701d44-745b-49c2-a267-cedf1d407735" />
+
+3. The website is now secure and can be accessed with HTTPS
+   <img width="1919" height="892" alt="image" src="https://github.com/user-attachments/assets/bc68714c-1ce6-4d25-8ff4-1cd865768a65" />
 
 
+
+
+   
