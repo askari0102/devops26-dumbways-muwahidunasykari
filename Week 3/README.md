@@ -115,6 +115,19 @@
 
 32. In your local computer, add the IP address and domain to the hosts 
 
+**Connecting to VPS (AWS EC2) with SSH**
+
+-----
+1. Create instance, set it so that it can only be accessed with ssh. For maximum security, select My IP instead of 0.0.0.0/0 (Anywhere) to ensure only your current network can connect.
+
+2. Download the server's private key and move them to your .ssh folder
+   
+3. Run `chmod 400 "yourkey.pem"`, if necessary, to ensure your key is not publicly viewable. If you're on windows you can set the permission manually, set it so the key is only accessible by you.
+   <img width="535" height="639" alt="image" src="https://github.com/user-attachments/assets/051d8cb3-4096-429a-9df2-ec41b2f57dde" />
+
+4. Connect to your instance using its Public DNS.
+   <img width="1464" height="196" alt="image" src="https://github.com/user-attachments/assets/a6a7fa44-50a3-4e01-9262-8c5443951220" />
+
 
 **Registering Domain on Cloudflare**
 
@@ -159,4 +172,6 @@
 3. Type in the script, use [crontab guru](https://crontab.guru/) to make it easier to write and understand the time format used. This script will run every Monday at 00:00. It will check the certificates’ status and renew them if they are close to expiring.
    <img width="663" height="64" alt="image" src="https://github.com/user-attachments/assets/d5b539a3-dfb5-4190-8f72-06183a3df6ef" />
    <img width="1919" height="699" alt="image" src="https://github.com/user-attachments/assets/4271e2b3-664d-4946-9bc5-3520eb61bc00" />
+   <img width="1205" height="297" alt="image" src="https://github.com/user-attachments/assets/6c826236-903b-4e19-ba40-e963bd3a0a3b" />
+
    
