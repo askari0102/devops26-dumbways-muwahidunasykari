@@ -116,7 +116,15 @@
 32. In your local computer, add the IP address and domain to the hosts 
 
 
-    
+**Registering Domain on Cloudflare and Setting up Certbot**
+
+------
+
+1. Go to cloudflare's dashboard and click on DNS>Records
+   <img width="1828" height="596" alt="image" src="https://github.com/user-attachments/assets/7d1c45df-1350-432f-9120-5e1a991bee7d" />
+
+2. Click "Add record" and input your IP address and the desired name. Add two records, one for the main website and one for api.
+   <img width="1405" height="323" alt="image" src="https://github.com/user-attachments/assets/7f3f6911-d36f-4895-9fda-4000b72576ad" />
 
 
 
