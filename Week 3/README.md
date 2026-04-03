@@ -156,11 +156,7 @@
 2. Run `sudo crontab -e` and choose an editor.
    <img width="684" height="230" alt="image" src="https://github.com/user-attachments/assets/d1b0b0c2-43dd-4249-b2e9-5b8ad0b583bf" />
 
-3. Type in the script, use [crontab.guru](https://crontab.guru/) to make it easier to write and understand the time format used. This script will run every Monday at 00:00. It will check the certificates’ status and renew them if they are close to expiring.
+3. Type in the script, use [crontab guru](https://crontab.guru/) to make it easier to write and understand the time format used. This script will run every Monday at 00:00. It will check the certificates’ status and renew them if they are close to expiring.
    <img width="663" height="64" alt="image" src="https://github.com/user-attachments/assets/d5b539a3-dfb5-4190-8f72-06183a3df6ef" />
    <img width="1919" height="699" alt="image" src="https://github.com/user-attachments/assets/4271e2b3-664d-4946-9bc5-3520eb61bc00" />
-
-
-
-
    
