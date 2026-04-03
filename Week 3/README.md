@@ -123,9 +123,10 @@
 2. Download the server's private key and move them to your .ssh folder
    
 3. Run `chmod 400 "yourkey.pem"`, if necessary, to ensure your key is not publicly viewable. If you're on windows you can set the permission manually, set it so the key is only accessible by you.
+   
    <img width="535" height="639" alt="image" src="https://github.com/user-attachments/assets/051d8cb3-4096-429a-9df2-ec41b2f57dde" />
 
-4. Connect to your instance using its Public DNS.
+5. Connect to your instance using its Public DNS.
    <img width="1464" height="196" alt="image" src="https://github.com/user-attachments/assets/a6a7fa44-50a3-4e01-9262-8c5443951220" />
 
 
