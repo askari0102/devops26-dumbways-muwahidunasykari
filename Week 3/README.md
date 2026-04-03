@@ -108,12 +108,17 @@
     <img width="783" height="142" alt="image" src="https://github.com/user-attachments/assets/2a64d252-96ca-4709-a700-91495c4cb92c" />
 
 30. Go to `/etc/nginx/sites-available` and create two .conf files for the frontend and the backend.
-    <img width="774" height="419" alt="image" src="https://github.com/user-attachments/assets/d92607f3-15c9-4202-a665-92f473fa0d69" />
+    <img width="772" height="416" alt="image" src="https://github.com/user-attachments/assets/8a226422-1f02-49b0-a4ba-3a58a2048b37" />
 
 31. Create shortcut of the files with `sudo ln -s /etc/nginx/sites-available/myapp.conf /etc/nginx/sites-enabled/`
     <img width="1458" height="143" alt="image" src="https://github.com/user-attachments/assets/faedc89d-3d74-4139-b22f-968b8395b79c" />
 
-32. In your local computer, add the IP address and domain to the hosts 
+32. In your local computer, add the IP address and domain to the hosts.
+    <img width="363" height="47" alt="image" src="https://github.com/user-attachments/assets/f1e6cdf9-9279-41dd-9dfd-f4d0b7cce99f" />
+
+33. Open the website with the domain.
+    <img width="1919" height="962" alt="image" src="https://github.com/user-attachments/assets/b591bf7b-a89c-4694-ae92-82256453f329" />
+
 
 **Connecting to VPS (AWS EC2) with SSH**
 
