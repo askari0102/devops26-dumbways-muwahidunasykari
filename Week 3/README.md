@@ -203,7 +203,7 @@
    
    <img width="648" height="456" alt="image" src="https://github.com/user-attachments/assets/4170fa32-0395-40a9-824b-48f89c05a17c" />
 
-7. Download [MySQL](https://dev.mysql.com/downloads/mysql/) on your local computer. I'm using the .ZIP/portable version. Ifv you're using installer, you can skip step 7.
+7. Download [MySQL](https://dev.mysql.com/downloads/mysql/) on your local computer. I'm using the .ZIP/portable version. If you're using installer, you can skip step 7.
    
    <img width="1104" height="101" alt="image" src="https://github.com/user-attachments/assets/e196631b-0a89-4893-b057-1f581ae75950" />
 
