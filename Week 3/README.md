@@ -181,4 +181,46 @@
    <img width="1919" height="699" alt="image" src="https://github.com/user-attachments/assets/4271e2b3-664d-4946-9bc5-3520eb61bc00" />
    <img width="1205" height="297" alt="image" src="https://github.com/user-attachments/assets/6c826236-903b-4e19-ba40-e963bd3a0a3b" />
 
+**Remote Database with MySQL-client**
+
+---------
+
+1. Enter mysql as root and create a new database called "demo" and a dummy table called "transactions"
+   <img width="665" height="572" alt="image" src="https://github.com/user-attachments/assets/b34235d1-8c49-471c-9136-5bedcef3238e" />
+
+2. Create two new roles, "admin" and "guest".
    
+   <img width="497" height="137" alt="image" src="https://github.com/user-attachments/assets/6945f2c8-965a-4bcb-87f7-2f4b1749ee9d" />
+
+3. Grant full access rights to "admin" and give "guest" only SELECT access.
+   <img width="1052" height="542" alt="image" src="https://github.com/user-attachments/assets/b5aa110d-2fb0-4616-a601-ace47f676d0d" />
+
+4. Create two new users. Give "admin" role to one user and "guest" to the other. Set default role for both users as well.
+   <img width="842" height="413" alt="image" src="https://github.com/user-attachments/assets/2b28e261-117a-4284-8ed4-9fd6b791a423" />
+   <img width="726" height="404" alt="image" src="https://github.com/user-attachments/assets/88268129-8c92-48f1-9ea1-b1c602715f64" />
+
+5. Make sure to allow port 3306 on UFW.
+   
+   <img width="648" height="456" alt="image" src="https://github.com/user-attachments/assets/4170fa32-0395-40a9-824b-48f89c05a17c" />
+
+7. Download [MySQL](https://dev.mysql.com/downloads/mysql/) on your local computer. I'm using the .ZIP/portable version. Ifv you're using installer, you can skip step 7.
+   
+   <img width="1104" height="101" alt="image" src="https://github.com/user-attachments/assets/e196631b-0a89-4893-b057-1f581ae75950" />
+
+8. Extract the .ZIP file, inside the folder go to bin folder and copy the path. Add the path to environment variables.
+   
+   <img width="1213" height="762" alt="image" src="https://github.com/user-attachments/assets/c45ce0d0-fb7c-453e-a316-78d3e27c3017" />
+
+10. Test MySQL client by running `mysql --version` in terminal.
+      <img width="1329" height="132" alt="image" src="https://github.com/user-attachments/assets/8d0bff0e-1202-494d-8c3a-06d989f93bdc" />
+
+11. Connect by typing in the server's IP and mysql's user.
+    <img width="964" height="374" alt="image" src="https://github.com/user-attachments/assets/7896937f-230d-4b7d-9797-808b25e3ea16" />
+
+12. You can now remote the database.
+    <img width="1053" height="844" alt="image" src="https://github.com/user-attachments/assets/80ddfbb5-53d6-4c29-b3ea-90d470ac6feb" />
+
+
+    
+
+
