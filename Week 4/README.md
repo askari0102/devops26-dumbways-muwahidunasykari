@@ -10,7 +10,7 @@ sudo apt remove $(dpkg --get-selections docker.io docker-compose docker-compose-
 
 # Add Docker's GPG key
 echo " === Adding Docker's GPG key ==="
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o  /usr/share/keyrings/docker-archive-keyring.gpg
+curl -fsSL  https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor --yes -o  /usr/share/keyrings/docker-archive-keyring.gpg
 
 # Add Docker repository to Apt sources
 echo " === Adding Docker repository to Apt Sources ==="
@@ -40,7 +40,7 @@ sudo apt  update -y
 
 # Installing Docker
 echo "=== Installing Docker ==="
-sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+sudo apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
 # Start and enable Docker
 echo "=== Starting Docker Service ==="
