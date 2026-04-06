@@ -37,4 +37,17 @@ echo \
 
 # Update package list again
 sudo apt  update -y
+
+# Installing Docker
+echo "=== Installing Docker ==="
+sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
+# Start and enable Docker
+echo "=== Starting Docker Service ==="
+sudo systemctl start docker
+sudo systemctl enable docker
+
+# Verification
+echo " === Verifying Docker Installation ==="
+docker --version
 ```
