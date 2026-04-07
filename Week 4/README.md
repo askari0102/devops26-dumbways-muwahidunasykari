@@ -55,21 +55,9 @@
    <img width="977" height="291" alt="image" src="https://github.com/user-attachments/assets/ab90a899-69fe-4d9c-9f3e-98e15b126ad1" />
 
 ```
-import axios from 'axios';
-
-const API = axios.create({
-    baseURL: "http://localhost:5000/api/v1"
-});
-
-const setAuthToken = (token) => {
-    if(token){
-        API.defaults.headers.common['Authorization'] = `Bearer ${token}`;
-    } else {
-        delete API.defaults.headers.common['Authorization'];
-    }
-}
-
-export {
-    API,
-    setAuthToken
-}
+FROM node:14-alpine
+WORKDIR /home/app
+COPY . .
+RUN npm install
+EXPOSE 3000
+CMD ["npm", "start"]
