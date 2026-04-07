@@ -19,7 +19,7 @@
   # Update package list and install necessary dependencies
   echo " === Updating package list === "
   sudo apt update -y
-  echp " === Installating dependencies ==== "
+  echo " === Installating dependencies ==== "
   sudo apt install -y ca-certificates curl
   
   # Securely add docker's key to keyrings
@@ -54,67 +54,4 @@
 2. Add user to docker group and log in to the new docker group with `sudo usermod -aG docker $USER` and `newgrp docker`. Check if Docker can be run without root by running `docker run hello-world`.
    <img width="977" height="291" alt="image" src="https://github.com/user-attachments/assets/ab90a899-69fe-4d9c-9f3e-98e15b126ad1" />
 
-```
-FROM node:14-alpine
-WORKDIR /home/app
-COPY . .
-RUN npm install
-EXPOSE 3000
-CMD ["npm", "start"]
-```
 
-```
-services:
-  frontend:
-    build: ./wayshub-frontend
-    ports:
-      - "3000:3000"
-    depends_on:
-      - backend
-
-  backend:
-    build: ./wayshub-backend
-    ports:
-      - "5000:5000"
-    env_file:
-      - docker-compose.env
-    command: sh -c "sleep 20 && npx sequelize db:migrate && node index.js"
-    depends_on:
-      - mysql
-
-  mysql:
-    image: mysql:8
-    env_file:
-      - docker-compose.env
-    ports:
-      - "3306:3306"
-    volumes:
-      - mysql_data:/var/lib/mysql
-
-  nginx:
-    image: nginx:latest
-    ports:
-      - "80:80"
-    volumes:
-      - ./nginx:/etc/nginx/conf.d:ro
-    depends_on:
-      - frontend
-      - backend
-
-volumes:
-  mysql_data:
-```
-
-```
-# Backend
-DB_HOST=mysql
-DB_USER=wayshub
-DB_PASSWORD=dumbways
-DB_NAME=wayshub
-
-# MySQL
-MYSQL_ROOT_PASSWORD=dumbways
-MYSQL_DATABASE=wayshub
-MYSQL_USER=wayshub
-MYSQL_PASSWORD=dumbways
-```
