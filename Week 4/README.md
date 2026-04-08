@@ -61,4 +61,10 @@ docker --version
    <img width="944" height="52" alt="image" src="https://github.com/user-attachments/assets/79f30130-023d-4700-950b-057aa5f244c3" />
    <img width="729" height="36" alt="image" src="https://github.com/user-attachments/assets/8265fc48-9d44-476a-8a87-f1b2b0188be2" />
 
+2. Make a new directory for the app, then clone the frontend and the backend
+   <img width="1251" height="492" alt="image" src="https://github.com/user-attachments/assets/94deb1be-7139-4daa-8265-87819f3a25d0" />
 
+3. Make a new file called "Dockerfile" in the frontend and the backend.
+   <img width="1147" height="393" alt="image" src="https://github.com/user-attachments/assets/12a50ad9-bafb-41af-ad3c-da719cb4d6b0" />
+
+4. 
