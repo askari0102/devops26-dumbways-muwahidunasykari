@@ -83,6 +83,6 @@ docker --version
 7. Make .conf file for the web server/nginx
    <img width="819" height="602" alt="image" src="https://github.com/user-attachments/assets/79219269-44ed-4418-a848-6d1e281b9ee9" />
 
-8. Run docker compose
+8. Run docker compose up
    <img width="1478" height="260" alt="image" src="https://github.com/user-attachments/assets/f71f226b-3ffa-400f-9078-5a0bf7c8aa7b" />
 
