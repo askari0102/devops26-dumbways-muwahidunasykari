@@ -22,9 +22,12 @@ Install Docker with this [bash script](https://github.com/askari0102/devops26-du
 5. Edit the _config.json_ in the backend directory to connect the backend to the database.
    <img width="955" height="235" alt="image" src="https://github.com/user-attachments/assets/47ee29ed-14fc-421f-94f5-0b3b17c28429" />
 
-6. In the app directory, make a new file called "[docker-compose.yml](https://github.com/askari0102/devops26-dumbways-muwahidunasykari/blob/main/Week%204/docker-compose.yml)"
+6. Make a new directory for nginx and a .conf file.
+   <img width="802" height="604" alt="image" src="https://github.com/user-attachments/assets/e90d7a02-c928-4301-bee3-09a3aa5fd11a" />
+
+7. In the app directory, make a new file called "[docker-compose.yml](https://github.com/askari0102/devops26-dumbways-muwahidunasykari/blob/main/Week%204/docker-compose.yml)"
    
-7. Make a new file called "docker-compose.env" for the environment.
+8. Make a new file called "docker-compose.env" for the environment.
    <img width="761" height="306" alt="image" src="https://github.com/user-attachments/assets/2a870ecb-fb1c-403d-ba2a-4a66752930fe" />
 
 
