@@ -48,6 +48,9 @@ services:
     depends_on:
       - frontend
       - backend
+      
+networks:
+  kelompok2:
 
 volumes:
   mysql_data:
