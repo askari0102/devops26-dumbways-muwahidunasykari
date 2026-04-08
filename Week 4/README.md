@@ -60,7 +60,7 @@ docker --version
 
 **Production**
 
-1. Create new docker user and login with the new user.
+1. Create a new docker user and login with the new user.
    <img width="825" height="35" alt="image" src="https://github.com/user-attachments/assets/247470d1-a6f0-4362-8d24-78ffffcc9029" />
    <img width="944" height="52" alt="image" src="https://github.com/user-attachments/assets/79f30130-023d-4700-950b-057aa5f244c3" />
    <img width="729" height="36" alt="image" src="https://github.com/user-attachments/assets/8265fc48-9d44-476a-8a87-f1b2b0188be2" />
@@ -73,7 +73,7 @@ docker --version
 
 4. Set config to connect frontend to backend, and the backend to database.
    <img width="896" height="428" alt="image" src="https://github.com/user-attachments/assets/52251c28-b6eb-4f0e-a262-00b3289cd15a" />
-   <img width="415" height="184" alt="image" src="https://github.com/user-attachments/assets/e231d5e7-f40c-456c-b421-281b236a8196" />
+   <img width="985" height="215" alt="image" src="https://github.com/user-attachments/assets/bf6487f2-78a8-42b7-ba2d-895612a390e6" />
 
 5. Build the frontend and the backend.
    <img width="1470" height="224" alt="image" src="https://github.com/user-attachments/assets/32cc979c-d3f4-4ac3-9a6e-7cae57713b5e" />
