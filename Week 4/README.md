@@ -56,7 +56,9 @@ docker --version
 
 **Production**
 
-1. Create new docker user
+1. Create new docker user and login with the new user.
    <img width="825" height="35" alt="image" src="https://github.com/user-attachments/assets/247470d1-a6f0-4362-8d24-78ffffcc9029" />
    <img width="944" height="52" alt="image" src="https://github.com/user-attachments/assets/79f30130-023d-4700-950b-057aa5f244c3" />
+   <img width="729" height="36" alt="image" src="https://github.com/user-attachments/assets/8265fc48-9d44-476a-8a87-f1b2b0188be2" />
+
 
