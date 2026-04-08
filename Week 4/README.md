@@ -82,14 +82,14 @@ docker --version
 6. Make .conf file for the web server/nginx
    <img width="819" height="602" alt="image" src="https://github.com/user-attachments/assets/79219269-44ed-4418-a848-6d1e281b9ee9" />
 
-7. Make a new docker-compose.yml and the .env for the backend
-   <img width="925" height="575" alt="image" src="https://github.com/user-attachments/assets/9e3b916d-8286-4238-9fff-3f4e57ffa61d" />
-   <img width="796" height="172" alt="image" src="https://github.com/user-attachments/assets/fb79aba0-0aa8-48ee-a01e-8de13f9aca74" />
+7. Make a new file docker-compose.yml and the .env for the backend
+   <img width="843" height="569" alt="image" src="https://github.com/user-attachments/assets/573e6ff8-5058-4827-af9a-1d90e2fcc947" />
+   <img width="802" height="171" alt="image" src="https://github.com/user-attachments/assets/9f6f3922-6612-4d95-ad40-ea97b56dee83" />
 
-8. Run docker compose up
+9. Run docker compose up
    <img width="1478" height="260" alt="image" src="https://github.com/user-attachments/assets/f71f226b-3ffa-400f-9078-5a0bf7c8aa7b" />
 
-9. The app can be accessed with domain with all its functions.
+10. The app can be accessed with domain with all its functions.
     <img width="1912" height="975" alt="image" src="https://github.com/user-attachments/assets/3713dc4e-3d85-4119-b2b4-eadbde3957df" />
     <img width="1910" height="470" alt="image" src="https://github.com/user-attachments/assets/313481da-286d-4276-9e9a-b6bda92af95a" />
 
