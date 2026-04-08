@@ -4,7 +4,7 @@
 
 **Staging**
 
-1. Install Docker with the script below
+1. Install Docker with this [bash script]
 ```
 #!/bin/bash
   
@@ -55,8 +55,12 @@ sudo systemctl enable docker
 echo " === Verifying Docker Installation ==="
 docker --version
 ```
-2. Add user to docker group and log in to the new docker group with `sudo usermod -aG docker $USER` and `newgrp docker`. Check if Docker can be run without root by running `docker run hello-world`.
-   <img width="977" height="291" alt="image" src="https://github.com/user-attachments/assets/ab90a899-69fe-4d9c-9f3e-98e15b126ad1" />
+2. Make a new user `sudo adduser username`, add the user to the sudo and docker group with `sudo usermod -aG sudo username` and `sudo usermod -aG docker username`, run `newgrp docker` to reload membership, log in to the new account with `su - username`. Check if Docker can be run without root by running `docker ps`.
+   <img width="940" height="550" alt="image" src="https://github.com/user-attachments/assets/7006b773-090a-4ded-951a-3826fcdffcd0" />
+   <img width="877" height="192" alt="image" src="https://github.com/user-attachments/assets/c4fc3c85-0ac3-4f56-a7ad-09e8a2736a51" />
+
+
+
 
 **Production**
 
