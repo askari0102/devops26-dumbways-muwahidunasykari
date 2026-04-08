@@ -1,0 +1,53 @@
+services:
+  frontend:
+    container_name: wayshub-fe
+    build: ./wayshub-frontend
+    image: kelompok2/wayshub/frontend:staging
+    ports:
+      - "3000:3000"
+    networks:
+      - kelompok2
+    depends_on:
+      - backend
+
+  backend:
+    container_name: wayshub-be
+    build: ./wayshub-backend
+    image: kelompok2/wayshub/backendend:staging
+    env_file:
+      - docker-compose.env
+    command: sh -c "sleep 20 && npx sequelize db:migrate && node index.js"
+    ports:
+      - "5000:5000"
+    networks:
+      - kelompok2
+    depends_on:
+      - mysql
+
+  mysql:
+    container_name: wayshub-db
+    image: mysql:8
+    env_file:
+      - docker-compose.env
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - kelompok2
+
+  nginx:
+    container_name: wayshub-webserver
+    image: nginx:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx:/etc/nginx/conf.d:ro
+    networks:
+      - kelompok2
+    depends_on:
+      - frontend
+      - backend
+
+volumes:
+  mysql_data:
