@@ -90,3 +90,7 @@ docker --version
    <img width="1478" height="260" alt="image" src="https://github.com/user-attachments/assets/f71f226b-3ffa-400f-9078-5a0bf7c8aa7b" />
 
 9. The app can be accessed with domain with all its functions.
+    <img width="1912" height="975" alt="image" src="https://github.com/user-attachments/assets/3713dc4e-3d85-4119-b2b4-eadbde3957df" />
+    <img width="1910" height="470" alt="image" src="https://github.com/user-attachments/assets/313481da-286d-4276-9e9a-b6bda92af95a" />
+
+
