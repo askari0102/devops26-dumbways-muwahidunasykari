@@ -54,4 +54,9 @@ docker --version
 2. Add user to docker group and log in to the new docker group with `sudo usermod -aG docker $USER` and `newgrp docker`. Check if Docker can be run without root by running `docker run hello-world`.
    <img width="977" height="291" alt="image" src="https://github.com/user-attachments/assets/ab90a899-69fe-4d9c-9f3e-98e15b126ad1" />
 
+**Production**
+
+1. Create new docker user
+   <img width="825" height="35" alt="image" src="https://github.com/user-attachments/assets/247470d1-a6f0-4362-8d24-78ffffcc9029" />
+   <img width="944" height="52" alt="image" src="https://github.com/user-attachments/assets/79f30130-023d-4700-950b-057aa5f244c3" />
 
