@@ -1,5 +1,9 @@
 **Docker**
 
+------
+
+**Staging**
+
 1. Install Docker with the script below
 ```
 #!/bin/bash
