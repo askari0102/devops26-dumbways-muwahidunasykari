@@ -82,7 +82,7 @@ docker --version
 6. Make .conf file for the web server/nginx
    <img width="819" height="602" alt="image" src="https://github.com/user-attachments/assets/79219269-44ed-4418-a848-6d1e281b9ee9" />
 
-7. Make a new file docker-compose.yml and the .env for the backend
+7. Make docker-compose.yml file, and the .env for the backend
    <img width="843" height="569" alt="image" src="https://github.com/user-attachments/assets/573e6ff8-5058-4827-af9a-1d90e2fcc947" />
    <img width="802" height="171" alt="image" src="https://github.com/user-attachments/assets/9f6f3922-6612-4d95-ad40-ea97b56dee83" />
 
