@@ -65,7 +65,7 @@ Install Docker with this [bash script](https://github.com/askari0102/devops26-du
    <img width="819" height="602" alt="image" src="https://github.com/user-attachments/assets/79219269-44ed-4418-a848-6d1e281b9ee9" />
 
 7. Make docker-compose.yml file, and the .env for the backend
-   <img width="843" height="569" alt="image" src="https://github.com/user-attachments/assets/573e6ff8-5058-4827-af9a-1d90e2fcc947" />
+   <img width="796" height="761" alt="image" src="https://github.com/user-attachments/assets/2a3f4785-d03e-4bf3-89af-34832503b66a" />
    <img width="802" height="171" alt="image" src="https://github.com/user-attachments/assets/9f6f3922-6612-4d95-ad40-ea97b56dee83" />
 
 9. Run docker compose up
