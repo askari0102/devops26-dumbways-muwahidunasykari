@@ -30,7 +30,14 @@ Install Docker with this [bash script](https://github.com/askari0102/devops26-du
 8. Make a new file called "docker-compose.env" for the environment.
    <img width="761" height="306" alt="image" src="https://github.com/user-attachments/assets/2a870ecb-fb1c-403d-ba2a-4a66752930fe" />
 
+9. Run `docker compose up -d --build`
+   <img width="1460" height="121" alt="image" src="https://github.com/user-attachments/assets/330e581d-dfde-4004-9889-6526150883de" />
 
+10. Run `docker ps` to check whats running
+    <img width="1633" height="259" alt="image" src="https://github.com/user-attachments/assets/5c38c7df-80a3-44b8-81f8-6770479a7227" />
+
+11. The app can be accessed with a domain with all its functions.
+    <img width="1919" height="976" alt="image" src="https://github.com/user-attachments/assets/216b7586-1185-4909-afe8-e17248bb48a4" />
 
 
 **Production**
@@ -64,7 +71,7 @@ Install Docker with this [bash script](https://github.com/askari0102/devops26-du
 9. Run docker compose up
    <img width="1478" height="260" alt="image" src="https://github.com/user-attachments/assets/f71f226b-3ffa-400f-9078-5a0bf7c8aa7b" />
 
-10. The app can be accessed with domain with all its functions.
+10. The app can be accessed with a domain with all its functions.
     <img width="1912" height="975" alt="image" src="https://github.com/user-attachments/assets/3713dc4e-3d85-4119-b2b4-eadbde3957df" />
     <img width="1910" height="470" alt="image" src="https://github.com/user-attachments/assets/313481da-286d-4276-9e9a-b6bda92af95a" />
 
