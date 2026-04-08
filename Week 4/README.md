@@ -10,7 +10,19 @@ Install Docker with this [bash script](https://github.com/askari0102/devops26-du
    <img width="940" height="550" alt="image" src="https://github.com/user-attachments/assets/7006b773-090a-4ded-951a-3826fcdffcd0" />
    <img width="877" height="192" alt="image" src="https://github.com/user-attachments/assets/c4fc3c85-0ac3-4f56-a7ad-09e8a2736a51" />
 
+2. Make a new directory for the app and clone the frontend and the backend.
+   <img width="1216" height="537" alt="image" src="https://github.com/user-attachments/assets/4d4d2bba-93c1-416e-9819-90664f119b65" />
 
+3. Make a file called "Dockerfile" in the frontend and backend directories.
+   <img width="1065" height="396" alt="image" src="https://github.com/user-attachments/assets/82d71175-6059-4d1b-a70d-04f36f985a12" />
+
+4. Edit the _api.js_ in the frontend directory to connect to the backend.
+   <img width="947" height="467" alt="image" src="https://github.com/user-attachments/assets/5031756f-b327-45f5-9d9e-919505a29850" />
+
+5. Edit the _config.json_ in the backend directory to connect the backend to the database.
+   <img width="955" height="235" alt="image" src="https://github.com/user-attachments/assets/47ee29ed-14fc-421f-94f5-0b3b17c28429" />
+
+6. In the app directory, make a new file called "docker-compose.yml"
 
 
 **Production**
