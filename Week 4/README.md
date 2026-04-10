@@ -112,3 +112,6 @@ Install Docker with this [bash script](https://github.com/askari0102/devops26-du
 12. Go back to dashboard and click _New Item_ and select _Pipeline_.
     <img width="1602" height="401" alt="image" src="https://github.com/user-attachments/assets/ad4e96b2-023b-4e94-ae2b-af66622e471b" />
 
+13. Select _GitHub hook trigger for GITScm polling_ and config your pipeline with your repo and the credentials that you created earlier then click _Save_.
+    <img width="1361" height="706" alt="image" src="https://github.com/user-attachments/assets/a841d6d9-989b-47ca-8ab1-68d5233c5bbf" />
+
