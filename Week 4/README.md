@@ -75,4 +75,21 @@ Install Docker with this [bash script](https://github.com/askari0102/devops26-du
     <img width="1912" height="975" alt="image" src="https://github.com/user-attachments/assets/3713dc4e-3d85-4119-b2b4-eadbde3957df" />
     <img width="1910" height="470" alt="image" src="https://github.com/user-attachments/assets/313481da-286d-4276-9e9a-b6bda92af95a" />
 
+**Setup Jenkins**
 
+1. Run `docker run -d -p 8080:8080 -p 50000:50000 --restart=on-failure -v jenkins_home:/var/jenkins_home jenkins/jenkins:lts-jdk21` to run jenkins on top docker
+   <img width="1470" height="53" alt="image" src="https://github.com/user-attachments/assets/505e18ea-7262-400b-8344-ddb4745f0a83" />
+
+2. Check if its running correctly by running docker ps
+   <img width="1470" height="121" alt="image" src="https://github.com/user-attachments/assets/ca1e386e-275d-49b8-95b3-6e5e86b8e114" />
+
+3. Open Jenkins with IP Address on port 8080 and login with your password
+   <img width="1242" height="861" alt="image" src="https://github.com/user-attachments/assets/fad9a377-a0fa-42d4-a36e-182849df6e8b" />
+
+4. Choose _Select plugins to install_.
+   <img width="1247" height="861" alt="image" src="https://github.com/user-attachments/assets/0cbe122b-c671-4500-bd83-c0d643fc8762" />
+
+5. Make sure SSH is selected and proceed by clicking _install_.
+
+   
+   
