@@ -75,7 +75,7 @@ Install Docker with this [bash script](https://github.com/askari0102/devops26-du
     <img width="1912" height="975" alt="image" src="https://github.com/user-attachments/assets/3713dc4e-3d85-4119-b2b4-eadbde3957df" />
     <img width="1910" height="470" alt="image" src="https://github.com/user-attachments/assets/313481da-286d-4276-9e9a-b6bda92af95a" />
 
-**Setup Jenkins**
+**Jenkins Installation**
 
 1. Run `docker run -d -p 8080:8080 -p 50000:50000 --restart=on-failure -v jenkins_home:/var/jenkins_home jenkins/jenkins:lts-jdk21` to run jenkins on top docker
    <img width="1470" height="53" alt="image" src="https://github.com/user-attachments/assets/505e18ea-7262-400b-8344-ddb4745f0a83" />
@@ -90,6 +90,16 @@ Install Docker with this [bash script](https://github.com/askari0102/devops26-du
    <img width="1247" height="861" alt="image" src="https://github.com/user-attachments/assets/0cbe122b-c671-4500-bd83-c0d643fc8762" />
 
 5. Make sure SSH is selected and proceed by clicking _install_.
+   <img width="1238" height="855" alt="image" src="https://github.com/user-attachments/assets/d1a4c37e-7fdf-49bd-8e73-4b21e20b4437" />
 
-   
+6. Create admin user on this page
+   <img width="1233" height="856" alt="image" src="https://github.com/user-attachments/assets/9a6a00e1-37e3-44bb-953d-1949fd589dc9" />
+
+7. Setup URL, I'm just gonna leave it at IP address and setup reverse proxy later. 
+   <img width="1231" height="438" alt="image" src="https://github.com/user-attachments/assets/226e87e0-f40d-4221-a214-065ba19dac85" />
+
+8. Jenkins is ready
+   <img width="774" height="350" alt="image" src="https://github.com/user-attachments/assets/27e263b4-0498-451c-b4b0-786650cdb4b8" />
+
+
    
