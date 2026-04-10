@@ -105,3 +105,10 @@ Install Docker with this [bash script](https://github.com/askari0102/devops26-du
 9. Go to _Manage Jekins_ -> _Security_ and change the _Host Key Verification_ to _Accept first connection_ and click save.
     <img width="1632" height="189" alt="image" src="https://github.com/user-attachments/assets/843a87a4-feea-409a-8ce8-9b3e09771753" />
 
+10. Go to _Manage Jekins_ -> _Credentials_ -> _System_ -> _Global_ and choose _SSH username with private key_. Fill in the data and private key and click _Create_.
+    
+    <img width="688" height="845" alt="image" src="https://github.com/user-attachments/assets/e96ddd03-c200-4fce-8139-c1c293d34894" />
+
+12. Go back to dashboard and click _New Item_ and select _Pipeline_.
+    <img width="1602" height="401" alt="image" src="https://github.com/user-attachments/assets/ad4e96b2-023b-4e94-ae2b-af66622e471b" />
+
