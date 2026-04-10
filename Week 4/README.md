@@ -75,7 +75,7 @@ Install Docker with this [bash script](https://github.com/askari0102/devops26-du
     <img width="1912" height="975" alt="image" src="https://github.com/user-attachments/assets/3713dc4e-3d85-4119-b2b4-eadbde3957df" />
     <img width="1910" height="470" alt="image" src="https://github.com/user-attachments/assets/313481da-286d-4276-9e9a-b6bda92af95a" />
 
-**Jenkins Installation**
+**Jenkins Setup**
 
 1. Run `docker run -d -p 8080:8080 -p 50000:50000 --restart=on-failure -v jenkins_home:/var/jenkins_home jenkins/jenkins:lts-jdk21` to run jenkins on top docker
    <img width="1470" height="53" alt="image" src="https://github.com/user-attachments/assets/505e18ea-7262-400b-8344-ddb4745f0a83" />
@@ -89,7 +89,7 @@ Install Docker with this [bash script](https://github.com/askari0102/devops26-du
 4. Choose _Select plugins to install_.
    <img width="1247" height="861" alt="image" src="https://github.com/user-attachments/assets/0cbe122b-c671-4500-bd83-c0d643fc8762" />
 
-5. Make sure SSH is selected and proceed by clicking _install_.
+5. Make sure _SSH Agent_ is selected and proceed by clicking _install_.
    <img width="1238" height="855" alt="image" src="https://github.com/user-attachments/assets/d1a4c37e-7fdf-49bd-8e73-4b21e20b4437" />
 
 6. Create admin user on this page
@@ -99,7 +99,9 @@ Install Docker with this [bash script](https://github.com/askari0102/devops26-du
    <img width="1231" height="438" alt="image" src="https://github.com/user-attachments/assets/226e87e0-f40d-4221-a214-065ba19dac85" />
 
 8. Jenkins is ready
+   
    <img width="774" height="350" alt="image" src="https://github.com/user-attachments/assets/27e263b4-0498-451c-b4b0-786650cdb4b8" />
 
+9. Go to _Manage Jekins_ -> _Security_ and change the _Host Key Verification_ to _Accept first connection_ and click save.
+    <img width="1632" height="189" alt="image" src="https://github.com/user-attachments/assets/843a87a4-feea-409a-8ce8-9b3e09771753" />
 
-   
