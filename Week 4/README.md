@@ -69,22 +69,24 @@ Install Docker with this [bash script](https://github.com/askari0102/devops26-du
 10. In the CI/CD server, create a new directory for Wayshub and make the [.yml for the docker compose](https://github.com/askari0102/devops26-dumbways-muwahidunasykari/blob/main/Week%204/Production/CICD/docker-compose.yml) and the [environment file](https://github.com/askari0102/devops26-dumbways-muwahidunasykari/blob/main/Week%204/Production/CICD/docker-compose.env).
     
 12. Create Dockerfile for Jenkins.
+    
     <img width="703" height="213" alt="image" src="https://github.com/user-attachments/assets/3c3c3cdd-b400-40c7-a30b-e40f59aad43d" />
 
-13. Create .conf for nginx
+14. Create .conf for nginx
+    
     <img width="719" height="304" alt="image" src="https://github.com/user-attachments/assets/b4ae890a-22e7-4d93-afae-589bb5d4a262" />
 
-14. Run `docker compose up -d --build` and access the jenkins container by running `docker exec -it wayshub_jenkins bash`. Run `docker ps` to make sure jenkins have permission to run docker commands.
+16. Run `docker compose up -d --build` and access the jenkins container by running `docker exec -it wayshub_jenkins bash`. Run `docker ps` to make sure jenkins have permission to run docker commands.
 
-15. Open Jenkins by using `Server_IP:8080` in your browser. In terminal run `docker logs wayshub-jenkins`, copy the password and paste it in your browser.
+17. Open Jenkins by using `Server_IP:8080` in your browser. In terminal run `docker logs wayshub-jenkins`, copy the password and paste it in your browser.
     <img width="1197" height="335" alt="image" src="https://github.com/user-attachments/assets/58d842b8-d7a1-4d66-bdde-665d7c427238" />
     <img width="1155" height="468" alt="image" src="https://github.com/user-attachments/assets/2a7064ac-6c66-4486-8584-81c319fa37e0" />
 
-16. Finish the Jenkins setup, make sure "SSH Agent" plugin and "NodeJS" plugin are installed.
+18. Finish the Jenkins setup, make sure "SSH Agent" plugin and "NodeJS" plugin are installed.
     <img width="929" height="111" alt="image" src="https://github.com/user-attachments/assets/4d6ff454-f70a-48ba-98e0-8355c0761df4" />
     <img width="993" height="217" alt="image" src="https://github.com/user-attachments/assets/d949d122-9324-4695-bae7-ff5b13ff3e7d" />
 
-17. Go to _Manage Jenkins_ -> _Tools_ -> _Add NodeJs_. Select version 14 and save.
+19. Go to _Manage Jenkins_ -> _Tools_ -> _Add NodeJs_. Select version 14 and save.
     <img width="1628" height="405" alt="image" src="https://github.com/user-attachments/assets/27260db2-cc48-4f05-b1cd-1f51ec11202a" />
 
 17. Go to _Manage Jekins_ -> _Security_ and change the _Host Key Verification_ to _Accept first connection_ and click save.
