@@ -189,5 +189,19 @@ Install Docker with this [bash script](https://github.com/askari0102/devops26-du
    <img width="1078" height="140" alt="image" src="https://github.com/user-attachments/assets/cdecec24-d1a8-4e82-9331-20987d0030ba" />
 
 6. Check if the CI/CD pipeline is running by going to your gitlab repo -> _Build_ -> _Pipelines_
-   <img width="1554" height="368" alt="image" src="https://github.com/user-attachments/assets/f75f5bdb-ba30-48fb-8197-0986de8e61a7" />
+   <img width="1561" height="355" alt="image" src="https://github.com/user-attachments/assets/a00d1208-5316-473c-b5d2-1a79195d036b" />
+
+**Discord Notifications with GitLab**
+
+1. Create or edit a webhook bot in server settings and copy the webhook url
+   <img width="877" height="411" alt="image" src="https://github.com/user-attachments/assets/cf54ec6e-0751-4ec7-a568-b693e8eed11b" />
+
+2. Edit the .gitlab-ci.yml and add after script
+   <img width="1174" height="649" alt="image" src="https://github.com/user-attachments/assets/c25706a6-46a2-440b-bfb3-e2f9b9993ba5" />
+
+3. Add a new variable for the webhook
+   <img width="716" height="92" alt="image" src="https://github.com/user-attachments/assets/8450e1d3-e917-4667-a627-f5aa7d33462d" />
+
+4. Push something to gitlab to test. The discord bot will notify you when the deploy succeeds/fails.
+   <img width="989" height="208" alt="image" src="https://github.com/user-attachments/assets/dc9465ae-a89e-447e-ada3-f2cc175157b5" />
 
