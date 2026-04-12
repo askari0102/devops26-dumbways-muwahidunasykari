@@ -6,6 +6,7 @@ Install Docker with this [bash script](https://github.com/askari0102/devops26-du
 
 **Staging**
 
+------
 1. Make a new user `sudo adduser username`, add the user to the sudo and docker group with `sudo usermod -aG sudo username` and `sudo usermod -aG docker username`, run `newgrp docker` to reload membership, log in to the new account with `su - username`. Check if Docker can be run without root by running `docker ps`.
    <img width="940" height="550" alt="image" src="https://github.com/user-attachments/assets/7006b773-090a-4ded-951a-3826fcdffcd0" />
    <img width="877" height="192" alt="image" src="https://github.com/user-attachments/assets/c4fc3c85-0ac3-4f56-a7ad-09e8a2736a51" />
@@ -42,6 +43,7 @@ Install Docker with this [bash script](https://github.com/askari0102/devops26-du
 
 **Production**
 
+-------
 1. Fork the frontend and backend repositories to your own github. Mine can be found [here(frontend)](https://github.com/askari0102/wayshub-frontend) and [here(backend)](https://github.com/askari0102/wayshub-backend)
    
 2. Clone both repo to your own computer.
@@ -116,4 +118,26 @@ Install Docker with this [bash script](https://github.com/askari0102/devops26-du
 25. Push something to your github repo. The pipeline will trigger automatically every time there's a change in the SCM.
     <img width="982" height="307" alt="image" src="https://github.com/user-attachments/assets/c6c3477c-2bd2-4842-bad6-583960962501" />
 
+
+
+
+
+**Extra**
+
+----
+**Adding "test" stage to frontend and backend**
+
+----
+
+1. The frontend already have react library and script so you only have to add new file for testing.
+   <img width="1095" height="512" alt="image" src="https://github.com/user-attachments/assets/85ee4033-4d56-45cd-87ed-5dc55676d7fc" />
+
+2. The backend is more complicated. Open package.json and add `test: "jest"` to `"scripts"` and `"jest": "^29.0.0",` to dependencies.
+   <img width="771" height="143" alt="image" src="https://github.com/user-attachments/assets/11b2bb7e-997c-4b1c-85d1-455905bc3eba" />
+   <img width="443" height="143" alt="image" src="https://github.com/user-attachments/assets/47f26f2a-68cb-405b-840a-98719a3e90cd" />
+
+3. Create a new file for testing
+   <img width="930" height="153" alt="image" src="https://github.com/user-attachments/assets/c0472aad-1022-4042-9341-8a5e9e10ce00" />
+
+4. Temporarily change the `npm ci` in [Jenkinsfile](https://github.com/askari0102/wayshub-backend/blob/main/Jenkinsfile) to `npm install` to install the necessary dependency. After you run the pipeline once you can change it back to `npm ci`.
 
