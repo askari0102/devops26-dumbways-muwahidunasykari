@@ -127,8 +127,6 @@ Install Docker with this [bash script](https://github.com/askari0102/devops26-du
 ----
 **Adding "test" stage to frontend and backend**
 
-----
-
 1. The frontend already have react library and script so you only have to add new file for testing.
    <img width="1095" height="512" alt="image" src="https://github.com/user-attachments/assets/85ee4033-4d56-45cd-87ed-5dc55676d7fc" />
 
@@ -139,4 +137,3 @@ Install Docker with this [bash script](https://github.com/askari0102/devops26-du
    
    <img width="314" height="174" alt="image" src="https://github.com/user-attachments/assets/c6bc2f64-f88e-4d1b-b1b7-078aed17d47f" />
    <img width="435" height="220" alt="image" src="https://github.com/user-attachments/assets/cfe10230-72a5-4736-a867-1f83e0d0b428" />
-
