@@ -139,5 +139,4 @@ Install Docker with this [bash script](https://github.com/askari0102/devops26-du
 3. Create a new file for testing
    <img width="930" height="153" alt="image" src="https://github.com/user-attachments/assets/c0472aad-1022-4042-9341-8a5e9e10ce00" />
 
-4. Temporarily change the `npm ci` in [Jenkinsfile](https://github.com/askari0102/wayshub-backend/blob/main/Jenkinsfile) to `npm install` to install the necessary dependency. After you run the pipeline once you can change it back to `npm ci`.
 
