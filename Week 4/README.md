@@ -137,3 +137,14 @@ Install Docker with this [bash script](https://github.com/askari0102/devops26-du
    
    <img width="314" height="174" alt="image" src="https://github.com/user-attachments/assets/c6bc2f64-f88e-4d1b-b1b7-078aed17d47f" />
    <img width="435" height="220" alt="image" src="https://github.com/user-attachments/assets/cfe10230-72a5-4736-a867-1f83e0d0b428" />
+
+**Backend crashes when registering**
+
+1. If your backend crashes when registering, add `JWT_PRIVATE_KEY` to `docker-compose.env`
+   <img width="845" height="124" alt="image" src="https://github.com/user-attachments/assets/1d5f2e96-7105-41d2-bdf3-5bb007caa80f" />
+   
+2. Change `bcrypt` to `bcryptjs`.
+      - in `package.json` = "bcryptjs": "^2.4.3"
+      - in all controllers with bcrypt = `const bcrypt = require('bcryptjs');`
+
+    
