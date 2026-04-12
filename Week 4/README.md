@@ -183,9 +183,11 @@ Install Docker with this [bash script](https://github.com/askari0102/devops26-du
 3. Go to Gitlab -> Repo -> _Settings_ -> _CI/CD_ -> _Variables_ -> _Add variable_ and add several things
    <img width="931" height="321" alt="image" src="https://github.com/user-attachments/assets/333115ca-55c6-42ae-a775-66897e5479ff" />
 
-4. Create a new file called `[.gitlab-ci.yml](https://gitlab.com/askari0102/wayshub-backend/-/blob/main/.gitlab-ci.yml)` in your repo
+4. Create a new file called [.gitlab-ci.yml](https://gitlab.com/askari0102/wayshub-frontend/-/blob/main/.gitlab-ci.yml) in your repo
    
 5. Push the file to gitlab
-   <img width="1153" height="328" alt="image" src="https://github.com/user-attachments/assets/375b140d-ece8-4eb0-945c-8515f73c6729" />
+   <img width="1078" height="140" alt="image" src="https://github.com/user-attachments/assets/cdecec24-d1a8-4e82-9331-20987d0030ba" />
 
-   
+6. Check if the CI/CD pipeline is running by going to your gitlab repo -> _Build_ -> _Pipelines_
+   <img width="1554" height="368" alt="image" src="https://github.com/user-attachments/assets/f75f5bdb-ba30-48fb-8197-0986de8e61a7" />
+
