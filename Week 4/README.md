@@ -118,7 +118,7 @@ Install Docker with this [bash script](https://github.com/askari0102/devops26-du
 25. Push something to your github repo. The pipeline will trigger automatically every time there's a change in the SCM.
     <img width="982" height="307" alt="image" src="https://github.com/user-attachments/assets/c6c3477c-2bd2-4842-bad6-583960962501" />
 
-
+26. 
 
 
 
@@ -132,11 +132,11 @@ Install Docker with this [bash script](https://github.com/askari0102/devops26-du
 1. The frontend already have react library and script so you only have to add new file for testing.
    <img width="1095" height="512" alt="image" src="https://github.com/user-attachments/assets/85ee4033-4d56-45cd-87ed-5dc55676d7fc" />
 
-2. The backend is more complicated. Open package.json and add `test: "jest"` to `"scripts"` and `"jest": "^29.0.0",` to dependencies.
-   <img width="771" height="143" alt="image" src="https://github.com/user-attachments/assets/11b2bb7e-997c-4b1c-85d1-455905bc3eba" />
-   <img width="443" height="143" alt="image" src="https://github.com/user-attachments/assets/47f26f2a-68cb-405b-840a-98719a3e90cd" />
+2. The backend is a bit different. Create a new file for testing.
+   <img width="568" height="378" alt="image" src="https://github.com/user-attachments/assets/c76e7a71-6925-4646-b9eb-09e99b0c037b" />
 
-3. Create a new file for testing
-   <img width="930" height="153" alt="image" src="https://github.com/user-attachments/assets/c0472aad-1022-4042-9341-8a5e9e10ce00" />
-
+3. Edit the Jenkinsfile and add node:20 tool. The test will be ran with a zero-dependency built-in test runner.
+   
+   <img width="314" height="174" alt="image" src="https://github.com/user-attachments/assets/c6bc2f64-f88e-4d1b-b1b7-078aed17d47f" />
+   <img width="435" height="220" alt="image" src="https://github.com/user-attachments/assets/cfe10230-72a5-4736-a867-1f83e0d0b428" />
 
