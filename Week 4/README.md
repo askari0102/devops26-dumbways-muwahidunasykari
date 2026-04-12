@@ -117,10 +117,11 @@ Install Docker with this [bash script](https://github.com/askari0102/devops26-du
 
 25. Push something to your github repo. The pipeline will trigger automatically every time there's a change in the SCM.
     <img width="982" height="307" alt="image" src="https://github.com/user-attachments/assets/c6c3477c-2bd2-4842-bad6-583960962501" />
+    <img width="1433" height="187" alt="image" src="https://github.com/user-attachments/assets/a59a9d2a-8acd-4ed7-b392-29f5ac2687aa" />
 
-26. 
-
-
+26. Open the domain, the site is fully functional with login and register.
+    <img width="1919" height="939" alt="image" src="https://github.com/user-attachments/assets/b19796a5-ab79-48b3-af2a-cfd95b6c9d86" />
+    <img width="1919" height="390" alt="image" src="https://github.com/user-attachments/assets/7afd91c9-4e87-425b-b548-97b9d2ec5244" />
 
 **Extra**
 
@@ -144,7 +145,7 @@ Install Docker with this [bash script](https://github.com/askari0102/devops26-du
    <img width="845" height="124" alt="image" src="https://github.com/user-attachments/assets/1d5f2e96-7105-41d2-bdf3-5bb007caa80f" />
    
 2. Change `bcrypt` to `bcryptjs`.
-      - in `package.json` = "bcryptjs": "^2.4.3"
+      - in `package.json` = `"bcryptjs": "^2.4.3"`
       - in all controllers with bcrypt = `const bcrypt = require('bcryptjs');`
 
     
