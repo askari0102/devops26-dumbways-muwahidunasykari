@@ -139,6 +139,27 @@ Install Docker with this [bash script](https://github.com/askari0102/devops26-du
    <img width="314" height="174" alt="image" src="https://github.com/user-attachments/assets/c6bc2f64-f88e-4d1b-b1b7-078aed17d47f" />
    <img width="435" height="220" alt="image" src="https://github.com/user-attachments/assets/cfe10230-72a5-4736-a867-1f83e0d0b428" />
 
+**Discord Notifications with Jenkins**
+
+1. Go to _Server settings_ -> _Integrations_. Click _Create Webhook_
+   <img width="1456" height="796" alt="image" src="https://github.com/user-attachments/assets/4cc7b197-e08e-4b15-95f6-8c82fddc2481" />
+
+2. Create or edit an existing webhook and click _Copy Webhook URL_
+   <img width="884" height="500" alt="image" src="https://github.com/user-attachments/assets/71adfcc2-5cc9-40b0-9d92-70a78faec458" />
+
+3. Go to Jenkins and add a new secret text crendential for the webhook url.
+
+   <img width="688" height="643" alt="image" src="https://github.com/user-attachments/assets/3aad42ad-7353-4f8a-bb5b-4f164a463e88" />
+
+4. Update your Jenkinsfile to add the webhook and setup notification.
+   
+   <img width="645" height="44" alt="image" src="https://github.com/user-attachments/assets/c00131aa-fbd0-4bb2-b8af-f00036c94c62" />
+   <img width="1145" height="918" alt="image" src="https://github.com/user-attachments/assets/2591444a-0c8e-4977-b07d-83fed0802799" />
+
+5. The bot will notify if all stages ran successfully or not.
+   <img width="1315" height="233" alt="image" src="https://github.com/user-attachments/assets/61f66635-e656-452b-a9f7-dde373b4d257" />
+
+   
 **Backend crashes when registering**
 
 1. If your backend crashes when registering, add `JWT_PRIVATE_KEY` to `docker-compose.env`
