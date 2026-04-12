@@ -41,7 +41,7 @@ Install Docker with this [bash script](https://github.com/askari0102/devops26-du
     <img width="1919" height="976" alt="image" src="https://github.com/user-attachments/assets/216b7586-1185-4909-afe8-e17248bb48a4" />
 
 
-**Production**
+**Production with Jenkins**
 
 -------
 1. Fork the frontend and backend repositories to your own github. Mine can be found [here(frontend)](https://github.com/askari0102/wayshub-frontend) and [here(backend)](https://github.com/askari0102/wayshub-backend)
@@ -169,4 +169,23 @@ Install Docker with this [bash script](https://github.com/askari0102/devops26-du
       - in `package.json` = `"bcryptjs": "^2.4.3"`
       - in all controllers with bcrypt = `const bcrypt = require('bcryptjs');`
 
-    
+-----
+**GitLab**
+
+-----
+
+1. Add public key to your gitlab account
+   <img width="1360" height="272" alt="image" src="https://github.com/user-attachments/assets/89446ff9-4338-4bbd-8095-c8e120d4331e" />
+
+2. Generate a new key that will be used for deploying to appserver from gitlab. Copy and paste the public key to the appserver
+   <img width="1359" height="51" alt="image" src="https://github.com/user-attachments/assets/89dddba0-5c95-4400-8d0b-e9fcf6408ddd" />
+
+3. Go to Gitlab -> Repo -> _Settings_ -> _CI/CD_ -> _Variables_ -> _Add variable_ and add several things
+   <img width="931" height="321" alt="image" src="https://github.com/user-attachments/assets/333115ca-55c6-42ae-a775-66897e5479ff" />
+
+4. Create a new file called `[.gitlab-ci.yml](https://gitlab.com/askari0102/wayshub-backend/-/blob/main/.gitlab-ci.yml)` in your repo
+   
+5. Push the file to gitlab
+   <img width="1153" height="328" alt="image" src="https://github.com/user-attachments/assets/375b140d-ece8-4eb0-945c-8515f73c6729" />
+
+   
