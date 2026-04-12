@@ -80,12 +80,38 @@ Install Docker with this [bash script](https://github.com/askari0102/devops26-du
     <img width="1197" height="335" alt="image" src="https://github.com/user-attachments/assets/58d842b8-d7a1-4d66-bdde-665d7c427238" />
     <img width="1155" height="468" alt="image" src="https://github.com/user-attachments/assets/2a7064ac-6c66-4486-8584-81c319fa37e0" />
 
-16. Finish the Jenkins setup, make sure "SSH Agent" plugin is installed.
+16. Finish the Jenkins setup, make sure "SSH Agent" plugin and "NodeJS" plugin are installed.
     <img width="929" height="111" alt="image" src="https://github.com/user-attachments/assets/4d6ff454-f70a-48ba-98e0-8355c0761df4" />
     <img width="993" height="217" alt="image" src="https://github.com/user-attachments/assets/d949d122-9324-4695-bae7-ff5b13ff3e7d" />
+
+17. Go to _Manage Jenkins_ -> _Tools_ -> _Add NodeJs_. Select version 14 and save.
+    <img width="1628" height="405" alt="image" src="https://github.com/user-attachments/assets/27260db2-cc48-4f05-b1cd-1f51ec11202a" />
 
 17. Go to _Manage Jekins_ -> _Security_ and change the _Host Key Verification_ to _Accept first connection_ and click save.
     <img width="1632" height="189" alt="image" src="https://github.com/user-attachments/assets/843a87a4-feea-409a-8ce8-9b3e09771753" />
 
 18. Create a pair of ssh key. Go to _Manage Jekins_ -> _Credentials_ -> _System_ -> _Global_ and choose _SSH username with private key_. Fill in the data and private key and click _Create_. Don't forget to add the public key to the appserver.
+    <img width="664" height="143" alt="image" src="https://github.com/user-attachments/assets/e1c5ce88-813c-4382-93de-427dbcb43eac" />
+
+19. Create another Credential for Docker Hub's username and password.
+    <img width="1565" height="92" alt="image" src="https://github.com/user-attachments/assets/34e7086a-85b1-4739-971a-b07f3f50f4f4" />
+
+20. Go back to Jenkins' main page and click create _New Item_ and select pipeline
+    <img width="1129" height="325" alt="image" src="https://github.com/user-attachments/assets/9fc59a35-0015-4d4d-bff7-fd2ba616fa67" />
+
+21. Select _GitHub hook trigger for GITScm polling_
+    <img width="960" height="214" alt="image" src="https://github.com/user-attachments/assets/470a0ba6-271c-4d85-a5ac-217a592a8079" />
+
+22. Select _Pipeline script from SCM_, select _Git_ and paste in the repo's url
+    <img width="1336" height="650" alt="image" src="https://github.com/user-attachments/assets/2ea65458-3d7d-4966-bac5-dd1635f3db63" />
+
+23. Create another pipeline for the backend.
+    <img width="1455" height="291" alt="image" src="https://github.com/user-attachments/assets/05ec0789-478f-4713-b2e4-e5fb2a1cc52e" />
+
+24. Go to your github repository and click _Settings_ -> _Weebhooks_ -> _Add Webhook_. Paste the Jenkins url and save webhook. Add webhook for both the frontend and the backend repositories.
+    <img width="964" height="93" alt="image" src="https://github.com/user-attachments/assets/01f0fce9-9648-4d15-9871-56392c5a4d13" />
+
+25. Push something to your github repo. The pipeline will trigger automatically every time there's a change in the SCM.
+    <img width="982" height="307" alt="image" src="https://github.com/user-attachments/assets/c6c3477c-2bd2-4842-bad6-583960962501" />
+
 
