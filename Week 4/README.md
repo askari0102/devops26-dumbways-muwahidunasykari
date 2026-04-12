@@ -61,6 +61,31 @@ Install Docker with this [bash script](https://github.com/askari0102/devops26-du
 
 7. Prepare two servers, one for Appserver and one for CI/CD and Database.
    
-8. In the Appserver, create a new directory for wayshub and make the [docker-compose.yml](https://github.com/askari0102/devops26-dumbways-muwahidunasykari/blob/main/Week%204/Production/docker-compose.yml) file and the [environment](https://github.com/askari0102/devops26-dumbways-muwahidunasykari/blob/main/Week%204/Production/docker-compose.env).
+8. In the Appserver, create a new directory for Wayshub and make the [docker-compose.yml](https://github.com/askari0102/devops26-dumbways-muwahidunasykari/blob/main/Week%204/Production/docker-compose.yml) file and the [environment](https://github.com/askari0102/devops26-dumbways-muwahidunasykari/blob/main/Week%204/Production/docker-compose.env).
 
-9. 
+9. Create .conf file for nginx
+    <img width="816" height="604" alt="image" src="https://github.com/user-attachments/assets/5c9437c6-8301-45af-87a7-a87ccea40d3d" />
+
+10. In the CI/CD server, create a new directory for Wayshub and make the [.yml for the docker compose](https://github.com/askari0102/devops26-dumbways-muwahidunasykari/blob/main/Week%204/Production/CICD/docker-compose.yml) and the [environment file](https://github.com/askari0102/devops26-dumbways-muwahidunasykari/blob/main/Week%204/Production/CICD/docker-compose.env).
+    
+12. Create Dockerfile for Jenkins.
+    <img width="703" height="213" alt="image" src="https://github.com/user-attachments/assets/3c3c3cdd-b400-40c7-a30b-e40f59aad43d" />
+
+13. Create .conf for nginx
+    <img width="719" height="304" alt="image" src="https://github.com/user-attachments/assets/b4ae890a-22e7-4d93-afae-589bb5d4a262" />
+
+14. Run `docker compose up -d --build` and access the jenkins container by running `docker exec -it wayshub_jenkins bash`. Run `docker ps` to make sure jenkins have permission to run docker commands.
+
+15. Open Jenkins by using `Server_IP:8080` in your browser. In terminal run `docker logs wayshub-jenkins`, copy the password and paste it in your browser.
+    <img width="1197" height="335" alt="image" src="https://github.com/user-attachments/assets/58d842b8-d7a1-4d66-bdde-665d7c427238" />
+    <img width="1155" height="468" alt="image" src="https://github.com/user-attachments/assets/2a7064ac-6c66-4486-8584-81c319fa37e0" />
+
+16. Finish the Jenkins setup, make sure "SSH Agent" plugin is installed.
+    <img width="929" height="111" alt="image" src="https://github.com/user-attachments/assets/4d6ff454-f70a-48ba-98e0-8355c0761df4" />
+    <img width="993" height="217" alt="image" src="https://github.com/user-attachments/assets/d949d122-9324-4695-bae7-ff5b13ff3e7d" />
+
+17. Go to _Manage Jekins_ -> _Security_ and change the _Host Key Verification_ to _Accept first connection_ and click save.
+    <img width="1632" height="189" alt="image" src="https://github.com/user-attachments/assets/843a87a4-feea-409a-8ce8-9b3e09771753" />
+
+18. Create a pair of ssh key. Go to _Manage Jekins_ -> _Credentials_ -> _System_ -> _Global_ and choose _SSH username with private key_. Fill in the data and private key and click _Create_. Don't forget to add the public key to the appserver.
+
