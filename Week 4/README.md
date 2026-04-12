@@ -42,8 +42,25 @@ Install Docker with this [bash script](https://github.com/askari0102/devops26-du
 
 **Production**
 
+1. Fork the frontend and backend repositories to your own github. Mine can be found [here(frontend)](https://github.com/askari0102/wayshub-frontend) and [here(backend)](https://github.com/askari0102/wayshub-backend)
+   
+2. Clone both repo to your own computer.
+   <img width="811" height="194" alt="image" src="https://github.com/user-attachments/assets/8f2a16ca-b3bd-4186-8ae9-92d37f7b9491" />
 
+3. Edit the _api.js_ in the frontend and the _config.json_ in the backend so they're connected with one another
+   <img width="802" height="88" alt="image" src="https://github.com/user-attachments/assets/93272cb5-0b07-40f5-a216-d05d6aaa62ec" />
+   <img width="512" height="151" alt="image" src="https://github.com/user-attachments/assets/8bf9a487-9f7b-4b8c-a0ed-63d171e9510c" />
 
-13. Select _GitHub hook trigger for GITScm polling_ and config your pipeline with your repo and the credentials that you created earlier then click _Save_.
-    <img width="1361" height="706" alt="image" src="https://github.com/user-attachments/assets/a841d6d9-989b-47ca-8ab1-68d5233c5bbf" />
+4. Create Dockerfile for the frontend and the backend. The content is the same as  the Dockerfile in Staging.
+   
+5. Create Jenkinsfile for the [frontend](https://github.com/askari0102/wayshub-frontend/blob/main/Jenkinsfile) and the [backend](https://github.com/askari0102/wayshub-backend/blob/main/Jenkinsfile).
 
+6. Commit and push all the changes to github.
+   <img width="944" height="79" alt="image" src="https://github.com/user-attachments/assets/903f7f47-6752-4ecb-a05a-3b9462d00b44" />
+   <img width="944" height="77" alt="image" src="https://github.com/user-attachments/assets/35985db4-7fc4-409d-b041-e4216f0ba2ba" />
+
+7. Prepare two servers, one for Appserver and one for CI/CD and Database.
+   
+8. In the Appserver, create a new directory for wayshub and make the [docker-compose.yml](https://github.com/askari0102/devops26-dumbways-muwahidunasykari/blob/main/Week%204/Production/docker-compose.yml) file and the [environment](https://github.com/askari0102/devops26-dumbways-muwahidunasykari/blob/main/Week%204/Production/docker-compose.env).
+
+9. 
