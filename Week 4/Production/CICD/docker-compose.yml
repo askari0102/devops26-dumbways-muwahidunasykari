@@ -1,0 +1,48 @@
+services:
+  db:
+    container_name: wayshub-db
+    image: mysql:8
+    env_file:
+      - docker-compose.env
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - cicd
+
+  jenkins:
+    build: .
+    container_name: wayshub-jenkins
+    ports:
+    - "8080:8080"
+    - "50000:50000"
+    volumes:
+      - jenkins_home:/var/jenkins_home
+      - /var/run/docker.sock:/var/run/docker.sock
+    networks:
+      - cicd
+    user: jenkins
+    group_add:
+      - "999"
+
+  nginx:
+    container_name: wayshub-webserver-cicd
+    image: nginx:latest
+    ports:
+      - "443:443"
+      - "80:80"
+    volumes:
+      - ./nginx:/etc/nginx/conf.d:ro
+    networks:
+      - cicd
+    depends_on:
+      - db
+      - jenkins
+
+volumes:
+  jenkins_home:
+  db_data:
+
+networks:
+  cicd:
