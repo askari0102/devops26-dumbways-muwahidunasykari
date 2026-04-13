@@ -135,7 +135,7 @@ Install Docker with this [bash script](https://github.com/askari0102/devops26-du
 2. Add nginx.conf to the frontend repo
    <img width="889" height="215" alt="image" src="https://github.com/user-attachments/assets/33185828-2e59-49b9-baef-b0255b028d83" />
 
-3. Change port in default.conf in the Appserver from 3000 to 80.
+3. Change frontend port in default.conf in the Appserver from 3000 to 80.
    <img width="579" height="68" alt="image" src="https://github.com/user-attachments/assets/a627b543-a314-49e6-9aed-8fba5b033cdf" />
 
 4. Change Dockerfile in the backend to the following:
