@@ -128,16 +128,20 @@ Install Docker with this [bash script](https://github.com/askari0102/devops26-du
 ----
 **Multistage Docker Build: Optimize Image Size and Additonal Security for Production**
 
-1. Change Dockerfile to the following:
+1. Change Dockerfile in the frontend to the following:
+   
    <img width="650" height="330" alt="image" src="https://github.com/user-attachments/assets/10a4d6ea-0acb-4523-83bf-9fa26987c472" />
 
-2. Add nginx.conf to root repo
+2. Add nginx.conf to the frontend repo
    <img width="889" height="215" alt="image" src="https://github.com/user-attachments/assets/33185828-2e59-49b9-baef-b0255b028d83" />
 
 3. Change port in default.conf in the Appserver from 3000 to 80.
    <img width="579" height="68" alt="image" src="https://github.com/user-attachments/assets/a627b543-a314-49e6-9aed-8fba5b033cdf" />
 
-4. Create a new file called _.dockerignore_ and with the following content:
+4. Change Dockerfile in the backend to the following:
+   <img width="699" height="277" alt="image" src="https://github.com/user-attachments/assets/1b084405-44cb-4bef-841f-8cd324c834a5" />
+
+5. Create a new file called _.dockerignore_ in both backend and frontend with the following content:
    <img width="590" height="161" alt="image" src="https://github.com/user-attachments/assets/a156fc13-dea0-43a9-a2bf-be571d464f52" />
 
 
