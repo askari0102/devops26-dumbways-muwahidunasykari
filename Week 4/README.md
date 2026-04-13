@@ -183,7 +183,7 @@ sudo certbot certonly \
 
 **Auto renew cert with Cron**
 
-Can't. With wildcard cert you need Cloudflare API to auto renew the TXT record. Without it you need to manually add TXT record every 90 days, defeats the whole purpose of automation.
+Can't. With wildcard cert you need Cloudflare API to auto renew the TXT record. Without it you need to manually add TXT record every 90 days, defeats the whole point of automation.
 
 **Adding "test" stage to frontend and backend**
 
