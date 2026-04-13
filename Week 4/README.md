@@ -126,6 +126,42 @@ Install Docker with this [bash script](https://github.com/askari0102/devops26-du
 **Extra**
 
 ----
+**Upgrade to HTTPS**
+
+1. Go to the Appserver and run the command below
+```
+sudo certbot certonly \
+  --manual \
+  --preferred-challenges dns \
+  -d "kelompok2.studentdumbways.my.id" \
+  -d "*.kelompok2.studentdumbways.my.id" \
+  --email email@kamu.com \
+  --agree-tos
+```
+
+2. Go to Cloudflare and deploy  the dns txt record, then press enter.
+   <img width="987" height="271" alt="image" src="https://github.com/user-attachments/assets/bd65656a-9620-4bb6-8907-b114dbcc9f88" />
+   <img width="1385" height="390" alt="image" src="https://github.com/user-attachments/assets/ada33c6f-b52d-40fe-ae3a-b3eaf1339915" />
+
+3. You will be asked to add another one. Press enter again. The cert is ready
+   <img width="1402" height="403" alt="image" src="https://github.com/user-attachments/assets/90a5f658-5007-4a24-a05d-84470d2943d3" />
+   <img width="1274" height="130" alt="image" src="https://github.com/user-attachments/assets/9553aed2-9a51-4cf0-8b23-0dd4b392dd43" />
+
+4. Edit docker compose, add port 443 and mount cert to nginx
+   <img width="1057" height="303" alt="image" src="https://github.com/user-attachments/assets/be382578-f6a9-42db-8b90-205ef30918ed" />
+ 
+5. Edit the default.conf and add cert and 443.
+   <img width="1105" height="156" alt="image" src="https://github.com/user-attachments/assets/1fc56a17-33a1-44d7-a793-7061a89f23c0" />
+
+6. Connection is now secure. 
+   <img width="1308" height="301" alt="image" src="https://github.com/user-attachments/assets/bd378ed8-d2fb-46b5-9967-c61a16c29153" />
+
+7. Do the same steps on the CI/CD server as well, or manually move the certs to the CI/CD server. Change the url from within Jenkins from http to https to access Jenkins with https.
+   <img width="1919" height="591" alt="image" src="https://github.com/user-attachments/assets/ad05600d-421b-4202-9903-0bac8284dafe" />
+   
+8. Don't forget to change the url in api.js in the front to https.
+   <img width="1260" height="153" alt="image" src="https://github.com/user-attachments/assets/ceeb9a77-0aeb-4755-958f-69f1163110e7" />
+
 **Adding "test" stage to frontend and backend**
 
 1. The frontend already have react library and script so you only have to add new file for testing.
@@ -197,7 +233,7 @@ Install Docker with this [bash script](https://github.com/askari0102/devops26-du
    <img width="877" height="411" alt="image" src="https://github.com/user-attachments/assets/cf54ec6e-0751-4ec7-a568-b693e8eed11b" />
 
 2. Edit the .gitlab-ci.yml and add after script
-   <img width="1174" height="649" alt="image" src="https://github.com/user-attachments/assets/c25706a6-46a2-440b-bfb3-e2f9b9993ba5" />
+   <img width="1253" height="666" alt="image" src="https://github.com/user-attachments/assets/d5616d8b-96d5-429c-8449-c26df4be6b39" />
 
 3. Add a new variable for the webhook
    <img width="716" height="92" alt="image" src="https://github.com/user-attachments/assets/8450e1d3-e917-4667-a627-f5aa7d33462d" />
