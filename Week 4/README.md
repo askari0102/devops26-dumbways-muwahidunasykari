@@ -181,6 +181,10 @@ sudo certbot certonly \
 8. Don't forget to change the url in api.js in the front to https.
    <img width="1260" height="153" alt="image" src="https://github.com/user-attachments/assets/ceeb9a77-0aeb-4755-958f-69f1163110e7" />
 
+**Auto renew cert with Cron**
+
+Can't. With wildcard cert you need Cloudflare API to auto renew the TXT record. Without it you need to manually add TXT record every 90 days, defeats the whole purpose of automation.
+
 **Adding "test" stage to frontend and backend**
 
 1. The frontend already have react library and script so you only have to add new file for testing.
