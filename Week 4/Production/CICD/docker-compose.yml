@@ -28,7 +28,7 @@ services:
 
   nginx:
     container_name: wayshub-webserver-cicd
-    image: nginx:latest
+    image: nginx:stable-alpine
     ports:
       - "443:443"
       - "80:80"
