@@ -72,7 +72,7 @@ Install Docker with this [bash script](https://github.com/askari0102/devops26-du
     
 12. Create Dockerfile for Jenkins.
     
-    <img width="703" height="213" alt="image" src="https://github.com/user-attachments/assets/3c3c3cdd-b400-40c7-a30b-e40f59aad43d" />
+    <img width="924" height="120" alt="image" src="https://github.com/user-attachments/assets/0ad2022e-ac4d-45c1-81e4-ff36bb2328f0" />
 
 14. Create .conf for nginx
     
