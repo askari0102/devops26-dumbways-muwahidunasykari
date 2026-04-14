@@ -129,8 +129,7 @@ Install Docker with this [bash script](https://github.com/askari0102/devops26-du
 **Multistage Docker Build: Optimize Image Size and Additonal Security for Production**
 
 1. Change Dockerfile in the frontend to the following:
-   
-   <img width="650" height="330" alt="image" src="https://github.com/user-attachments/assets/10a4d6ea-0acb-4523-83bf-9fa26987c472" />
+   <img width="1199" height="819" alt="image" src="https://github.com/user-attachments/assets/05003687-9313-4873-8b0e-d20740882f3c" />
 
 2. Add nginx.conf to the frontend repo
    <img width="889" height="215" alt="image" src="https://github.com/user-attachments/assets/33185828-2e59-49b9-baef-b0255b028d83" />
@@ -139,11 +138,12 @@ Install Docker with this [bash script](https://github.com/askari0102/devops26-du
    <img width="579" height="68" alt="image" src="https://github.com/user-attachments/assets/a627b543-a314-49e6-9aed-8fba5b033cdf" />
 
 4. Change Dockerfile in the backend to the following:
-   <img width="1005" height="424" alt="image" src="https://github.com/user-attachments/assets/3b4fa19c-62f0-418c-8954-317d7380da5f" />
+   <img width="1028" height="566" alt="image" src="https://github.com/user-attachments/assets/e574029c-cd34-459c-992f-a2362355dd36" />
 
 5. Create a new file called .dockerignore in both backend and frontend directories, and list all unnecessary or sensitive files to keep your images small and secure.
    <img width="1201" height="235" alt="image" src="https://github.com/user-attachments/assets/7db9ac0d-11a2-46cc-a827-d647b528a1c5" />
 
+6. Image sizes are down to small sizes.
 
 
 **Upgrade to HTTPS**
