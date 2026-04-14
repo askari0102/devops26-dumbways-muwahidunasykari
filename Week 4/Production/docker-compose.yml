@@ -14,18 +14,20 @@ services:
       - docker-compose.env
     environment:
       - NODE_ENV=production
-    command: sh -c "npx sequelize db:migrate && node index.js"
+    command: sh -c "./node_modules/.bin/sequelize db:migrate && node index.js"
     networks:
       - kelompok2
 
   nginx:
-    image: nginx:latest
+    image: nginx:stable-alpine
     ports:
       - "80:80"
+      - "443:443"
     networks:
       - kelompok2
     volumes:
       - ./nginx:/etc/nginx/conf.d:ro
+      - /etc/letsencrypt:/etc/letsencrypt:ro
     depends_on:
       - frontend
       - backend
