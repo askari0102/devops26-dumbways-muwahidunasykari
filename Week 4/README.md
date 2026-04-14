@@ -139,7 +139,7 @@ Install Docker with this [bash script](https://github.com/askari0102/devops26-du
    <img width="579" height="68" alt="image" src="https://github.com/user-attachments/assets/a627b543-a314-49e6-9aed-8fba5b033cdf" />
 
 4. Change Dockerfile in the backend to the following:
-   <img width="699" height="277" alt="image" src="https://github.com/user-attachments/assets/1b084405-44cb-4bef-841f-8cd324c834a5" />
+   <img width="1005" height="424" alt="image" src="https://github.com/user-attachments/assets/3b4fa19c-62f0-418c-8954-317d7380da5f" />
 
 5. Create a new file called .dockerignore in both backend and frontend directories, and list all unnecessary or sensitive files to keep your images small and secure.
    <img width="1201" height="235" alt="image" src="https://github.com/user-attachments/assets/7db9ac0d-11a2-46cc-a827-d647b528a1c5" />
