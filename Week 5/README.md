@@ -29,7 +29,6 @@ sudo ./aws/install
 5. Setup credentials by running `aws configure`
 
 6. Verify credentials by running `aws sts get-caller-identity`.
-   <img width="630" height="132" alt="image" src="https://github.com/user-attachments/assets/f36baef5-3820-4dc2-b57c-14ba2ee3a8fa" />
 
 7. Create new directory for terraform and move to the directory.
    <img width="544" height="30" alt="image" src="https://github.com/user-attachments/assets/eda83a0a-25e5-4fae-a2f5-01587301fa42" />
