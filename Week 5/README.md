@@ -40,8 +40,8 @@ sudo ./aws/install
 terraform {
   required_providers {
     aws = {
-      source  = "hashicorp/aws"
-      version = "~> 5.0"
+        source = "hashicorp/aws"
+        version = "~> 5.0"
     }
   }
 }
@@ -51,11 +51,26 @@ provider "aws" {
 }
 
 resource "aws_instance" "server" {
-  ami           = "ami-0672fd5b9f0bdbefd"  # Ubuntu 22.04 Singapore
-  instance_type = "t2.micro"
+    ami = "ami-0672fd5b9f0bdbefd"
+    instance_type = "t3.small"
 
-  tags = {
-    Name = "terraform-server"
-  }
+    tags = {
+        Name = "terraform-server"
+    }
 }
 ```
+
+9. Run `terraform init` to initialize provider.
+   <img width="750" height="444" alt="image" src="https://github.com/user-attachments/assets/45c18873-fe11-4b96-b6a4-f1fb6cc34adb" />
+
+10. Run `terraform plan -out=tfplan` to preview the plan for the infrastructures that will be created and save the plan to a new file
+    <img width="930" height="220" alt="image" src="https://github.com/user-attachments/assets/3e8a012c-4e2e-455e-a8b0-5565ba86c475" />
+    <img width="811" height="188" alt="image" src="https://github.com/user-attachments/assets/c1572b3c-79bd-4812-a97c-dca259be1ea5" />
+    
+ 11. Run `terraform apply "tfplan"` to apply the saved plan. This will execute the actions proposed in the plan file and create the infrastructures.
+     <img width="704" height="144" alt="image" src="https://github.com/user-attachments/assets/e83d7b72-46a0-4418-9d43-e4710a595fb0" />
+
+12. Check your AWS. The created instances should be up and running
+    <img width="1426" height="97" alt="image" src="https://github.com/user-attachments/assets/5f44b35f-441b-4110-8e6d-d118d4adcc00" />
+
+    
