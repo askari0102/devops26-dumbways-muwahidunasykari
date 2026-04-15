@@ -68,9 +68,10 @@ resource "aws_instance" "server" {
     <img width="811" height="188" alt="image" src="https://github.com/user-attachments/assets/c1572b3c-79bd-4812-a97c-dca259be1ea5" />
     
  11. Run `terraform apply "tfplan"` to apply the saved plan. This will execute the actions proposed in the plan file and create the infrastructures.
+     
      <img width="704" height="144" alt="image" src="https://github.com/user-attachments/assets/e83d7b72-46a0-4418-9d43-e4710a595fb0" />
 
-12. Check your AWS. The created instances should be up and running
+13. Check your AWS. The created instances should be up and running
     <img width="1426" height="97" alt="image" src="https://github.com/user-attachments/assets/5f44b35f-441b-4110-8e6d-d118d4adcc00" />
 
     
