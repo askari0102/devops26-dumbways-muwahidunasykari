@@ -28,10 +28,10 @@ sudo ./aws/install
 
 5. Setup credentials by running `aws configure`
 ```
-* **AWS Access Key ID**: `(Enter your Access Key ID)`
-* **AWS Secret Access Key**: `(Enter your Secret Access Key)`
-* **Default region name**: `ap-southeast-1` (or your preferred region)
-* **Default output format**: `json` or just press enter
+**AWS Access Key ID** : `(Enter your Access Key ID)`
+**AWS Secret Access Key** : `(Enter your Secret Access Key)`
+**Default region name** : `ap-southeast-1` (or your preferred region)
+**Default output format** : `json` or just press enter
 ```
 
 7. Verify credentials by running `aws sts get-caller-identity`.
