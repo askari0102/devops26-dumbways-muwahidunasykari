@@ -43,14 +43,17 @@ Default output format: json (or just press enter)
 9. This repository contains Terraform configurations to deploy two Ubuntu 22.04 LTS instances:
 - Gateway Server: Acts as an Nginx Reverse Proxy and Database Server.
 - App Server: Acts as the application host (Frontend & Backend).
+```
+<pre>
 .
-├── [provider.tf](https://github.com/askari0102/devops26-dumbways-muwahidunasykari/blob/main/Week%205/provider.tf)      # AWS Provider configuration
-├── [vpc.tf](https://github.com/askari0102/devops26-dumbways-muwahidunasykari/blob/main/Week%205/vpc.tf)           # VPC, Subnet, Internet Gateway, and Routing 
-├── [sg.tf](https://github.com/askari0102/devops26-dumbways-muwahidunasykari/blob/main/Week%205/sg.tf)            # Security Group rules 
-├── [ssh.tf](https://github.com/askari0102/devops26-dumbways-muwahidunasykari/blob/main/Week%205/ssh.tf)           # Automated SSH Key Pair generation 
-├── [ec2.tf ](https://github.com/askari0102/devops26-dumbways-muwahidunasykari/blob/main/Week%205/ec2.tf)          # EC2 Instance definitions and Elastic IP associations
-├── [outputs.tf](https://github.com/askari0102/devops26-dumbways-muwahidunasykari/blob/main/Week%205/outputs.tf)       # Public IP outputs
-└── .gitignore       # Protection for sensitive files (*.pem, .tfstate)
+├── 📄 <a href="./provider.tf"><b>provider.tf</b></a>      # AWS Provider configuration and versioning
+├── 🌐 <a href="./vpc.tf"><b>vpc.tf</b></a>           # VPC, Subnet, IGW, and Routing definitions
+├── 🛡️ <a href="./sg.tf"><b>sg.tf</b></a>            # Security Group rules (Stateful Firewall)
+├── 🔑 <a href="./ssh.tf"><b>ssh.tf</b></a>           # Automated SSH Key Pair generation (TLS)
+├── 🖥️ <a href="./ec2.tf"><b>ec2.tf</b></a>           # EC2 Instance and Elastic IP associations
+└── 📤 <a href="./outputs.tf"><b>outputs.tf</b></a>       # Public IP outputs for administrative access
+</pre>
+```
 
 10. Deploy
 ```
@@ -67,8 +70,10 @@ terraform apply "tfplan"
 <img width="969" height="322" alt="image" src="https://github.com/user-attachments/assets/3538095c-3d7b-4910-951f-9b55b8c84f13" />
 <img width="944" height="208" alt="image" src="https://github.com/user-attachments/assets/10d34988-98d4-4134-8006-88f97d31c1c5" />
 
+
 11. Check your AWS. The created instances should be up and running
 <img width="1013" height="227" alt="image" src="https://github.com/user-attachments/assets/5730a7f0-62d0-426b-bd84-c72891f71122" />
+
 
 12. Accessing the Servers
 ```
