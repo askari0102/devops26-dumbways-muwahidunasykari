@@ -1,3 +1,4 @@
+**Terraform**
 1. Install Terraform in your local computer. I'm using WSL (Ubuntu).
 ```
 sudo apt-get update && sudo apt-get install -y gnupg software-properties-common
@@ -86,8 +87,29 @@ ssh -i deployer-key.pem ubuntu@<APP_SERVER_PUBLIC_IP>
 <img width="970" height="338" alt="image" src="https://github.com/user-attachments/assets/ae90cd17-4b7c-4707-b65e-ef875cd215ea" />
 <img width="966" height="337" alt="image" src="https://github.com/user-attachments/assets/eea79b81-24ca-4247-aa76-d1cacc2c514a" />
 
+
 13. Preview and execute infrastructure destruction with `terraform destroy`.
 <img width="965" height="332" alt="image" src="https://github.com/user-attachments/assets/13e89742-dfa5-47b2-b999-b5f6d4b4d8d2" />
 <img width="956" height="37" alt="image" src="https://github.com/user-attachments/assets/5f159a95-52da-4398-81e0-35903584ca5f" />
 
+**Ansible**
 
+1. Install pipx
+```
+sudo apt update
+sudo apt install pipx
+pipx ensurepath
+```
+<img width="759" height="40" alt="image" src="https://github.com/user-attachments/assets/5f4bbd2a-97e3-4e7a-8f6c-16ddb7615104" />
+
+2. Install Ansible with pipx
+```
+pipx install --include-deps ansible # Run this if you want to install the full Ansible package
+pipx install ansible-core           # Run this if you want the minimal ansible-core package
+```
+<img width="672" height="44" alt="image" src="https://github.com/user-attachments/assets/0d62df09-be0e-439b-804f-cdb7662870ed" />
+
+3. Create a new directory for the ansible configs and move into that directory
+<img width="670" height="43" alt="image" src="https://github.com/user-attachments/assets/6cc47868-5566-4d0d-bfa1-5e3189ee23b6" />
+
+4. 
