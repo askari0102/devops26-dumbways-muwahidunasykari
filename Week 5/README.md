@@ -43,17 +43,15 @@ Default output format: json (or just press enter)
 9. This repository contains Terraform configurations to deploy two Ubuntu 22.04 LTS instances:
 - Gateway Server: Acts as an Nginx Reverse Proxy and Database Server.
 - App Server: Acts as the application host (Frontend & Backend).
-```
 <pre>
 .
-├── 📄 <a href="./provider.tf"><b>provider.tf</b></a>      # AWS Provider configuration and versioning
-├── 🌐 <a href="./vpc.tf"><b>vpc.tf</b></a>           # VPC, Subnet, IGW, and Routing definitions
-├── 🛡️ <a href="./sg.tf"><b>sg.tf</b></a>            # Security Group rules (Stateful Firewall)
-├── 🔑 <a href="./ssh.tf"><b>ssh.tf</b></a>           # Automated SSH Key Pair generation (TLS)
-├── 🖥️ <a href="./ec2.tf"><b>ec2.tf</b></a>           # EC2 Instance and Elastic IP associations
-└── 📤 <a href="./outputs.tf"><b>outputs.tf</b></a>       # Public IP outputs for administrative access
+├── 📄 <a href="./provider.tf"><b>provider.tf</b></a>      # AWS Provider configuration
+├── 🌐 <a href="./vpc.tf"><b>vpc.tf</b></a>           # VPC, Subnet, IGW, and Routing
+├── 🛡️ <a href="./sg.tf"><b>sg.tf</b></a>            # Security Group rules 
+├── 🔑 <a href="./ssh.tf"><b>ssh.tf</b></a>           # Automated SSH Key Pair generation
+├── 🖥️ <a href="./ec2.tf"><b>ec2.tf</b></a>           # EC2 Instance and Elastic IP 
+└── 📤 <a href="./outputs.tf"><b>outputs.tf</b></a>       # Public IP outputs for ssh access
 </pre>
-```
 
 10. Deploy
 ```
