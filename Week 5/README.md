@@ -65,9 +65,8 @@ terraform plan -out=tfplan
 terraform apply "tfplan"
 ```
 <img width="967" height="139" alt="image" src="https://github.com/user-attachments/assets/e4c409b0-9357-4811-abde-27bad5ebe8f7" />
-<img width="969" height="322" alt="image" src="https://github.com/user-attachments/assets/3538095c-3d7b-4910-951f-9b55b8c84f13" />
-<img width="944" height="208" alt="image" src="https://github.com/user-attachments/assets/10d34988-98d4-4134-8006-88f97d31c1c5" />
-
+<img width="967" height="315" alt="image" src="https://github.com/user-attachments/assets/bd156f6a-ec6f-4499-baab-5aee35ca3fe4" />
+<img width="960" height="306" alt="image" src="https://github.com/user-attachments/assets/c159fc7d-10a1-486f-b13a-29be338289ec" />
 
 11. Check your AWS. The created instances should be up and running
 <img width="1013" height="227" alt="image" src="https://github.com/user-attachments/assets/5730a7f0-62d0-426b-bd84-c72891f71122" />
@@ -84,7 +83,11 @@ ssh -i deployer-key.pem ubuntu@<GATEWAY_PUBLIC_IP>
 # SSH into the App Server
 ssh -i deployer-key.pem ubuntu@<APP_SERVER_PUBLIC_IP>
 ```
-<img width="967" height="336" alt="image" src="https://github.com/user-attachments/assets/993826d5-7432-4ef2-8087-26e3ba63c0c8" />
-<img width="969" height="339" alt="image" src="https://github.com/user-attachments/assets/a9566fd0-e793-48c0-9fd0-6d076592a1c0" />
+<img width="970" height="338" alt="image" src="https://github.com/user-attachments/assets/ae90cd17-4b7c-4707-b65e-ef875cd215ea" />
+<img width="966" height="337" alt="image" src="https://github.com/user-attachments/assets/eea79b81-24ca-4247-aa76-d1cacc2c514a" />
 
-    
+13. Preview and execute infrastructure destruction with `terraform destroy`.
+<img width="965" height="332" alt="image" src="https://github.com/user-attachments/assets/13e89742-dfa5-47b2-b999-b5f6d4b4d8d2" />
+<img width="956" height="37" alt="image" src="https://github.com/user-attachments/assets/5f159a95-52da-4398-81e0-35903584ca5f" />
+
+
