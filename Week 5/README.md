@@ -45,7 +45,7 @@ Default output format: json (or just press enter)
 - Gateway Server: Acts as an Nginx Reverse Proxy and Database Server.
 - App Server: Acts as the application host (Frontend & Backend).
 <pre>
-.
+terraform/
 ├── 📄 <a href="./provider.tf"><b>provider.tf</b></a>      # AWS Provider configuration
 ├── 🌐 <a href="./vpc.tf"><b>vpc.tf</b></a>           # VPC, Subnet, IGW, and Routing
 ├── 🛡️ <a href="./sg.tf"><b>sg.tf</b></a>            # Security Group rules 
@@ -112,4 +112,14 @@ pipx install ansible-core           # Run this if you want the minimal ansible-c
 3. Create a new directory for the ansible configs and move into that directory
 <img width="670" height="43" alt="image" src="https://github.com/user-attachments/assets/6cc47868-5566-4d0d-bfa1-5e3189ee23b6" />
 
-4. 
+4. This repository contains Ansible configurations to deploy frontend and backend to Appserver and setup webserver and db to Gateway Server.
+<pre>
+ansible/
+├── ⚙️  ansible.cfg         # Ansible configuration (inventory path, SSH key, remote user)
+├── 📋 site.yaml            # Import playbooks
+├── 📦 appserver.yaml       # Deploy frontend & backend containers via Docker
+├── 🌐 gateway.yaml         # Setup Nginx + MySQL database
+├── 📂 group_vars/
+│   └── 🔧 all              # Global variables (image names, ports, DB credentials)
+└── 📄 Inventory            # List of target servers (appserver & gateway groups)
+</pre>
