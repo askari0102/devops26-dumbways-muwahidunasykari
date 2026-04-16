@@ -40,29 +40,18 @@ Default output format: json (or just press enter)
    <img width="544" height="30" alt="image" src="https://github.com/user-attachments/assets/eda83a0a-25e5-4fae-a2f5-01587301fa42" />
    <img width="675" height="47" alt="image" src="https://github.com/user-attachments/assets/8c4e3526-d773-4ee4-83c4-1bccb5e56afa" />
 
-9. Create a new file called main.tf
+9. This repository contains Terraform configurations to deploy two Ubuntu 22.04 LTS instances:
 ```
-terraform {
-  required_providers {
-    aws = {
-        source = "hashicorp/aws"
-        version = "~> 5.0"
-    }
-  }
-}
-
-provider "aws" {
-  region = "ap-southeast-1"
-}
-
-resource "aws_instance" "server" {
-    ami = "ami-0672fd5b9f0bdbefd"
-    instance_type = "t3.small"
-
-    tags = {
-        Name = "terraform-server"
-    }
-}
+1. Gateway Server: Acts as an Nginx Reverse Proxy and Database Server.
+2. App Server: Acts as the application host (Frontend & Backend).
+.
+├── provider.tf      # AWS Provider configuration
+├── vpc.tf           # VPC, Subnet, Internet Gateway, and Routing 
+├── sg.tf            # Security Group rules 
+├── ssh.tf           # Automated SSH Key Pair generation 
+├── ec2.tf           # EC2 Instance definitions and Elastic IP associations
+├── outputs.tf       # Public IP outputs for administrative access
+└── .gitignore       # Protection for sensitive files (*.pem, .tfstate)
 ```
 
 9. Run `terraform init` to initialize provider.
