@@ -68,6 +68,20 @@ terraform apply "tfplan"
 <img width="944" height="208" alt="image" src="https://github.com/user-attachments/assets/10d34988-98d4-4134-8006-88f97d31c1c5" />
 
 11. Check your AWS. The created instances should be up and running
-<img width="1426" height="97" alt="image" src="https://github.com/user-attachments/assets/5f44b35f-441b-4110-8e6d-d118d4adcc00" />
+<img width="1013" height="227" alt="image" src="https://github.com/user-attachments/assets/5730a7f0-62d0-426b-bd84-c72891f71122" />
+
+12. Accessing the Servers
+```
+# Set correct file permissions
+chmod 400 deployer-key.pem
+
+# SSH into the Gateway Server
+ssh -i deployer-key.pem ubuntu@<GATEWAY_PUBLIC_IP>
+
+# SSH into the App Server
+ssh -i deployer-key.pem ubuntu@<APP_SERVER_PUBLIC_IP>
+```
+<img width="967" height="336" alt="image" src="https://github.com/user-attachments/assets/993826d5-7432-4ef2-8087-26e3ba63c0c8" />
+<img width="969" height="339" alt="image" src="https://github.com/user-attachments/assets/a9566fd0-e793-48c0-9fd0-6d076592a1c0" />
 
     
