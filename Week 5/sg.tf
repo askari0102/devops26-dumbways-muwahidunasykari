@@ -25,7 +25,7 @@ resource "aws_security_group_rule" "allow_ssh_inbound" {
   from_port         = 22
   to_port           = 22
   protocol          = "tcp"
-  cidr_blocks       = ["180.252.91.0/24"] # IP Laptop
+  cidr_blocks       = ["X.X.X.X/24"] # IP Laptop
   security_group_id = aws_security_group.sg_gateway_db.id
 }
 # Inbound Appserver SSH
@@ -34,7 +34,7 @@ resource "aws_security_group_rule" "allow_ssh_app_from_laptop" {
   from_port         = 22
   to_port           = 22
   protocol          = "tcp"
-  cidr_blocks       = ["180.252.91.0/24"] # IP Laptop 
+  cidr_blocks       = ["X.X.X.X/24"] # IP Laptop 
   security_group_id = aws_security_group.sg_app.id
 }
 # Integrasi 
