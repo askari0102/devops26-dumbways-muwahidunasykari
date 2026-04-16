@@ -27,14 +27,20 @@ sudo ./aws/install
    <img width="1476" height="112" alt="image" src="https://github.com/user-attachments/assets/9512d5fe-7ea1-4275-bf99-fcb29257b00e" />
 
 5. Setup credentials by running `aws configure`
+```
+* **AWS Access Key ID**: `(Enter your Access Key ID)`
+* **AWS Secret Access Key**: `(Enter your Secret Access Key)`
+* **Default region name**: `ap-southeast-1` (or your preferred region)
+* **Default output format**: `json` or just press enter
+```
 
-6. Verify credentials by running `aws sts get-caller-identity`.
+7. Verify credentials by running `aws sts get-caller-identity`.
 
-7. Create new directory for terraform and move to the directory.
+8. Create new directory for terraform and move to the directory.
    <img width="544" height="30" alt="image" src="https://github.com/user-attachments/assets/eda83a0a-25e5-4fae-a2f5-01587301fa42" />
    <img width="675" height="47" alt="image" src="https://github.com/user-attachments/assets/8c4e3526-d773-4ee4-83c4-1bccb5e56afa" />
 
-8. Create a new file called main.tf
+9. Create a new file called main.tf
 ```
 terraform {
   required_providers {
