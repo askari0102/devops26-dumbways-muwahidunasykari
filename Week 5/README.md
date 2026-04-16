@@ -112,7 +112,7 @@ pipx install ansible-core           # Run this if you want the minimal ansible-c
 3. Create a new directory for the ansible configs and move into that directory
 <img width="670" height="43" alt="image" src="https://github.com/user-attachments/assets/6cc47868-5566-4d0d-bfa1-5e3189ee23b6" />
 
-4. This repository contains Ansible configurations to deploy frontend and backend to Appserver and setup webserver and db to Gateway Server.
+4. This repository contains Ansible configurations to deploy frontend and backend to Appserver and setup webserver and db in Gateway Server.
 <pre>
 ansible/
 ├── ⚙️  ansible.cfg         # Ansible configuration (inventory path, SSH key, remote user)
