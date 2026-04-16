@@ -45,12 +45,12 @@ Default output format: json (or just press enter)
 1. Gateway Server: Acts as an Nginx Reverse Proxy and Database Server.
 2. App Server: Acts as the application host (Frontend & Backend).
 .
-├── provider.tf      # AWS Provider configuration
-├── vpc.tf           # VPC, Subnet, Internet Gateway, and Routing 
-├── sg.tf            # Security Group rules 
-├── ssh.tf           # Automated SSH Key Pair generation 
-├── ec2.tf           # EC2 Instance definitions and Elastic IP associations
-├── outputs.tf       # Public IP outputs for administrative access
+├── [provider.tf](https://github.com/askari0102/devops26-dumbways-muwahidunasykari/blob/main/Week%205/provider.tf)      # AWS Provider configuration
+├── [vpc.tf](https://github.com/askari0102/devops26-dumbways-muwahidunasykari/blob/main/Week%205/vpc.tf)           # VPC, Subnet, Internet Gateway, and Routing 
+├── [sg.tf](https://github.com/askari0102/devops26-dumbways-muwahidunasykari/blob/main/Week%205/sg.tf)            # Security Group rules 
+├── [ssh.tf](https://github.com/askari0102/devops26-dumbways-muwahidunasykari/blob/main/Week%205/ssh.tf)           # Automated SSH Key Pair generation 
+├── [ec2.tf ](https://github.com/askari0102/devops26-dumbways-muwahidunasykari/blob/main/Week%205/ec2.tf)          # EC2 Instance definitions and Elastic IP associations
+├── [outputs.tf](https://github.com/askari0102/devops26-dumbways-muwahidunasykari/blob/main/Week%205/outputs.tf)       # Public IP outputs
 └── .gitignore       # Protection for sensitive files (*.pem, .tfstate)
 ```
 
