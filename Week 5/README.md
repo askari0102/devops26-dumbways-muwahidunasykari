@@ -116,18 +116,26 @@ pipx install ansible-core           # Run this if you want the minimal ansible-c
 4. This repository contains Ansible configurations to deploy frontend and backend to Appserver and setup webserver and db in Gateway Server.
 <pre>
 ansible/
-├── ⚙️  ansible.cfg         # Ansible configuration (inventory path, SSH key, remote user)
-├── 📋 site.yaml            # Import playbooks
-├── 📦 appserver.yaml       # Deploy frontend & backend containers via Docker
-├── 🌐 gateway.yaml         # Setup Nginx + MySQL database
-├── 📂 group_vars/
-│   └── 🔧 all              # Global variables (image names, ports, DB credentials)
-├── 📄 Inventory            # List of target servers (appserver & gateway groups). Created automatically from Terraform.
-└── .vault_pass              # Key for encrypting passwords (for db)
+├── ⚙️ <a href="./ansible/ansible.cfg">ansible.cfg</a>          # Ansible configuration 
+├── 📋 <a href="./ansible/main.yaml">main.yaml</a>            # Import playbooks
+├── 📦 <a href="./ansible/setup_app.yaml">setup_app.yaml</a>       # Setup App Server
+├── 🌐 <a href="./ansible/setup_gateway.yaml">setup_gateway.yaml</a>   # Setup Gateway Server
+├── 📂 <b>group_vars/</b>
+│   └── 🔧 <a href="./ansible/group_vars/all">all</a>              # Global variables 
+├── 📂 <b>templates/</b>
+│   └── 📄 <a href="./ansible/templates/wayshub.j2">wayshub.j2</a>       # Dynamic nginx template
+├── 📄 <a href="./ansible/Inventory">Inventory</a>            # List of target servers. Created automatically from Terraform.
+└── 🔑 <a href="./ansible/.vault_pass">.vault_pass</a>          # Key for encrypting passwords (for db)
 </pre>
 To encrypt your passwords, run the commands below. Copy the results to group_vars/all
 ```
 python3 -c 'import crypt; print(crypt.crypt("passworduser", crypt.mksalt(crypt.METHOD_SHA256)))' # For user's password
 ansible-vault encrypt_string 'password_db_asli' --vault-id default@.vault_pass --name 'db_password' # For db's password. If you get an error then remove the `vault_password_file = .vault_pass` line from the ansible.cfg first, then add it again after you ran the command.
 ```
-5. 
+5. Create DNS records on Cloudflare 
+<img width="1409" height="155" alt="image" src="https://github.com/user-attachments/assets/c2c84064-3a0d-4fbc-a708-6a47dabdb91a" />
+
+6. Run Ansible with `ansible-playbook main.yaml`
+<img width="1361" height="392" alt="image" src="https://github.com/user-attachments/assets/60ce2adb-9dd4-4f7e-86bf-9cda6fbf9f3c" />
+
+7. SSH to the Appserver and Gateway Server. Make sure everything is running correctly.
