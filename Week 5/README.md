@@ -46,13 +46,13 @@ Default output format: json (or just press enter)
 - App Server: Acts as the application host (Frontend & Backend).
 <pre>
 terraform/
-├── 📄 <a href="./Terraform/provider.tf"><b>provider.tf</b></a>        # AWS Provider configuration
-├── 🌐 <a href="./Terraform/vpc.tf"><b>vpc.tf</b></a>             # VPC, Subnet, IGW, and Routing
-├── 🛡️ <a href="./Terraform/sg.tf"><b>sg.tf</b></a>              # Security Group rules 
-├── 🔑 <a href="./Terraform/ssh.tf"><b>ssh.tf</b></a>             # Automated SSH Key Pair generation
-├── 🖥️ <a href="./Terraform/ec2.tf"><b>ec2.tf</b></a>             # EC2 Instance and Elastic IP 
+├── 📄 <a href="./Terraform/provider.tf"><b>provider.tf</b></a>          # AWS Provider configuration
+├── 🌐 <a href="./Terraform/vpc.tf"><b>vpc.tf</b></a>               # VPC, Subnet, IGW, and Routing
+├── 🛡️ <a href="./Terraform/sg.tf"><b>sg.tf</b></a>                # Security Group rules 
+├── 🔑 <a href="./Terraform/ssh.tf"><b>ssh.tf</b></a>               # Automated SSH Key Pair generation
+├── 🖥️ <a href="./Terraform/ec2.tf"><b>ec2.tf</b></a>               # EC2 Instance and Elastic IP 
 ├── 📄 <a href="./Terraform/ansible-inventory.tf"><b>ansible-inventory.tf</b></a>  # Automatically create Inventory file for Ansible
-└── 📤 <a href="./Terraform/outputs.tf"><b>outputs.tf</b></a>       # Public IP outputs for ssh access
+└── 📤 <a href="./Terraform/outputs.tf"><b>outputs.tf</b></a>           # Public IP outputs for ssh access
 </pre>
 
 10. Deploy
