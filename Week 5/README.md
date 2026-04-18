@@ -76,14 +76,11 @@ terraform apply "tfplan"
 
 12. Accessing the Servers
 ```
-# Set correct file permissions
-chmod 400 deployer-key.pem
-
 # SSH into the Gateway Server
-ssh -i deployer-key.pem ubuntu@<GATEWAY_PUBLIC_IP>
+ssh -i ~/.ssh/deployer-key.pem  ubuntu@<GATEWAY_PUBLIC_IP>
 
 # SSH into the App Server
-ssh -i deployer-key.pem ubuntu@<APP_SERVER_PUBLIC_IP>
+ssh -i ~/.ssh/deployer-key.pem ubuntu@<APPSERVER_PUBLIC_IP>
 ```
 <img width="970" height="338" alt="image" src="https://github.com/user-attachments/assets/ae90cd17-4b7c-4707-b65e-ef875cd215ea" />
 <img width="966" height="337" alt="image" src="https://github.com/user-attachments/assets/eea79b81-24ca-4247-aa76-d1cacc2c514a" />
