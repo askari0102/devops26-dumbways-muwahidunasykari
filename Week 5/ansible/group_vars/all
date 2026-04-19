@@ -1,0 +1,28 @@
+# Konfigurasi DB
+db_name: wayshub
+db_user: asykari
+db_password: !vault |
+          $ANSIBLE_VAULT;1.1;AES256
+          63363363613266343330366163646338316261646266616335346465333533303936656166626464
+          3131323037383333633633363431633363666434316434360a643261633233613636386666303534
+          39366163373036633463626130303561383136383632393532623133656632303939623038363536
+          3533306262306434380a346234623631353336636435326337363962333435643061393530643536
+          3237
+
+# Konfigurasi user sistem 
+new_user: asykari
+new_user_password: $5$J1YHab4hY/E0V1xv$6JkovYmUdHSeHZdSNrzyoeBcC9H.n/05VwL/811zTO.
+
+# Repo app 
+frontend_repo: "https://github.com/askari0102/wayshub-frontend.git"
+backend_repo: "https://github.com/askari0102/wayshub-backend.git"
+
+# Domain
+domain_name: "asykari.studentdumbways.my.id"
+
+# Backend environment
+jwt_private_key: "951836"
+node_env: "production"
+cloud_name: "dlumdgloz"
+api_key: "958682469343893"
+api_secret: "ujMVhZydB8NHd0z2w13HFwm4EEA"
