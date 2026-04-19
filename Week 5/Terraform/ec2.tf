@@ -25,12 +25,23 @@ resource "aws_instance" "gateway_db" {
 # Server 2: Appserver
 resource "aws_instance" "app_server" {
   ami           = data.aws_ami.ubuntu_22.id
-  instance_type = "t3.micro"
+  instance_type = "t3.small"
   subnet_id     = aws_subnet.public.id
   vpc_security_group_ids = [aws_security_group.sg_app.id]
   key_name = aws_key_pair.main_key.key_name
 
   tags = { Name = "App-Server" }
+}
+
+# Server 3: Monitoring (Prometheus + Grafana)
+resource "aws_instance" "monitoring" {
+  ami           = data.aws_ami.ubuntu_22.id
+  instance_type = "t3.small" 
+  subnet_id     = aws_subnet.public.id
+  vpc_security_group_ids = [aws_security_group.sg_monitoring.id]
+  key_name      = aws_key_pair.main_key.key_name
+
+  tags = { Name = "Monitoring-Server" }
 }
 
 # Elastic IP Server Gateway
@@ -47,4 +58,12 @@ resource "aws_eip" "appserver_eip" {
   instance = aws_instance.app_server.id
 
   tags = { Name = "app-server-eip" }
+}
+
+# Elastic IP Server Monitoring
+resource "aws_eip" "monitoring_eip" {
+  domain   = "vpc"
+  instance = aws_instance.monitoring.id
+
+  tags = { Name = "monitoring-eip" }
 }
