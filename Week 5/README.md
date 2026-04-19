@@ -67,24 +67,11 @@ terraform plan -out=tfplan
 terraform apply "tfplan"
 ```
 <img width="967" height="139" alt="image" src="https://github.com/user-attachments/assets/e4c409b0-9357-4811-abde-27bad5ebe8f7" />
-<img width="967" height="315" alt="image" src="https://github.com/user-attachments/assets/bd156f6a-ec6f-4499-baab-5aee35ca3fe4" />
-<img width="960" height="306" alt="image" src="https://github.com/user-attachments/assets/c159fc7d-10a1-486f-b13a-29be338289ec" />
+<img width="1361" height="408" alt="image" src="https://github.com/user-attachments/assets/7b808b11-3dc0-4a02-9f2d-919dadb0241a" />
+<img width="1362" height="405" alt="image" src="https://github.com/user-attachments/assets/3ffadf10-c552-41fc-abfd-9d68c7d67f20" />
 
 11. Check your AWS. The created instances should be up and running
-<img width="1013" height="227" alt="image" src="https://github.com/user-attachments/assets/5730a7f0-62d0-426b-bd84-c72891f71122" />
-
-
-12. Accessing the Servers
-```
-# SSH into the Gateway Server
-ssh -i ~/.ssh/deployer-key.pem  ubuntu@<GATEWAY_PUBLIC_IP>
-
-# SSH into the App Server
-ssh -i ~/.ssh/deployer-key.pem ubuntu@<APPSERVER_PUBLIC_IP>
-```
-<img width="970" height="338" alt="image" src="https://github.com/user-attachments/assets/ae90cd17-4b7c-4707-b65e-ef875cd215ea" />
-<img width="966" height="337" alt="image" src="https://github.com/user-attachments/assets/eea79b81-24ca-4247-aa76-d1cacc2c514a" />
-
+<img width="947" height="153" alt="image" src="https://github.com/user-attachments/assets/10b0a626-3603-4feb-8373-108c468549ff" />
 
 13. Preview and execute infrastructure destruction with `terraform destroy`.
 <img width="965" height="332" alt="image" src="https://github.com/user-attachments/assets/13e89742-dfa5-47b2-b999-b5f6d4b4d8d2" />
@@ -140,4 +127,8 @@ ansible-vault encrypt_string 'password_db_asli' --vault-id default@.vault_pass -
 6. Run Ansible with `ansible-playbook main.yaml`
 <img width="1361" height="392" alt="image" src="https://github.com/user-attachments/assets/60ce2adb-9dd4-4f7e-86bf-9cda6fbf9f3c" />
 
-7. SSH to the Appserver and Gateway Server. Make sure everything is running correctly.
+7. Accessing the servers
+```
+ssh -i ~/.ssh/deployer-key.pem <new_user>@<SERVER_PUBLIC_IP> # Replace <SERVER_PUBLIC_IP> with the actual IP address of the Gateway, App, or Monitoring server.
+```
+
