@@ -10,9 +10,9 @@ resource "aws_key_pair" "main_key" {
   public_key = tls_private_key.main.public_key_openssh
 }
 
-# 3. Simpan Private Key ke file lokal (.pem) supaya bisa dipakai buat SSH
+# 3. Simpan Private Key ke folder .ssh
 resource "local_file" "ssh_key" {
-  filename        = "${path.module}/deployer-key.pem"
+  filename        = pathexpand("~/.ssh/deployer-key.pem")
   content         = tls_private_key.main.private_key_pem
   file_permission = "0400" # Supaya SSH nggak nolak karena permission terlalu terbuka
 }
