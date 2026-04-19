@@ -85,7 +85,7 @@ terraform apply "tfplan"
 **Ansible**
 
 -----------
-1. Install pipx
+**1. Install pipx**
 ```
 sudo apt update
 sudo apt install pipx
@@ -93,17 +93,17 @@ pipx ensurepath
 ```
 <img width="759" height="40" alt="image" src="https://github.com/user-attachments/assets/5f4bbd2a-97e3-4e7a-8f6c-16ddb7615104" />
 
-2. Install Ansible with pipx
+**2. Install Ansible with pipx**
 ```
 pipx install --include-deps ansible # Run this if you want to install the full Ansible package
 pipx install ansible-core           # Run this if you want the minimal ansible-core package
 ```
 <img width="672" height="44" alt="image" src="https://github.com/user-attachments/assets/0d62df09-be0e-439b-804f-cdb7662870ed" />
 
-3. Create a new directory for the ansible configs and move into that directory
+**3. Create a new directory for the ansible configs and move into that directory**
 <img width="670" height="43" alt="image" src="https://github.com/user-attachments/assets/6cc47868-5566-4d0d-bfa1-5e3189ee23b6" />
 
-4. This repository contains Ansible configurations to deploy frontend and backend to Appserver and setup webserver and db in Gateway Server.
+**4. This repository contains Ansible configurations to deploy frontend and backend to Appserver and setup webserver and db in Gateway Server.**
 <pre>
 ansible/
 ├── ⚙️ <a href="./ansible/ansible.cfg">ansible.cfg</a>          # Ansible config settings
@@ -127,13 +127,13 @@ To encrypt your passwords, run the commands below. Copy the results to group_var
 python3 -c 'import crypt; print(crypt.crypt("passworduser", crypt.mksalt(crypt.METHOD_SHA256)))' # For user's password
 ansible-vault encrypt_string 'password_db_asli' --vault-id default@.vault_pass --name 'db_password' # For db's password. If you get an error then remove the `vault_password_file = .vault_pass` line from the ansible.cfg first, then add it again after you ran the command.
 ```
-5. Create DNS records on Cloudflare 
+**5. Create DNS records on Cloudflare** 
 <img width="1409" height="155" alt="image" src="https://github.com/user-attachments/assets/c2c84064-3a0d-4fbc-a708-6a47dabdb91a" />
 
-6. Run Ansible with `ansible-playbook main.yaml`
+**6. Run Ansible with `ansible-playbook main.yaml`**
 <img width="1361" height="392" alt="image" src="https://github.com/user-attachments/assets/60ce2adb-9dd4-4f7e-86bf-9cda6fbf9f3c" />
 
-7. Accessing the servers
+**7. Accessing the servers**
 ```
 ssh -i ~/.ssh/deployer-key.pem <new_user>@<SERVER_PUBLIC_IP> # Replace <SERVER_PUBLIC_IP> with the actual IP address of the Gateway, App, or Monitoring server.
 ```
