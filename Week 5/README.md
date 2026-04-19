@@ -153,20 +153,76 @@ ssh -i ~/.ssh/deployer-key.pem <new_user>@<SERVER_PUBLIC_IP> # Replace <SERVER_P
 <img width="1547" height="330" alt="image" src="https://github.com/user-attachments/assets/e0b38272-114a-4486-8804-611cdbba6852" />
 
 **2. Create & Configure Panel**
-  - Click + > Dashboard > Add Visualization.
+  - Click + > Dashboard > Add Panel > Configure Visualization.
   - Select Prometheus as the source.
-  - Set Query: Switch the toggle from "Builder" to Code, then paste the the query below:
-| Metric | PromQL Formula | Threshold |
-| :--- | :--- | :--- |
-| **CPU Usage** | `100 - (avg by (instance) (irate(node_cpu_seconds_total{mode="idle"}[5m])) * 100)` | > 20% (Red) |
-| **RAM Usage** | `(node_memory_MemTotal_bytes - node_memory_MemAvailable_bytes) / node_memory_MemTotal_bytes * 100` | > 75% (Red) |
-| **Disk Usage** | `(node_filesystem_size_bytes{mountpoint="/"} - node_filesystem_free_bytes{mountpoint="/"}) / node_filesystem_size_bytes{mountpoint="/"} * 100` | > 80% (Red) |
-<img width="1919" height="896" alt="image" src="https://github.com/user-attachments/assets/248a375d-cc32-4999-bee0-f10a79d38e64" />
+  - Set Query: Switch the toggle from "Builder" to Code, then paste the the query and click run query.
 
-* CPU Usage (%)
-`100 - (avg by (instance) (irate(node_cpu_seconds_total{mode="idle"}[5m])) * 100)`
-* RAM Usage (%)
-`(node_memory_MemTotal_bytes - node_memory_MemAvailable_bytes) / node_memory_MemTotal_bytes * 100`
-* Disk Usage (%)
-`(node_filesystem_size_bytes{mountpoint="/"} - node_filesystem_free_bytes{mountpoint="/"}) / node_filesystem_size_bytes{mountpoint="/"} * 100`
-<img width="1919" height="891" alt="image" src="https://github.com/user-attachments/assets/e7d02cd9-9633-45c2-84be-534ee44c9194" />
+| Metric | PromQL Query | Unit | Threshold |
+| :--- | :--- | :--- | :--- |
+| **CPU Usage** | `100 - (avg by (alias) (irate(node_cpu_seconds_total{mode="idle"}[5m])) * 100)` | Percent (%) | > 20%  |
+| **RAM Usage (%)** | `(1 - (avg by (alias) (node_memory_MemAvailable_bytes) / avg by (alias) (node_memory_MemTotal_bytes))) * 100` | Percent (%) | > 75% |
+| **RAM Usage (GB)** | `avg by (alias) (node_memory_MemTotal_bytes - node_memory_MemAvailable_bytes) / 1024 / 1024` | Gigabytes | > 1.5GB (Warning) |
+| **Disk Usage (GB)** | `avg by (alias) (node_filesystem_size_bytes{mountpoint="/"} - node_filesystem_avail_bytes{mountpoint="/"}) / 1024 / 1024 / 1024` | Gigabytes | > 6.5GB  |
+
+**3. Visualization & Refinement**
+- Select Visualization: Choose your preferred type (Gauge, Bar Gauge, or Time Series).
+- Standard Options:
+  * Set the Unit according to the chosen table (e.g., Megabytes, Percent, etc.).
+  * Define Min/Max values to ensure the scale reflects your actual hardware capacity (e.g., Max: 7.6 for Disk).
+- Thresholds: Configure color-coded indicators (Green, Yellow, Red) based on the threshold values to provide quick visual alerts.
+- Data Filtering: Use the Transform tab > Filter data by name if you need to remove "ghost" series or unwanted query results from the view.
+<img width="1919" height="849" alt="image" src="https://github.com/user-attachments/assets/0055639d-5c25-43b7-a0dd-0448c3619501" />
+<img width="1919" height="834" alt="image" src="https://github.com/user-attachments/assets/7831086b-4c1b-4ad9-a975-ac9cde418507" />
+<img width="1919" height="906" alt="image" src="https://github.com/user-attachments/assets/310e13fe-4272-420c-bd06-542d8cb5d5d8" />
+<img width="1919" height="967" alt="image" src="https://github.com/user-attachments/assets/3b7333ed-f1ca-4ec8-a38c-be51a6b38a0f" />
+
+**4. Set as Home Dashboard**
+- Go to Profile (bottom-left) > Preferences.
+- Select your dashboard in the Home Dashboard dropdown.
+- Click Save.
+- Auto-Refresh: Set to 5s (top right).
+<img width="1504" height="607" alt="image" src="https://github.com/user-attachments/assets/0f9bbc0e-f769-4545-8491-4434dea548bf" />
+<img width="1919" height="901" alt="image" src="https://github.com/user-attachments/assets/66e84f19-434e-48a2-8a28-fe0c60e193c9" />
+
+**5. Discord Alerting Setup**
+- Create Discord Webhook
+  * Open your Discord server and go to Server Settings > Integrations.
+  * Click Webhooks > New Webhook.
+  * Name it and select the channel.
+  * Click Copy Webhook URL.
+  <img width="872" height="223" alt="image" src="https://github.com/user-attachments/assets/cd206640-6d2c-436c-81c2-a5f3a69c8fa2" />
+
+- Configure Contact Point in Grafana
+  * Navigate to Alerting > Contact points.
+  * Click _New contact point_.
+  * Name: Discord-Alerts.
+  * Integration: Select Discord.
+  * Webhook URL: Paste the URL from Discord.
+  * Apply Template In Message Content if you want (optional).
+  * Click Test to ensure a notification arrives, then Save.
+<img width="1919" height="368" alt="image" src="https://github.com/user-attachments/assets/fdd3d291-56a2-42fe-940c-4066143f45a7" />
+<img width="1919" height="820" alt="image" src="https://github.com/user-attachments/assets/544075d9-61a9-45e5-9ef0-1b7554dcfa10" />
+<img width="936" height="348" alt="image" src="https://github.com/user-attachments/assets/dd73d05d-267b-4e9c-956e-4e32c55a9ff2" />
+<img width="1444" height="497" alt="image" src="https://github.com/user-attachments/assets/c13b2da7-8757-41e3-bfe7-73a1d24c599e" />
+
+- Create Alert Rule
+  * Go to Alerting > Alert rules > + Create alert rule
+  * Define Query and Condition
+    - Query: Use the PromQL from the table above (e.g., CPU Usage query).
+    - Threshold: Set IS ABOVE to your limit (e.g., 20).
+  * Set Evaluation Behavior
+    - Folder: Create a new folder named Server Alerts.
+    - Evaluation group: Create a group named 1m-check with a 1m interval.
+    - Pending period (For): Set to 5m (Wait 5 minutes of sustained high usage before firing).
+  * Add Details & Notifications
+    - Summary: High usage on {{ $labels.alias }}
+    - Description: Current value is {{ $values.B }}% on server {{ $labels.alias }}
+    - Notifications: Select Discord-Alerts as the contact point.
+  * Click Save rule and exit.
+
+- Testing the Alert
+  * Manual Threshold Trigger: Edit an alert rule and temporarily lower the threshold (e.g., set CPU Alert to Above 1 %). Once the status changes to Firing and sends a Discord notification, revert the threshold     to its original value.
+<img width="1137" height="289" alt="image" src="https://github.com/user-attachments/assets/be6f96d3-e1e9-4ad7-8cbd-535aae499bee" />
+
+
+
