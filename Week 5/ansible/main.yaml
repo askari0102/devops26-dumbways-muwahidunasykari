@@ -1,0 +1,24 @@
+---
+# 1. Install Docker, Setup User dan Install Node Exporter di semua server
+- hosts: gateway app monitoring
+  become: yes
+  tasks:
+    - include_tasks: setup_base.yaml
+
+# 2. Setup Gateway dulu agar DB siap
+- hosts: gateway
+  become: yes
+  tasks:
+    - include_tasks: setup_gateway.yaml
+
+# 3. Baru Setup App Server
+- hosts: app
+  become: yes
+  tasks:
+    - include_tasks: setup_app.yaml
+
+# 4. Setup Server Monitoring
+- hosts: monitoring
+  become: yes
+  tasks:
+    - include_tasks: setup_monitoring.yaml

@@ -1,0 +1,73 @@
+---
+# Tunggu DB Ready
+- name: Wait for MySQL
+  wait_for:
+    host: "{{ db_host }}"  
+    port: 3306
+    delay: 3       
+    timeout: 45
+
+
+# --- DEPLOY BACKEND ---
+- name: Clone Backend
+  git:
+    repo: "{{ backend_repo }}"
+    dest: "/home/{{ new_user }}/backend"
+  become: yes
+  become_user: "{{ new_user }}"
+
+- name: Build Backend
+  shell: "docker build -t wayshub-be-img ."
+  args: { chdir: "/home/{{ new_user }}/backend" }
+  become: yes
+  become_user: "{{ new_user }}"
+
+- name: Run Backend Container
+  docker_container:
+    name: wayshub-be
+    image: wayshub-be-img
+    state: started
+    restart_policy: always
+    published_ports: ["5000:5000"]
+    command: >
+      sh -c "./node_modules/.bin/sequelize db:migrate && node index.js"
+    env:
+      NODE_ENV: "{{ node_env }}"
+      DATABASE_URL: "mysql://{{ db_user }}:{{ db_password }}@{{ db_host }}:3306/{{ db_name }}"
+      JWT_PRIVATE_KEY: "{{ jwt_private_key }}"
+      CLOUD_NAME: "{{ cloud_name }}"
+      API_KEY: "{{ api_key }}"
+      API_SECRET: "{{ api_secret }}"
+  become: yes
+  become_user: "{{ new_user }}"
+
+
+# --- DEPLOY FRONTEND ---
+- name: Clone Frontend
+  git:
+    repo: "{{ frontend_repo }}"
+    dest: "/home/{{ new_user }}/frontend"
+  become: yes
+  become_user: "{{ new_user }}"
+
+- name: Create .env file for React
+  copy:
+    dest: "/home/{{ new_user }}/frontend/.env" 
+    content: "REACT_APP_API_URL=http://api.{{ domain_name }}/api/v1"
+  become: yes
+  become_user: "{{ new_user }}"
+
+- name: Build Frontend
+  shell: "docker build -t wayshub-fe-img ."
+  args: { chdir: "/home/{{ new_user }}/frontend" }
+  become: yes
+  become_user: "{{ new_user }}"
+
+- name: Run Frontend Container
+  docker_container:
+    name: wayshub-fe
+    image: wayshub-fe-img
+    state: started
+    published_ports: ["3000:80"] # Mapping 80 ke host 3000
+  become: yes
+  become_user: "{{ new_user }}"

@@ -1,0 +1,84 @@
+# Persiapan sistem (Untuk memberikan izin ke user baru)
+- name: Install ACL package
+  apt:
+    name: acl
+    state: present
+
+# Install Docker
+- name: Install Docker Dependencies
+  apt:
+    name: [apt-transport-https, ca-certificates, curl, gnupg, lsb-release, python3-pip]
+    state: present
+    update_cache: yes
+
+- name: Add Docker GPG key
+  apt_key:
+    url: https://download.docker.com/linux/ubuntu/gpg
+    state: present
+
+- name: Add Docker repository (Ubuntu 22.04)
+  apt_repository:
+    repo: "deb [arch=amd64] https://download.docker.com/linux/ubuntu jammy stable"
+    state: present
+
+- name: Install Docker CE
+  apt:
+    name: [docker-ce, docker-ce-cli, containerd.io]
+    state: present
+
+- name: Install Docker Library for Python
+  pip:
+    name: 
+      - docker
+      - docker-compose
+    executable: pip3
+
+# Setup User
+- name: Setup User
+  user:
+    name: "{{ new_user }}"
+    password: "{{ new_user_password }}"
+    groups: sudo,docker
+    append: yes
+
+- name: Copy authorized keys from ubuntu user
+  shell: "cat /home/ubuntu/.ssh/authorized_keys"
+  register: ubuntu_keys
+  changed_when: false
+
+- name: Set authorized key for new user
+  authorized_key:
+    user: "{{ new_user }}"
+    state: present
+    key: "{{ ubuntu_keys.stdout }}"
+
+- name: Allow passwordless sudo for new user
+  lineinfile:
+    path: /etc/sudoers
+    state: present
+    regexp: "^%{{ new_user }}"
+    line: "{{ new_user }} ALL=(ALL) NOPASSWD:ALL"
+    validate: "/usr/sbin/visudo -cf %s"
+
+- name: Force Ansible to reconnect with new user groups
+  meta: reset_connection
+
+# Install Node Exporter 
+- name: Run Node Exporter with full host access
+  docker_container:
+    name: node-exporter
+    image: prom/node-exporter:latest
+    state: started
+    restart_policy: always
+    published_ports: ["9100:9100"]
+    volumes:
+      - "/proc:/host/proc:ro"
+      - "/sys:/host/sys:ro"
+      - "/:/rootfs:ro"
+    command:
+      - '--path.procfs=/host/proc'
+      - '--path.sysfs=/host/sys'
+      - '--path.rootfs=/rootfs'
+      - "--collector.filesystem.mount-points-exclude=^/(sys|proc|dev|host|etc|rootfs/var/lib/docker/containers|rootfs/var/lib/docker/overlay2|rootfs/run/docker/netns)($$|/)"
+  become: yes
+  become_user: "{{ new_user }}"

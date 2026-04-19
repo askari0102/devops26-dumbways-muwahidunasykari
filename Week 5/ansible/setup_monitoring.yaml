@@ -1,0 +1,29 @@
+---
+- name: Create Monitoring Directory
+  file:
+    path: /home/{{ new_user }}/monitoring
+    state: directory
+    owner: "{{ new_user }}"
+    group: "{{ new_user }}" 
+    mode: '0755'
+
+- name: Template Prometheus Config
+  template:
+    src: prometheus.j2
+    dest: /home/{{ new_user }}/monitoring/prometheus.yml
+    owner: "{{ new_user }}"
+    group: "{{ new_user }}"
+  
+- name: Template Docker Compose
+  template:
+    src: docker-compose.j2
+    dest: /home/{{ new_user }}/monitoring/docker-compose.yml
+    owner: "{{ new_user }}"
+    group: "{{ new_user }}"
+
+- name: Run Monitoring (Docker Compose)
+  community.docker.docker_compose_v2:
+    project_src: /home/{{ new_user }}/monitoring
+    state: present
+  become: yes
+  become_user: "{{ new_user }}"
