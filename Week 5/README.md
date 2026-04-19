@@ -113,16 +113,21 @@ pipx install ansible-core           # Run this if you want the minimal ansible-c
 4. This repository contains Ansible configurations to deploy frontend and backend to Appserver and setup webserver and db in Gateway Server.
 <pre>
 ansible/
-├── ⚙️ <a href="./ansible/ansible.cfg">ansible.cfg</a>          # Ansible configuration 
-├── 📋 <a href="./ansible/main.yaml">main.yaml</a>            # Import playbooks
-├── 📦 <a href="./ansible/setup_app.yaml">setup_app.yaml</a>       # Setup App Server
-├── 🌐 <a href="./ansible/setup_gateway.yaml">setup_gateway.yaml</a>   # Setup Gateway Server
+├── ⚙️ <a href="./ansible/ansible.cfg">ansible.cfg</a>          # Ansible config settings
+├── 🚀 <a href="./ansible/main.yaml">main.yaml</a>            # Main playbook to run everything
+├── 📦 <a href="./ansible/setup_app.yaml">setup_app.yaml</a>       # App server setup
+├── 🛡️ <a href="./ansible/setup_gateway.yaml">setup_gateway.yaml</a>   # Gateway & Nginx setup
+├── 📈 <a href="./ansible/setup_monitoring.yaml">setup_monitoring.yaml</a> # Prometheus & Grafana setup
+├── 🐳 <a href="./ansible/install_docker.yaml">install_docker.yaml</a>  # Docker installation and user setup for all servers
 ├── 📂 <b>group_vars/</b>
-│   └── 🔧 <a href="./ansible/group_vars/all">all</a>              # Global variables 
+│   └── 🔧 <a href="./ansible/group_vars/all">all</a>               # Global variables 
 ├── 📂 <b>templates/</b>
-│   └── 📄 <a href="./ansible/templates/wayshub.j2">wayshub.j2</a>       # Dynamic nginx template
-├── 📄 <a href="./ansible/Inventory">Inventory</a>            # List of target servers. Created automatically from Terraform.
-└── 🔑 <a href="./ansible/.vault_pass">.vault_pass</a>          # Key for encrypting passwords (for db)
+│   ├── 📄 <a href="./ansible/templates/wayshub.j2">wayshub.j2</a>        # Nginx config template
+│   ├── 📄 <a href="./ansible/templates/frontend-env.j2">frontend-env.j2</a>   # Frontend .env template
+│   ├── 📄 <a href="./ansible/templates/prometheus.j2">prometheus.j2</a>     # Prometheus scrape targets config# Frontend .env template
+│   └── 📄 <a href="./ansible/templates/docker-compose.j2">docker-compose.j2</a> # Docker Compose template for Monitoring
+├── 📑 <a href="./ansible/Inventory">Inventory</a>            # Server list (from Terraform output)
+└── 🔐 <a href="./ansible/.vault_pass">.vault_pass</a>          # Ansible Vault password
 </pre>
 To encrypt your passwords, run the commands below. Copy the results to group_vars/all
 ```
