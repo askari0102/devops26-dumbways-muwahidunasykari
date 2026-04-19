@@ -72,12 +72,15 @@ terraform apply "tfplan"
 <img width="1361" height="408" alt="image" src="https://github.com/user-attachments/assets/7b808b11-3dc0-4a02-9f2d-919dadb0241a" />
 <img width="1362" height="405" alt="image" src="https://github.com/user-attachments/assets/3ffadf10-c552-41fc-abfd-9d68c7d67f20" />
 
+
 **10. Check your AWS. The created instances should be up and running**
 <img width="947" height="153" alt="image" src="https://github.com/user-attachments/assets/10b0a626-3603-4feb-8373-108c468549ff" />
+
 
 **11. Preview and execute infrastructure destruction with `terraform destroy`.**
 <img width="965" height="332" alt="image" src="https://github.com/user-attachments/assets/13e89742-dfa5-47b2-b999-b5f6d4b4d8d2" />
 <img width="956" height="37" alt="image" src="https://github.com/user-attachments/assets/5f159a95-52da-4398-81e0-35903584ca5f" />
+
 
 **Ansible**
 
