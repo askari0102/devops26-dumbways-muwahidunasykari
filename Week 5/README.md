@@ -119,7 +119,7 @@ ansible/
 │   ├── 📄 <a href="./ansible/templates/frontend-env.j2">frontend-env.j2</a>   # Frontend .env template
 │   ├── 📄 <a href="./ansible/templates/prometheus.j2">prometheus.j2</a>     # Prometheus scrape targets config# Frontend .env template
 │   └── 📄 <a href="./ansible/templates/docker-compose.j2">docker-compose.j2</a> # Docker Compose template for Monitoring
-├── 📑 <a href="./ansible/Inventory">Inventory</a>            # Server list (from Terraform output)
+├── 📑  Inventory            # Server list (from Terraform output)
 └── 🔐 <a href="./ansible/.vault_pass">.vault_pass</a>          # Ansible Vault password
 </pre>
 To encrypt your passwords, run the commands below. Copy the results to group_vars/all
