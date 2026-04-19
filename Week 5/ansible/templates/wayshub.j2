@@ -1,0 +1,85 @@
+# Frontend
+server {
+    listen 80;
+    server_name {{ domain_name }}; 
+
+    location / {
+        proxy_pass http://{{ hostvars['app_server']['app_private_ip'] }}:3000;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+}
+
+# Backend 
+server {
+    listen 80;
+    server_name api.{{ domain_name }}; 
+
+    location / {
+        proxy_pass http://{{ hostvars['app_server']['app_private_ip'] }}:5000;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+}
+
+# Grafana
+server {
+    listen 80;
+    server_name monitor.{{ domain_name }}; 
+
+    location / {
+        proxy_pass http://{{ hostvars['monitoring_server']['monitoring_private_ip'] }}:3000;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+}
+
+# Prometheus
+server {
+    listen 80;
+    server_name prom.{{ domain_name }}; 
+
+    location / {
+        proxy_pass http://{{ hostvars['monitoring_server']['monitoring_private_ip'] }}:9090;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+}
+
+# Node Exporter - Gateway Server
+server {
+    listen 80;
+    server_name node-gateway.{{ domain_name }}; 
+
+    location / {
+        proxy_pass http://{{ hostvars['gateway_server']['gateway_private_ip'] }}:9100;
+        proxy_set_header Host $host;
+    }
+}
+
+# Node Exporter - App Server
+server {
+    listen 80;
+    server_name node-app.{{ domain_name }}; 
+
+    location / {
+        proxy_pass http://{{ hostvars['app_server']['app_private_ip'] }}:9100;
+        proxy_set_header Host $host;
+    }
+}
+
+# Node Exporter - Monitoring Server
+server {
+    listen 80;
+    server_name node-monitor.{{ domain_name }}; 
+
+    location / {
+        proxy_pass http://{{ hostvars['monitoring_server']['monitoring_private_ip'] }}:9100;
+        proxy_set_header Host $host;
+    }
+}
