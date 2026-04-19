@@ -1,4 +1,4 @@
-**Terraform**
+### **Creating Infrastructure with Terraform**
 
 ---------------
 **1. Install Terraform in your local computer. I'm using WSL (Ubuntu).**
@@ -82,7 +82,7 @@ terraform apply "tfplan"
 <img width="956" height="37" alt="image" src="https://github.com/user-attachments/assets/5f159a95-52da-4398-81e0-35903584ca5f" />
 
 
-**Ansible**
+### **Ansible**
 
 -----------
 **1. Install pipx**
@@ -128,7 +128,7 @@ python3 -c 'import crypt; print(crypt.crypt("passworduser", crypt.mksalt(crypt.M
 ansible-vault encrypt_string 'password_db_asli' --vault-id default@.vault_pass --name 'db_password' # For db's password. If you get an error then remove the `vault_password_file = .vault_pass` line from the ansible.cfg first, then add it again after you ran the command.
 ```
 **5. Create DNS records on Cloudflare** 
-<img width="1409" height="155" alt="image" src="https://github.com/user-attachments/assets/c2c84064-3a0d-4fbc-a708-6a47dabdb91a" />
+<img width="1415" height="407" alt="image" src="https://github.com/user-attachments/assets/cbe1c9db-a728-45d3-b25b-e1d053baeebe" />
 
 **6. Run Ansible with `ansible-playbook main.yaml`**
 <img width="1361" height="392" alt="image" src="https://github.com/user-attachments/assets/60ce2adb-9dd4-4f7e-86bf-9cda6fbf9f3c" />
@@ -138,3 +138,35 @@ ansible-vault encrypt_string 'password_db_asli' --vault-id default@.vault_pass -
 ssh -i ~/.ssh/deployer-key.pem <new_user>@<SERVER_PUBLIC_IP> # Replace <SERVER_PUBLIC_IP> with the actual IP address of the Gateway, App, or Monitoring server.
 ```
 
+**8. Visit the main domain in your browser to start using the app. The website is fully operational, including the registration and login systems.**
+<img width="1919" height="939" alt="image" src="https://github.com/user-attachments/assets/6630f511-5343-4ee9-a9ad-7abd77aa4647" />
+
+### **Monitoring with Prometheus & Grafana**
+
+------
+
+**1. Connecting Prometheus to Grafana**
+  - Go to Connections > Data Sources > Add Prometheus.
+  - Set URL to: http://prometheus:9090 (using Docker Service Name).
+  - Click Save & Test.
+<img width="1919" height="1004" alt="image" src="https://github.com/user-attachments/assets/d29b3945-c7a4-411e-82a5-9e0069f7b7d4" />
+<img width="1547" height="330" alt="image" src="https://github.com/user-attachments/assets/e0b38272-114a-4486-8804-611cdbba6852" />
+
+**2. Create & Configure Panel**
+  - Click + > Dashboard > Add Visualization.
+  - Select Prometheus as the source.
+  - Set Query: Switch the toggle from "Builder" to Code, then paste the the query below:
+| Metric | PromQL Formula | Threshold |
+| :--- | :--- | :--- |
+| **CPU Usage** | `100 - (avg by (instance) (irate(node_cpu_seconds_total{mode="idle"}[5m])) * 100)` | > 20% (Red) |
+| **RAM Usage** | `(node_memory_MemTotal_bytes - node_memory_MemAvailable_bytes) / node_memory_MemTotal_bytes * 100` | > 75% (Red) |
+| **Disk Usage** | `(node_filesystem_size_bytes{mountpoint="/"} - node_filesystem_free_bytes{mountpoint="/"}) / node_filesystem_size_bytes{mountpoint="/"} * 100` | > 80% (Red) |
+<img width="1919" height="896" alt="image" src="https://github.com/user-attachments/assets/248a375d-cc32-4999-bee0-f10a79d38e64" />
+
+* CPU Usage (%)
+`100 - (avg by (instance) (irate(node_cpu_seconds_total{mode="idle"}[5m])) * 100)`
+* RAM Usage (%)
+`(node_memory_MemTotal_bytes - node_memory_MemAvailable_bytes) / node_memory_MemTotal_bytes * 100`
+* Disk Usage (%)
+`(node_filesystem_size_bytes{mountpoint="/"} - node_filesystem_free_bytes{mountpoint="/"}) / node_filesystem_size_bytes{mountpoint="/"} * 100`
+<img width="1919" height="891" alt="image" src="https://github.com/user-attachments/assets/e7d02cd9-9633-45c2-84be-534ee44c9194" />
