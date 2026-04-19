@@ -1,5 +1,5 @@
 **Terraform**
-1. Install Terraform in your local computer. I'm using WSL (Ubuntu).
+**1. Install Terraform in your local computer. I'm using WSL (Ubuntu).**
 ```
 sudo apt-get update && sudo apt-get install -y gnupg software-properties-common
 wget -O- https://apt.releases.hashicorp.com/gpg | \
@@ -13,21 +13,21 @@ sudo apt update
 sudo apt-get install terraform
 ```
 
-2. Verify with `terraform -version`
+**2. Verify with `terraform -version`**
 
 <img width="467" height="64" alt="image" src="https://github.com/user-attachments/assets/eb4264a8-6e7a-41ef-80b8-95215886da24" />
 
-3. Install AWS CLI
+**3. Install AWS CLI**
 ```
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 unzip awscliv2.zip
 sudo ./aws/install
 ```
 
-4. Create AWS Access Key by going to AWS Console → Security Credentials → Access keys → Create access key
+**4. Create AWS Access Key by going to AWS Console → Security Credentials → Access keys → Create access key**
 <img width="1476" height="112" alt="image" src="https://github.com/user-attachments/assets/9512d5fe-7ea1-4275-bf99-fcb29257b00e" />
 
-5. Setup credentials by running `aws configure`
+**5. Setup credentials by running `aws configure`**
 ```
 AWS Access Key ID: (Enter your Access Key ID)
 AWS Secret Access Key: (Enter your Secret Access Key)
@@ -35,13 +35,13 @@ Default region name: ap-southeast-1 (or your preferred region)
 Default output format: json (or just press enter)
 ```
 
-7. Verify credentials by running `aws sts get-caller-identity`.
+**6. Verify credentials by running `aws sts get-caller-identity`.**
 
-8. Create new directory for terraform and move to the directory.
+**7. Create new directory for terraform and move to the directory.**
 <img width="544" height="30" alt="image" src="https://github.com/user-attachments/assets/eda83a0a-25e5-4fae-a2f5-01587301fa42" />
 <img width="675" height="47" alt="image" src="https://github.com/user-attachments/assets/8c4e3526-d773-4ee4-83c4-1bccb5e56afa" />
 
-9. This repository contains Terraform configurations to deploy two Ubuntu 22.04 LTS instances:
+**8. This repository contains Terraform configurations to deploy two Ubuntu 22.04 LTS instances:**
 - Gateway Server: Acts as an Nginx Reverse Proxy and Database Server.
 - App Server: Acts as the application host (Frontend & Backend).
 <pre>
@@ -55,7 +55,7 @@ terraform/
 └── 📤 <a href="./Terraform/outputs.tf"><b>outputs.tf</b></a>             # Public IP outputs for ssh access
 </pre>
 
-10. Deploy
+**9. Deploy**
 ```
 # Initialize Terraform and download providers
 terraform init
@@ -70,10 +70,10 @@ terraform apply "tfplan"
 <img width="1361" height="408" alt="image" src="https://github.com/user-attachments/assets/7b808b11-3dc0-4a02-9f2d-919dadb0241a" />
 <img width="1362" height="405" alt="image" src="https://github.com/user-attachments/assets/3ffadf10-c552-41fc-abfd-9d68c7d67f20" />
 
-11. Check your AWS. The created instances should be up and running
+**10. Check your AWS. The created instances should be up and running**
 <img width="947" height="153" alt="image" src="https://github.com/user-attachments/assets/10b0a626-3603-4feb-8373-108c468549ff" />
 
-13. Preview and execute infrastructure destruction with `terraform destroy`.
+**11. Preview and execute infrastructure destruction with `terraform destroy`.**
 <img width="965" height="332" alt="image" src="https://github.com/user-attachments/assets/13e89742-dfa5-47b2-b999-b5f6d4b4d8d2" />
 <img width="956" height="37" alt="image" src="https://github.com/user-attachments/assets/5f159a95-52da-4398-81e0-35903584ca5f" />
 
