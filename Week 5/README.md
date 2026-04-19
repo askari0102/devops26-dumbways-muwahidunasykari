@@ -118,7 +118,7 @@ ansible/
 ├── 📦 <a href="./ansible/setup_app.yaml">setup_app.yaml</a>       # App server setup
 ├── 🛡️ <a href="./ansible/setup_gateway.yaml">setup_gateway.yaml</a>  # Gateway and Database setup
 ├── 📈 <a href="./ansible/setup_monitoring.yaml">setup_monitoring.yaml</a> # Monitoring (Prometheus & Grafana) setup
-├── 🐳 <a href="./ansible/install_docker.yaml">install_docker.yaml</a>  # Docker installation and user setup for all servers
+├── 🛠️ <a href="./ansible/setup_base.yaml">setup_base.yaml</a>      # Base setup: Docker, User, and Node Exporter for all servers
 ├── 📂 <b>group_vars/</b>
 │   └── 🔧 <a href="./ansible/group_vars/all">all</a>               # Global variables 
 ├── 📂 <b>templates/</b>
