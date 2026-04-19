@@ -1,4 +1,6 @@
 **Terraform**
+
+---------------
 **1. Install Terraform in your local computer. I'm using WSL (Ubuntu).**
 ```
 sudo apt-get update && sudo apt-get install -y gnupg software-properties-common
@@ -79,6 +81,7 @@ terraform apply "tfplan"
 
 **Ansible**
 
+-----------
 1. Install pipx
 ```
 sudo apt update
