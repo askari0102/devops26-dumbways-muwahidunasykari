@@ -1,0 +1,24 @@
+global:
+  scrape_interval: 5s # Tarik data setiap 5 detik
+
+scrape_configs:
+  # 1. Monitoring Server Sendiri
+  - job_name: 'monitoring_server'
+    static_configs:
+      - targets: ['{{ hostvars['monitoring_server']['monitoring_private_ip'] }}:9100']
+        labels:
+          alias: 'Monitoring-Server'
+
+  # 2. Gateway Server
+  - job_name: 'gateway_server'
+    static_configs:
+      - targets: ['{{ hostvars['gateway_server']['gateway_private_ip'] }}:9100']
+        labels:
+          alias: 'Gateway-Server'
+
+  # 3. App Server
+  - job_name: 'app_server'
+    static_configs:
+      - targets: ['{{ hostvars['app_server']['app_private_ip'] }}:9100']
+        labels:
+          alias: 'App-Server'
