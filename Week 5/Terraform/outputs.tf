@@ -27,3 +27,9 @@ output "app_private_ip" {
 output "monitoring_private_ip" {
   value = aws_instance.monitoring.private_ip
 }
+
+# Private Key, tidak akan terlihat keynya di output terminal
+output "private_key" {
+  value     = tls_private_key.main.private_key_pem
+  sensitive = true
+}
