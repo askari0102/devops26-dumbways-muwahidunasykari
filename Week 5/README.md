@@ -208,7 +208,7 @@ ssh -i ~/.ssh/deployer-key.pem <new_user>@<SERVER_PUBLIC_IP> # Replace <SERVER_P
 - Create Alert Rule
   * Open the panel in the dashboard → click ⋮ (3 dots) on the top right corner of the panel → More → New alert rule
   * Define Query and Condition
-    - Query is automatically filled from the panel. Add Threshold, set IS ABOVE to your desired limit (e.g., 20 for CPU, 80 for RAM).
+    - Query is automatically filled from the panel. Add Threshold, set it to your desired limit (e.g., 20 for CPU, 75 for RAM).
   * Set Evaluation Behavior
     - Folder: Create a new folder named `Server Alerts`.
     - Evaluation group: Create a group named `1m-interval` with a 1m interval.
