@@ -182,7 +182,7 @@ ssh -i ~/.ssh/deployer-key.pem <new_user>@<SERVER_PUBLIC_IP> # Replace <SERVER_P
 - Click Save.
 - Auto-Refresh: Set to 5s (top right).
 <img width="1504" height="607" alt="image" src="https://github.com/user-attachments/assets/0f9bbc0e-f769-4545-8491-4434dea548bf" />
-<img width="1919" height="901" alt="image" src="https://github.com/user-attachments/assets/66e84f19-434e-48a2-8a28-fe0c60e193c9" />
+<img width="1919" height="916" alt="image" src="https://github.com/user-attachments/assets/33469b30-fb0e-4c12-9b15-d5205213bbf9" />
 
 **5. Discord Alerting Setup**
 - Create Discord Webhook
@@ -200,10 +200,10 @@ ssh -i ~/.ssh/deployer-key.pem <new_user>@<SERVER_PUBLIC_IP> # Replace <SERVER_P
   * Webhook URL: Paste the URL from Discord.
   * Apply Template In Message Content if you want (optional).
   * Click Test to ensure a notification arrives, then Save.
-<img width="1919" height="368" alt="image" src="https://github.com/user-attachments/assets/fdd3d291-56a2-42fe-940c-4066143f45a7" />
-<img width="1919" height="820" alt="image" src="https://github.com/user-attachments/assets/544075d9-61a9-45e5-9ef0-1b7554dcfa10" />
-<img width="936" height="348" alt="image" src="https://github.com/user-attachments/assets/dd73d05d-267b-4e9c-956e-4e32c55a9ff2" />
-<img width="1444" height="497" alt="image" src="https://github.com/user-attachments/assets/c13b2da7-8757-41e3-bfe7-73a1d24c599e" />
+  <img width="1919" height="368" alt="image" src="https://github.com/user-attachments/assets/fdd3d291-56a2-42fe-940c-4066143f45a7" />
+  <img width="1919" height="820" alt="image" src="https://github.com/user-attachments/assets/544075d9-61a9-45e5-9ef0-1b7554dcfa10" />
+  <img width="936" height="348" alt="image" src="https://github.com/user-attachments/assets/dd73d05d-267b-4e9c-956e-4e32c55a9ff2" />
+  <img width="1444" height="497" alt="image" src="https://github.com/user-attachments/assets/c13b2da7-8757-41e3-bfe7-73a1d24c599e" />
 
 - Create Alert Rule
   * Go to Alerting > Alert rules > + Create alert rule
@@ -219,10 +219,14 @@ ssh -i ~/.ssh/deployer-key.pem <new_user>@<SERVER_PUBLIC_IP> # Replace <SERVER_P
     - Description: Current value is {{ $values.B }}% on server {{ $labels.alias }}
     - Notifications: Select Discord-Alerts as the contact point.
   * Click Save rule and exit.
+  <img width="1919" height="912" alt="image" src="https://github.com/user-attachments/assets/ea81efb0-0131-43bc-8d98-a4227e77a03a" />
 
 - Testing the Alert
   * Manual Threshold Trigger: Edit an alert rule and temporarily lower the threshold (e.g., set CPU Alert to Above 1 %). Once the status changes to Firing and sends a Discord notification, revert the threshold     to its original value.
-<img width="1137" height="289" alt="image" src="https://github.com/user-attachments/assets/be6f96d3-e1e9-4ad7-8cbd-535aae499bee" />
+  <img width="1114" height="357" alt="image" src="https://github.com/user-attachments/assets/20998595-4213-4c90-82a5-81a0be11da17" />
+  <img width="1097" height="409" alt="image" src="https://github.com/user-attachments/assets/4fa9fe17-b490-4809-a09c-472c9570bc8b" />
+
+
 
 
 
