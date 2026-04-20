@@ -206,17 +206,16 @@ ssh -i ~/.ssh/deployer-key.pem <new_user>@<SERVER_PUBLIC_IP> # Replace <SERVER_P
   <img width="1444" height="497" alt="image" src="https://github.com/user-attachments/assets/c13b2da7-8757-41e3-bfe7-73a1d24c599e" />
 
 - Create Alert Rule
-  * Go to Alerting > Alert rules > + Create alert rule
+  * Open the panel in the dashboard → click ⋮ (3 dots) on the top right corner of the panel → More → New alert rule
   * Define Query and Condition
-    - Query: Use the PromQL from the table above (e.g., CPU Usage query).
-    - Threshold: Set IS ABOVE to your limit (e.g., 20).
+    - Query is automatically filled from the panel. Add Threshold, set IS ABOVE to your desired limit (e.g., 20 for CPU, 80 for RAM).
   * Set Evaluation Behavior
-    - Folder: Create a new folder named Server Alerts.
-    - Evaluation group: Create a group named 1m-check with a 1m interval.
+    - Folder: Create a new folder named `Server Alerts`.
+    - Evaluation group: Create a group named `1m-interval` with a 1m interval.
     - Pending period (For): Set to 5m (Wait 5 minutes of sustained high usage before firing).
   * Add Details & Notifications
-    - Summary: High usage on {{ $labels.alias }}
-    - Description: Current value is {{ $values.B }}% on server {{ $labels.alias }}
+    - Summary: High X Usage on {{ $labels.alias }}.
+    - Description: X usage is at {{ printf "%.1f" $values.A.Value }}% on server {{ $labels.alias }}. 
     - Notifications: Select Discord-Alerts as the contact point.
   * Click Save rule and exit.
   <img width="1919" height="912" alt="image" src="https://github.com/user-attachments/assets/ea81efb0-0131-43bc-8d98-a4227e77a03a" />
