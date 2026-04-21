@@ -233,5 +233,5 @@ ssh -i ~/.ssh/deployer-key.pem <new_user>@<SERVER_PUBLIC_IP> # Replace <SERVER_P
 | Metric | PromQL Query | Unit | Threshold |
 | :--- | :--- | :--- | :--- |
 | **Container Status** | `time() - container_last_seen{name=~"wayshub.*"}` | - | 0-10s = Running (Green), > 10s = Stopped (Red) |
-| **Container Memory** | `container_memory_usage_bytes{name=~"wayshub.*"}` | Bytes (IEC) | > 100 MiB (Warning), > 200 MiB (Critical) |
+| **Container Memory** | `container_memory_working_set_bytes{name=~"wayshub.*"}` | Bytes (IEC) | > 100 MiB (Warning), > 200 MiB (Critical) |
 <img width="716" height="333" alt="image" src="https://github.com/user-attachments/assets/d767cd46-0f06-458a-836d-14ae4b454b59" />
