@@ -43,9 +43,10 @@ Default output format: json (or just press enter)
 <img width="544" height="30" alt="image" src="https://github.com/user-attachments/assets/eda83a0a-25e5-4fae-a2f5-01587301fa42" />
 <img width="675" height="47" alt="image" src="https://github.com/user-attachments/assets/8c4e3526-d773-4ee4-83c4-1bccb5e56afa" />
 
-**8. This repository contains Terraform configurations to deploy two Ubuntu 22.04 LTS instances:**
+**8. This repository contains Terraform configurations to deploy three Ubuntu 22.04 LTS instances:**
 - Gateway Server: Acts as an Nginx Reverse Proxy and Database Server.
 - App Server: Acts as the application host (Frontend & Backend).
+- Monitoring Server : Acts as a metrics monitoring and visualization system using Prometheus and Grafana, collecting data via Node Exporter and cAdvisor to track system and container performance.
 <pre>
 terraform/
 ├── 📄 <a href="./Terraform/provider.tf"><b>provider.tf</b></a>            # AWS Provider configuration
@@ -54,7 +55,7 @@ terraform/
 ├── 🔑 <a href="./Terraform/ssh.tf"><b>ssh.tf</b></a>                 # Automated SSH Key Pair generation
 ├── 🖥️ <a href="./Terraform/ec2.tf"><b>ec2.tf</b></a>                 # EC2 Instance and Elastic IP 
 ├── 📄 <a href="./Terraform/ansible-inventory.tf"><b>ansible-inventory.tf</b></a>   # Automatically create Inventory file for Ansible
-└── 📤 <a href="./Terraform/outputs.tf"><b>outputs.tf</b></a>             # Public IP outputs for ssh access
+└── 📤 <a href="./Terraform/outputs.tf"><b>outputs.tf</b></a>             # IP outputs
 </pre>
 
 **9. Deploy**
@@ -111,13 +112,13 @@ ansible/
 ├── 📦 <a href="./ansible/setup_app.yaml">setup_app.yaml</a>       # App server setup
 ├── 🛡️ <a href="./ansible/setup_gateway.yaml">setup_gateway.yaml</a>  # Gateway and Database setup
 ├── 📈 <a href="./ansible/setup_monitoring.yaml">setup_monitoring.yaml</a> # Monitoring (Prometheus & Grafana) setup
-├── 🛠️ <a href="./ansible/setup_base.yaml">setup_base.yaml</a>      # Base setup: Docker, User, and Node Exporter for all servers
+├── 🛠️ <a href="./ansible/setup_base.yaml">setup_base.yaml</a>      # Base setup: Docker, User, Node Exporter and cAdvisor for all servers
 ├── 📂 <b>group_vars/</b>
 │   └── 🔧 <a href="./ansible/group_vars/all">all</a>               # Global variables 
 ├── 📂 <b>templates/</b>
 │   ├── 📄 <a href="./ansible/templates/wayshub.j2">wayshub.j2</a>        # Nginx config template
 │   ├── 📄 <a href="./ansible/templates/frontend-env.j2">frontend-env.j2</a>   # Frontend .env template
-│   ├── 📄 <a href="./ansible/templates/prometheus.j2">prometheus.j2</a>     # Prometheus scrape targets config# Frontend .env template
+│   ├── 📄 <a href="./ansible/templates/prometheus.j2">prometheus.j2</a>     # Prometheus scrape targets config
 │   └── 📄 <a href="./ansible/templates/docker-compose.j2">docker-compose.j2</a> # Docker Compose template for Monitoring
 ├── 📑  Inventory            # Server list (from Terraform output)
 └── 🔐 <a href="./ansible/.vault_pass">.vault_pass</a>          # Ansible Vault password
