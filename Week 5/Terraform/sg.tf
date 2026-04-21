@@ -157,6 +157,27 @@ resource "aws_security_group_rule" "allow_node_exporter_app" {
   security_group_id        = aws_security_group.sg_app.id
 }
 
+# Izinkan Monitoring Server akses cAdvisor 
+# - Di Gateway Server
+resource "aws_security_group_rule" "allow_cadvisor_gateway" {
+  type                     = "ingress"
+  from_port                = 8080
+  to_port                  = 8080
+  protocol                 = "tcp"
+  source_security_group_id = aws_security_group.sg_monitoring.id
+  security_group_id        = aws_security_group.sg_gateway_db.id
+}
+
+# - Di App Server
+resource "aws_security_group_rule" "allow_cadvisor_app" {
+  type                     = "ingress"
+  from_port                = 8080
+  to_port                  = 8080
+  protocol                 = "tcp"
+  source_security_group_id = aws_security_group.sg_monitoring.id
+  security_group_id        = aws_security_group.sg_app.id
+}
+
 # Izinkan Gateway untuk akses Node Exporter 
 # 1. Izinkan Gateway akses port 9100 di Server App
 resource "aws_security_group_rule" "allow_node_exporter_app_from_gateway" {
@@ -178,7 +199,7 @@ resource "aws_security_group_rule" "allow_node_exporter_monitor_from_gateway" {
   security_group_id        = aws_security_group.sg_monitoring.id
 }
 
-# 3. Izinkan Gateway akses port 9100 ke DIRINYA SENDIRI (PENTING!)
+# 3. Izinkan Gateway akses port 9100 ke diri sendiri
 resource "aws_security_group_rule" "allow_node_exporter_gateway_self" {
   type                     = "ingress"
   from_port                = 9100
