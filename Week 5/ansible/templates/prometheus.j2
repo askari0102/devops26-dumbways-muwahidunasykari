@@ -22,3 +22,13 @@ scrape_configs:
       - targets: ['{{ hostvars['app_server']['app_private_ip'] }}:9100']
         labels:
           alias: 'App-Server'
+
+  # 4. Monitor Appserver & Gateway Containers
+  - job_name: 'container_monitoring'
+    static_configs:
+      - targets: ['{{ hostvars['gateway_server']['gateway_private_ip'] }}:8080']
+        labels:
+          alias: 'Gateway-Server'
+      - targets: ['{{ hostvars['app_server']['app_private_ip'] }}:8080']
+        labels:
+          alias: 'App-Server'
