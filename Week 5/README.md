@@ -1,6 +1,9 @@
-### **Creating Infrastructure with Terraform**
+### IaC - Terraform and Ansible + Monitoring
 
 ---------------
+**Creating Infrastructure with Terraform**
+
+------
 **1. Install Terraform in your local computer. I'm using WSL (Ubuntu).**
 ```
 sudo apt-get update && sudo apt-get install -y gnupg software-properties-common
