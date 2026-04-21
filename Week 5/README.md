@@ -225,7 +225,12 @@ ssh -i ~/.ssh/deployer-key.pem <new_user>@<SERVER_PUBLIC_IP> # Replace <SERVER_P
   <img width="1114" height="357" alt="image" src="https://github.com/user-attachments/assets/20998595-4213-4c90-82a5-81a0be11da17" />
   <img width="1097" height="409" alt="image" src="https://github.com/user-attachments/assets/4fa9fe17-b490-4809-a09c-472c9570bc8b" />
 
+**Monitoring Specific Containers**
 
-
-
-
+- Monitor Frontend and Backend containers with cAdvisor (Need 0.54.x+ version to support Docker's 29.x.x overlayfs)
+- Create new panels using the following PromQL queries
+| Metric | PromQL Query | Unit | Threshold |
+| :--- | :--- | :--- | :--- |
+| **Container Status** | `time() - container_last_seen{name=~"wayshub.*"}` | - | No data = Stopped |
+| **Container Memory** | `container_memory_usage_bytes{name=~"wayshub.*"}` | Bytes (IEC) | > 100 MiB (Warning), > 200 MiB (Critical) |
+<img width="716" height="333" alt="image" src="https://github.com/user-attachments/assets/d767cd46-0f06-458a-836d-14ae4b454b59" />
