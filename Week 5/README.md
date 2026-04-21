@@ -228,7 +228,8 @@ ssh -i ~/.ssh/deployer-key.pem <new_user>@<SERVER_PUBLIC_IP> # Replace <SERVER_P
 **Monitoring Specific Containers**
 
 - Monitor Frontend and Backend containers with cAdvisor (Need 0.54.x+ version to support Docker's 29.x.x overlayfs)
-- Create new panels using the following PromQL queries
+- Create new panels using the following PromQL queries:
+
 | Metric | PromQL Query | Unit | Threshold |
 | :--- | :--- | :--- | :--- |
 | **Container Status** | `time() - container_last_seen{name=~"wayshub.*"}` | - | No data = Stopped |
