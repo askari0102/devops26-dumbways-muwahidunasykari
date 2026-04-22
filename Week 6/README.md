@@ -1,7 +1,7 @@
-##**Orchestration with Kubernetes**
+## **Orchestration with Kubernetes**
 
 ----
-#**Setup Kubernetes**
+### **Setup Kubernetes**
 
 **1. Prepare three servers, one for Master and two for workers using Terraform.**
 <img width="977" height="412" alt="image" src="https://github.com/user-attachments/assets/b110b67a-a99a-4c87-9fd9-83736c4b705d" />
