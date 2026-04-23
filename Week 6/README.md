@@ -60,6 +60,35 @@ chmod 700 get_helm.sh
 * Uninstall Traefik with `helm uninstall traefik traefik-crd -n kube-system`
 <img width="1802" height="210" alt="image" src="https://github.com/user-attachments/assets/089f6ebe-7a43-4aa9-b82f-68b9de1237f4" />
 
+* Create `config.yaml` in `/etc/rancher/k3s/` on the master node and add the following
+```
+cluster-init: true
+disable:
+  - servicelb
+  - traefik
+```
+<img width="1193" height="76" alt="image" src="https://github.com/user-attachments/assets/af57d57c-b2bc-4a03-968f-c09bbf2a274e" />
+
+* Create `config.yaml` in `/etc/rancher/k3s/` on both worker nodes with the same content, excluding `cluster-init: true`
+<img width="954" height="74" alt="image" src="https://github.com/user-attachments/assets/fc4129b7-9965-49b7-a20f-26de34cd5e6a" />
+
+* Restart k3s on all nodes to apply the changes
+```
+systemctl restart k3s # Master
+systemctl restart k3s-agent # Workers
+```
+
+* Install NGINX Ingress via Helm on Master
+```
+helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
+helm repo update
+helm install ingress-nginx ingress-nginx/ingress-nginx --namespace ingress-nginx --create-namespace
+```
+<img width="1780" height="436" alt="image" src="https://github.com/user-attachments/assets/5c38cbcf-190d-4c03-9b93-312e9f36942f" />
+
+* Verify NGINX Ingress is running correctly with `kubectl get pods -n ingress-nginx`
+<img width="1347" height="71" alt="image" src="https://github.com/user-attachments/assets/3bcd914d-b8d5-4ea8-aced-fdbc6709ed17" />
+
 **5. Remote Cluster from Local Computer**
 
 * Install kubectl on local computer
@@ -92,7 +121,7 @@ sed -i 's/127.0.0.1/<MASTER_IP>/g' ~/.kube/config
 ```
 cd /etc/rancher/k3s
 echo "tls-san:
-  - <MASTER_EIP>" | sudo tee /etc/rancher/k3s/config.yaml
+  - <MASTER_IIP>" | sudo tee /etc/rancher/k3s/config.yaml # If config.yaml already exists then simply add `tls-san: - <MASTER_IP>`
 ```
 <img width="1662" height="282" alt="image" src="https://github.com/user-attachments/assets/201bda3a-69f7-4866-a4e4-395b44234cc5" />
 
@@ -108,4 +137,12 @@ systemctl restart k3s
 * Verify the cluster is accessible from local computer `kubectl get nodes`
 <img width="1642" height="122" alt="image" src="https://github.com/user-attachments/assets/d7b14e07-1b8f-4ae9-bd8e-d4c6e950fc87" />
 
+**6. Deploying Nginx**
 
+* Create a new namespace with `kubectl create ns <namespace>`
+
+* Create a new yaml file for nginx
+<img width="1056" height="899" alt="image" src="https://github.com/user-attachments/assets/8e4450c0-6b08-4b4c-a18b-48eaa57d9060" />
+
+* Deploy nginx with `kubectl apply -f nginx.yaml`
+<img width="1073" height="68" alt="image" src="https://github.com/user-attachments/assets/a8ab49fb-2e56-4ca0-b419-44fd65193f23" />
