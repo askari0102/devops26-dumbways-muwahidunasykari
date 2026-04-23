@@ -37,11 +37,15 @@ chmod 700 get_helm.sh
 ./get_helm.sh
 ```
 <img width="1465" height="167" alt="image" src="https://github.com/user-attachments/assets/7fb254a6-a3d1-4a77-9cb0-db6ebdb2e4ee" />
+
 * Point Helm to the k3s cluster by exporting the kubeconfig
+  
   - Navigate to the k3s directory `cd /etc/rancher/k3s` and confirm `k3s.yaml` is present.
   <img width="1919" height="881" alt="image" src="https://github.com/user-attachments/assets/1533a381-6b86-4ef8-8cd7-3bacdf1bd6c6" />
+  
   - Export the kubeconfig `export KUBECONFIG=/etc/rancher/k3s/k3s.yaml`
   <img width="1090" height="36" alt="image" src="https://github.com/user-attachments/assets/977510e5-e7ab-4509-894a-7b2bb71193e5" />
+  
 * Helm is ready to use
 <img width="1011" height="50" alt="image" src="https://github.com/user-attachments/assets/48dffb54-6db7-42ba-8b19-f7e8bb5d1a00" />
 
