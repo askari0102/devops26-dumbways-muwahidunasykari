@@ -53,8 +53,10 @@ chmod 700 get_helm.sh
 
 * Confirm Traefik is currently installed with `helm ls -n kube-system`
 <img width="1919" height="100" alt="image" src="https://github.com/user-attachments/assets/b0b3e19c-0aea-432a-b522-1a7af156ba70" />
+
 * Navigate to the manifests directory `cd /var/lib/rancher/k3s/server/manifests` and remove the traefik manifest  to prevent k3s from re-deploying it on restart `rm -rf traefik.yaml`
 <img width="1369" height="171" alt="image" src="https://github.com/user-attachments/assets/99a6929f-8215-44bd-be19-0549928f7be9" />
+
 * Uninstall Traefik with `helm uninstall traefik traefik-crd -n kube-system`
 <img width="1802" height="210" alt="image" src="https://github.com/user-attachments/assets/089f6ebe-7a43-4aa9-b82f-68b9de1237f4" />
 
@@ -67,12 +69,14 @@ sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 kubectl version --client
 ```
 <img width="1919" height="215" alt="image" src="https://github.com/user-attachments/assets/6e634f2e-dea2-4d4d-930e-3e9db14dd330" />
+
 * Copy the k3s config from root to home temporarily
 ```
 sudo cp /etc/rancher/k3s/k3s.yaml /home/ubuntu/k3s.yaml
 sudo chown ubuntu:ubuntu /home/ubuntu/k3s.yaml
 ```
 <img width="889" height="51" alt="image" src="https://github.com/user-attachments/assets/3cc192bb-ed07-4262-a248-d4f939eeecfb" />
+
 * On your local computer, retrieve the config file from master. Note that master here refers to the SSH host alias already configured in ~/.ssh/config
 ```
 mkdir -p ~/.kube
@@ -100,6 +104,7 @@ rm /var/lib/rancher/k3s/server/tls/serving-kube-apiserver.key
 systemctl restart k3s
 <img width="1477" height="97" alt="image" src="https://github.com/user-attachments/assets/789a9620-6679-44bd-8a61-1b98556ba491" />
 ```
+
 * Verify the cluster is accessible from local computer `kubectl get nodes`
 <img width="1642" height="122" alt="image" src="https://github.com/user-attachments/assets/d7b14e07-1b8f-4ae9-bd8e-d4c6e950fc87" />
 
