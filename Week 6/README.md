@@ -121,7 +121,7 @@ sed -i 's/127.0.0.1/<MASTER_IP>/g' ~/.kube/config
 ```
 cd /etc/rancher/k3s
 echo "tls-san:
-  - <MASTER_IIP>" | sudo tee /etc/rancher/k3s/config.yaml # If config.yaml already exists then simply add `tls-san: - <MASTER_IP>`
+  - <MASTER_IP>" | sudo tee /etc/rancher/k3s/config.yaml # If config.yaml already exists then simply add `tls-san: - <MASTER_IP>`
 ```
 <img width="1662" height="282" alt="image" src="https://github.com/user-attachments/assets/201bda3a-69f7-4866-a4e4-395b44234cc5" />
 
