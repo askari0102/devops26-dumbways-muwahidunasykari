@@ -26,4 +26,4 @@
 - [IaC - Terraform and Ansible + Monitoring Server](https://github.com/askari0102/devops26-dumbways-muwahidunasykari/tree/main/Week%205)
 
 **Week 6**
-- [Orchestration with Kubernetes]()
+- [Orchestration with Kubernetes](https://github.com/askari0102/devops26-dumbways-muwahidunasykari/tree/main/Week%206)
