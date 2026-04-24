@@ -137,12 +137,58 @@ systemctl restart k3s
 * Verify the cluster is accessible from local computer `kubectl get nodes`
 <img width="1642" height="122" alt="image" src="https://github.com/user-attachments/assets/d7b14e07-1b8f-4ae9-bd8e-d4c6e950fc87" />
 
-**6. Deploying Nginx**
+**6. Persistent Volume Setup**
 
-* Create a new namespace with `kubectl create ns <namespace>`
+* Edit config.yaml on all nodes and add default-local-storage-path: /mnt/disk, then restart k3s
+<img width="952" height="39" alt="image" src="https://github.com/user-attachments/assets/40879941-1c0f-44a6-98d0-bdb1c5889e89" />
 
-* Create a new yaml file for nginx
-<img width="1056" height="899" alt="image" src="https://github.com/user-attachments/assets/8e4450c0-6b08-4b4c-a18b-48eaa57d9060" />
+* Verify the storage class is available with `kubectl get storageClasses`
+<img width="1206" height="74" alt="image" src="https://github.com/user-attachments/assets/6ca95930-dc50-4aa1-a9aa-17721bce1e1e" />
 
-* Deploy nginx with `kubectl apply -f nginx.yaml`
-<img width="1073" height="68" alt="image" src="https://github.com/user-attachments/assets/a8ab49fb-2e56-4ca0-b419-44fd65193f23" />
+* Create a namespace for your application with `kubectl create ns <namespace>
+<img width="1215" height="49" alt="image" src="https://github.com/user-attachments/assets/222d6eca-29db-4ee7-b346-8fa732c15b7c" />
+
+* Create a PVC manifest and apply it, then verify with `kubectl get pvc -n <namespace>`
+<img width="753" height="380" alt="image" src="https://github.com/user-attachments/assets/53378910-5cb6-4bf3-a5f5-1030c12c345c" />
+<img width="1145" height="45" alt="image" src="https://github.com/user-attachments/assets/bd5332e9-1808-4dc3-a068-ee0762819afe" />
+
+**7. Database Setup**
+
+* Create a Secret and StatefulSet manifest for MySQL. Full manifest can be found at [mysql.yaml](https://github.com/askari0102/devops26-dumbways-muwahidunasykari/blob/main/Week%206/Manifests/mysql.yaml)
+  
+* Apply the manifest
+<img width="974" height="89" alt="image" src="https://github.com/user-attachments/assets/9ebaea3b-379f-49a5-9836-94d827d03216" />
+
+* Verify the pod is running
+<img width="887" height="89" alt="image" src="https://github.com/user-attachments/assets/756be3f1-50b3-430d-b10d-46efdb308f65" />
+  
+* Verify the PVC is bound and check which node it is scheduled on with `kubectl get pvc -n <namespace> -o wide`
+<img width="1318" height="68" alt="image" src="https://github.com/user-attachments/assets/77a7ecc3-020a-47aa-9970-44cfe3693627" />
+
+* With Secret, your database's credentials will be encrypted
+<img width="981" height="158" alt="image" src="https://github.com/user-attachments/assets/c5c39f21-87fb-4a26-b7d6-5dc15e416428" />
+
+**8. Deploying App**
+
+* Create the app manifest. Full manifest can be found at [app.yaml](https://github.com/askari0102/devops26-dumbways-muwahidunasykari/blob/main/Week%206/Manifests/app.yaml)
+
+* Apply the manifest
+<img width="1120" height="153" alt="image" src="https://github.com/user-attachments/assets/96848dbc-cdbc-46f9-a804-5e2200168020" />
+
+* Verify all pods are running with `kubectl get pods -n wayshub`
+<img width="1158" height="107" alt="image" src="https://github.com/user-attachments/assets/277ed8d4-f531-4d8f-8728-f2dba0142097" />
+
+* Check the migration logs to ensure the database migration ran successfully
+```
+kubectl logs <backend-pod> -n wayshub -c migrate
+```
+<img width="1351" height="386" alt="image" src="https://github.com/user-attachments/assets/4f9046f0-6265-439c-95ba-b12af52ebb6f" />
+
+
+* Verify the app is accessible by opening the frontend domain in the browser and registering a new account
+<img width="1919" height="850" alt="image" src="https://github.com/user-attachments/assets/7c40ddcc-7a80-42cb-99df-fb9e7e739138" />
+<img width="1919" height="291" alt="image" src="https://github.com/user-attachments/assets/c2c8ab00-74ca-423a-b831-5e41d38a88dd" />
+<img width="1919" height="780" alt="image" src="https://github.com/user-attachments/assets/5325c59a-fca2-470e-8122-9039291cb60c" />
+
+
+
