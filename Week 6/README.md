@@ -187,7 +187,10 @@ kubectl logs <backend-pod> -n wayshub -c migrate
 
 * Verify the app is accessible by opening the frontend domain in the browser and registering a new account
 <img width="1919" height="850" alt="image" src="https://github.com/user-attachments/assets/7c40ddcc-7a80-42cb-99df-fb9e7e739138" />
+---
 <img width="1919" height="291" alt="image" src="https://github.com/user-attachments/assets/c2c8ab00-74ca-423a-b831-5e41d38a88dd" />
+
+---
 <img width="1919" height="780" alt="image" src="https://github.com/user-attachments/assets/5325c59a-fca2-470e-8122-9039291cb60c" />
 
 
