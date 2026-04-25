@@ -310,3 +310,5 @@ kubectl apply -f https://raw.githubusercontent.com/kubearmor/KubeArmor/main/pkg/
 * Verify with `kubectl get pods -n kubearmor`
 <img width="1633" height="257" alt="image" src="https://github.com/user-attachments/assets/5f0a1fc5-fa0d-4279-8465-6fe501490804" />
 
+* By default KubeArmor runs in audit mode — it logs all activity but does not block anything. To enforce security, create KubeArmorPolicy manifests defining what processes and files should be blocked per pod, then set the action to Block
+
