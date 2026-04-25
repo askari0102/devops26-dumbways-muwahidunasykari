@@ -139,7 +139,7 @@ systemctl restart k3s
 
 **6. Persistent Volume Setup**
 
-* Edit config.yaml on all nodes and add default-local-storage-path: /mnt/disk, then restart k3s
+* Edit config.yaml on all nodes and add `default-local-storage-path: /mnt/disk`, then restart k3s
 <img width="952" height="39" alt="image" src="https://github.com/user-attachments/assets/40879941-1c0f-44a6-98d0-bdb1c5889e89" />
 
 * Verify the storage class is available with `kubectl get storageClasses`
