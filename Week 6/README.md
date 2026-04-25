@@ -171,7 +171,7 @@ kubectl get secret -n wayshub
 
 **7. Database Setup**
 
-* Create a StatefulSet manifest for musql. Full manifest can be found at [mysql.yaml](https://github.com/askari0102/devops26-dumbways-muwahidunasykari/blob/main/Week%206/Manifests/mysql.yaml)
+* Create a StatefulSet manifest for mysql. Full manifest can be found at [mysql.yaml](https://github.com/askari0102/devops26-dumbways-muwahidunasykari/blob/main/Week%206/Manifests/mysql.yaml)
   
 * Apply the manifest
 <img width="1238" height="69" alt="image" src="https://github.com/user-attachments/assets/9b70e4c7-67a5-4bb5-b807-e9abb3d8898a" />
