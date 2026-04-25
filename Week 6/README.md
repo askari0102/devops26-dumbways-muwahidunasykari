@@ -284,82 +284,14 @@ tls:
 **2. Setup Network Policy**
 Network Policy restricts traffic between pods inside the cluster, ensuring that even if the frontend pod is compromised, it cannot directly access the database.
 
-* Create network-policy.yaml
-```
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: mysql-network-policy
-  namespace: wayshub
-spec:
-  podSelector:
-    matchLabels:
-      app: mysql
-  policyTypes:
-    - Ingress
-  ingress:
-    - from:
-        - podSelector:
-            matchLabels:
-              app: backend
-      ports:
-        - protocol: TCP
-          port: 3306
-
----
-
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: backend-network-policy
-  namespace: wayshub
-spec:
-  podSelector:
-    matchLabels:
-      app: backend
-  policyTypes:
-    - Ingress
-  ingress:
-    - from:
-        - podSelector:
-            matchLabels
-              app: frontend
-        - namespaceSelector:
-            matchLabels:
-              kubernetes.io/metadata.name: ingress-nginx
-      ports:
-        - protocol: TCP
-          port: 5000
-
----
-
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: frontend-network-policy
-  namespace: wayshub
-spec:
-  podSelector:
-    matchLabels:
-      app: frontend
-  policyTypes:
-    - Ingress
-  ingress:
-    - from:
-        - namespaceSelector:
-            matchLabels:
-              kubernetes.io/metadata.name: ingress-nginx
-      ports:
-        - protocol: TCP
-          port: 80
-  ```
+* Create a manifest for network policy. Full manifest can be found at [network-policy.yaml](https://github.com/askari0102/devops26-dumbways-muwahidunasykari/blob/main/Week%206/Manifests/network-policy.yaml)
 
 * Apply and verify
 ```
 kubectl apply -f network-policy.yaml
 kubectl get networkpolicy -n wayshub
 ```
-<img width="1208" height="162" alt="image" src="https://github.com/user-attachments/assets/17f6c343-9d1b-48f8-8925-7875bd59c081" />
+<img width="1377" height="194" alt="image" src="https://github.com/user-attachments/assets/07fec136-c8d6-4801-8c30-bfe04acdbc6d" />
 
 **3. KubeArmor**
 KubeArmor enforces security policies at the kernel level, restricting what processes and files a container can access.
