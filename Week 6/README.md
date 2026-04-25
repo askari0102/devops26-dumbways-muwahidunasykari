@@ -194,5 +194,69 @@ kubectl logs <backend-pod> -n wayshub -c migrate
 ---
 <img width="1919" height="780" alt="image" src="https://github.com/user-attachments/assets/5325c59a-fca2-470e-8122-9039291cb60c" />
 
+**9. SSL Certificate Setup with cert-manager**
+
+* Install cert-manager on master and verify
+```
+kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.20.2/cert-manager.yaml
+kubectl get pods -n cert-manager
+```
+<img width="1918" height="142" alt="image" src="https://github.com/user-attachments/assets/b0a2f684-3eaa-4481-9e0c-3de95636480a" />
+<img width="1919" height="112" alt="image" src="https://github.com/user-attachments/assets/2ce6bcb0-b907-425b-a617-c9872d3e1822" />
+
+* Install acme.sh 
+```
+curl https://get.acme.sh | sh
+source ~/.bashrc
+```
+<img width="1919" height="491" alt="image" src="https://github.com/user-attachments/assets/e1278e63-4d9c-4e83-b0dd-2c862f0887c7" />
+
+* Register acme.sh account with Let's Encrypt
+```
+acme.sh --register-account -m youremail@gmail.com --server letsencrypt
+```
+<img width="1919" height="113" alt="image" src="https://github.com/user-attachments/assets/4fda4541-c963-43be-b25d-ddb9a6ca2493" />
+
+* Request wildcard certificate and add the TXT records shown in the output to Cloudflare DNS manually 
+```
+acme.sh --issue --dns \
+  -d "asykari.kubernetes.studentdumbways.my.id" \
+  -d "*.asykari.kubernetes.studentdumbways.my.id" \
+  --server letsencrypt \
+  --yes-I-know-dns-manual-mode-enough-go-ahead-please
+```
+<img width="1919" height="583" alt="image" src="https://github.com/user-attachments/assets/ab7c500c-dbe6-45d4-a454-e2d744ef0086" />
+<img width="1419" height="154" alt="image" src="https://github.com/user-attachments/assets/a3dcffb9-d721-4793-8674-7defcc113701" />
+
+* Once the TXT records have been applied and are visible in DNS, verify and obtain the certificate
+```
+acme.sh --renew -d "asykari.kubernetes.studentdumbways.my.id" \
+  -d "*.asykari.kubernetes.studentdumbways.my.id" \
+  --yes-I-know-dns-manual-mode-enough-go-ahead-please
+```
+<img width="1919" height="462" alt="image" src="https://github.com/user-attachments/assets/1520c05f-8db8-4d2f-8d95-8a226a6c11a6" />
+
+*  Create a kubernetes secret from the certificate
+```
+kubectl create secret tls wildcard-tls \
+  --cert=/root/.acme.sh/asykari.kubernetes.studentdumbways.my.id_ecc/fullchain.cer \
+  --key=/root/.acme.sh/asykari.kubernetes.studentdumbways.my.id_ecc/asykari.kubernetes.studentdumbways.my.id.key \
+  -n wayshub
+```
+<img width="1919" height="121" alt="image" src="https://github.com/user-attachments/assets/d5c5bc86-ee55-40c2-a8eb-c1dcac7a7eca" />
+
+* Update the Ingress in the app.yaml to use TLS and re-apply
+```
+tls:
+    - hosts:
+        - asykari.kubernetes.studentdumbways.my.id
+        - api.asykari.kubernetes.studentdumbways.my.id
+      secretName: wildcard-tls
+```
+<img width="1292" height="151" alt="image" src="https://github.com/user-attachments/assets/2d4134d8-0229-4f56-965c-931e1854b462" />
+
+* Connection is now secure
+<img width="1919" height="782" alt="image" src="https://github.com/user-attachments/assets/00aa0c79-379e-41c4-981d-aabe9a897b8d" />
+
 
 
