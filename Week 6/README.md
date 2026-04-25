@@ -152,12 +152,29 @@ systemctl restart k3s
 <img width="753" height="380" alt="image" src="https://github.com/user-attachments/assets/53378910-5cb6-4bf3-a5f5-1030c12c345c" />
 <img width="1145" height="45" alt="image" src="https://github.com/user-attachments/assets/bd5332e9-1808-4dc3-a068-ee0762819afe" />
 
+**7. Secret Setup**
+
+* Create a secret for backend
+<img width="1342" height="399" alt="image" src="https://github.com/user-attachments/assets/36e2f2a2-7640-4d2c-898a-7dda9c268187" />
+
+* Create a secret for mysql
+<img width="1344" height="374" alt="image" src="https://github.com/user-attachments/assets/ea577bb8-b358-468b-9e41-b020195dcffd" />
+
+* Apply both secrets with `create` and verify
+```
+kubectl create -f backend-secret.yaml
+kubectl create -f mysql-secret.yaml
+kubectl get secret -n wayshub
+```
+<img width="1179" height="90" alt="image" src="https://github.com/user-attachments/assets/d62f3341-d280-4e83-86a8-7ca22bdace1c" />
+
+
 **7. Database Setup**
 
-* Create a Secret and StatefulSet manifest for MySQL. Full manifest can be found at [mysql.yaml](https://github.com/askari0102/devops26-dumbways-muwahidunasykari/blob/main/Week%206/Manifests/mysql.yaml)
+* Create a StatefulSet manifest for musql. Full manifest can be found at [mysql.yaml](https://github.com/askari0102/devops26-dumbways-muwahidunasykari/blob/main/Week%206/Manifests/mysql.yaml)
   
 * Apply the manifest
-<img width="974" height="89" alt="image" src="https://github.com/user-attachments/assets/9ebaea3b-379f-49a5-9836-94d827d03216" />
+<img width="1238" height="69" alt="image" src="https://github.com/user-attachments/assets/9b70e4c7-67a5-4bb5-b807-e9abb3d8898a" />
 
 * Verify the pod is running
 <img width="887" height="89" alt="image" src="https://github.com/user-attachments/assets/756be3f1-50b3-430d-b10d-46efdb308f65" />
@@ -173,7 +190,7 @@ systemctl restart k3s
 * Create the app manifest. Full manifest can be found at [app.yaml](https://github.com/askari0102/devops26-dumbways-muwahidunasykari/blob/main/Week%206/Manifests/app.yaml)
 
 * Apply the manifest
-<img width="1120" height="153" alt="image" src="https://github.com/user-attachments/assets/96848dbc-cdbc-46f9-a804-5e2200168020" />
+<img width="1387" height="128" alt="image" src="https://github.com/user-attachments/assets/f5fa82e4-e84b-4ff8-89fd-c11d2563ecfc" />
 
 * Verify all pods are running with `kubectl get pods -n wayshub`
 <img width="1158" height="107" alt="image" src="https://github.com/user-attachments/assets/277ed8d4-f531-4d8f-8728-f2dba0142097" />
