@@ -275,5 +275,104 @@ tls:
 * Connection is now secure
 <img width="1919" height="782" alt="image" src="https://github.com/user-attachments/assets/00aa0c79-379e-41c4-981d-aabe9a897b8d" />
 
+### **Extra - Added Security**
 
+**1. Restrict k3s API Access**
+* Update Security Group rule for port 6443 to only allow your laptop's IP instead of `0.0.0.0/0`
+<img width="1890" height="96" alt="image" src="https://github.com/user-attachments/assets/26283040-591d-48a6-8da0-dfc638fb8275" />
+
+**2. Setup Network Policy**
+Network Policy restricts traffic between pods inside the cluster, ensuring that even if the frontend pod is compromised, it cannot directly access the database.
+
+* Create network-policy.yaml
+```
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: mysql-network-policy
+  namespace: wayshub
+spec:
+  podSelector:
+    matchLabels:
+      app: mysql
+  policyTypes:
+    - Ingress
+  ingress:
+    - from:
+        - podSelector:
+            matchLabels:
+              app: backend
+      ports:
+        - protocol: TCP
+          port: 3306
+
+---
+
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: backend-network-policy
+  namespace: wayshub
+spec:
+  podSelector:
+    matchLabels:
+      app: backend
+  policyTypes:
+    - Ingress
+  ingress:
+    - from:
+        - podSelector:
+            matchLabels
+              app: frontend
+        - namespaceSelector:
+            matchLabels:
+              kubernetes.io/metadata.name: ingress-nginx
+      ports:
+        - protocol: TCP
+          port: 5000
+
+---
+
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: frontend-network-policy
+  namespace: wayshub
+spec:
+  podSelector:
+    matchLabels:
+      app: frontend
+  policyTypes:
+    - Ingress
+  ingress:
+    - from:
+        - namespaceSelector:
+            matchLabels:
+              kubernetes.io/metadata.name: ingress-nginx
+      ports:
+        - protocol: TCP
+          port: 80
+  ```
+
+* Apply and verify
+```
+kubectl apply -f network-policy.yaml
+kubectl get networkpolicy -n wayshub
+```
+<img width="1208" height="162" alt="image" src="https://github.com/user-attachments/assets/17f6c343-9d1b-48f8-8925-7875bd59c081" />
+
+**3. KubeArmor**
+KubeArmor enforces security policies at the kernel level, restricting what processes and files a container can access.
+
+* Install KubeArmor
+```
+helm repo add kubearmor https://kubearmor.github.io/charts
+helm repo update kubearmor
+helm upgrade --install kubearmor-operator kubearmor/kubearmor-operator -n kubearmor --create-namespace
+kubectl apply -f https://raw.githubusercontent.com/kubearmor/KubeArmor/main/pkg/KubeArmorOperator/config/samples/sample-config.yml
+```
+<img width="1919" height="638" alt="image" src="https://github.com/user-attachments/assets/35f4aff4-72c8-43d6-bbb3-23e673a2b752" />
+
+* Verify with `kubectl get pods -n kubearmor`
+<img width="1633" height="257" alt="image" src="https://github.com/user-attachments/assets/5f0a1fc5-fa0d-4279-8465-6fe501490804" />
 
