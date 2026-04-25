@@ -41,21 +41,6 @@ spec:
 
 ---
 
-apiVersion: v1
-kind: Secret
-metadata:
-  name: backend-secret
-  namespace: wayshub
-type: Opaque
-stringData:
-  JWT_PRIVATE_KEY: "951836"
-  CLOUD_NAME: "dlumdgloz"
-  API_KEY: "958682469343893"
-  API_SECRET: "ujMVhZydB8NHd0z2w13HFwm4EEA"
-  DATABASE_URL: "mysql://user:password@mysql-service.wayshub.svc.cluster.local:3306/wayshub"
-
----
-
 apiVersion: apps/v1
 kind: Deployment
 metadata:
