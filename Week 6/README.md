@@ -282,6 +282,7 @@ tls:
 <img width="1890" height="96" alt="image" src="https://github.com/user-attachments/assets/26283040-591d-48a6-8da0-dfc638fb8275" />
 
 **2. Setup Network Policy**
+
 Network Policy restricts traffic between pods inside the cluster, ensuring that even if the frontend pod is compromised, it cannot directly access the database.
 
 * Create a manifest for network policy. Full manifest can be found at [network-policy.yaml](https://github.com/askari0102/devops26-dumbways-muwahidunasykari/blob/main/Week%206/Manifests/network-policy.yaml)
@@ -294,6 +295,7 @@ kubectl get networkpolicy -n wayshub
 <img width="1377" height="194" alt="image" src="https://github.com/user-attachments/assets/07fec136-c8d6-4801-8c30-bfe04acdbc6d" />
 
 **3. KubeArmor**
+
 KubeArmor enforces security policies at the kernel level, restricting what processes and files a container can access.
 
 * Install KubeArmor
