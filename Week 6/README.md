@@ -166,7 +166,7 @@ kubectl get secret -n wayshub
 <img width="1179" height="90" alt="image" src="https://github.com/user-attachments/assets/d62f3341-d280-4e83-86a8-7ca22bdace1c" />
 
 
-**7. Database Setup**
+**8. Database Setup**
 
 * Create a StatefulSet manifest for mysql. Full manifest can be found at [mysql.yaml](https://github.com/askari0102/devops26-dumbways-muwahidunasykari/blob/main/Week%206/Manifests/mysql.yaml)
   
@@ -182,12 +182,12 @@ kubectl get secret -n wayshub
 * With Secret, your database's credentials will be encrypted
 <img width="981" height="158" alt="image" src="https://github.com/user-attachments/assets/c5c39f21-87fb-4a26-b7d6-5dc15e416428" />
 
-**8. Deploying App**
+**9. Deploying App**
 
-* Create the app manifest. Full manifest can be found at [app.yaml](https://github.com/askari0102/devops26-dumbways-muwahidunasykari/blob/main/Week%206/Manifests/app.yaml)
+* Create the app manifests. Full manifest can be found at [app.yaml](https://github.com/askari0102/devops26-dumbways-muwahidunasykari/blob/main/Week%206/Manifests/app.yaml) or individual manifests at [frontend.yaml](https://github.com/askari0102/devops26-dumbways-muwahidunasykari/blob/main/Week%206/Manifests/frontend.yaml), [backend.yaml](https://github.com/askari0102/devops26-dumbways-muwahidunasykari/blob/main/Week%206/Manifests/backend.yaml) and [ingress.yaml](https://github.com/askari0102/devops26-dumbways-muwahidunasykari/blob/main/Week%206/Manifests/ingress.yaml).
 
 * Apply the manifest
-<img width="1387" height="128" alt="image" src="https://github.com/user-attachments/assets/f5fa82e4-e84b-4ff8-89fd-c11d2563ecfc" />
+<img width="1199" height="171" alt="image" src="https://github.com/user-attachments/assets/e052782e-cb38-4e46-a6f2-81c7c96b4f0c" />
 
 * Verify all pods are running with `kubectl get pods -n wayshub`
 <img width="1158" height="107" alt="image" src="https://github.com/user-attachments/assets/277ed8d4-f531-4d8f-8728-f2dba0142097" />
@@ -208,7 +208,7 @@ kubectl logs <backend-pod> -n wayshub -c migrate
 ---
 <img width="1919" height="780" alt="image" src="https://github.com/user-attachments/assets/5325c59a-fca2-470e-8122-9039291cb60c" />
 
-**9. SSL Certificate Setup with cert-manager**
+**10. SSL Certificate Setup with cert-manager**
 
 * Install cert-manager on master and verify
 ```
@@ -272,8 +272,10 @@ tls:
 * Connection is now secure
 <img width="1919" height="782" alt="image" src="https://github.com/user-attachments/assets/00aa0c79-379e-41c4-981d-aabe9a897b8d" />
 
-### **Extra - Added Security**
+## **Extra**
 
+### **Added Security**
+---
 **1. Restrict k3s API Access**
 * Update Security Group rule for port 6443 to only allow your laptop's IP instead of `0.0.0.0/0`
 <img width="1890" height="96" alt="image" src="https://github.com/user-attachments/assets/26283040-591d-48a6-8da0-dfc638fb8275" />
@@ -309,3 +311,74 @@ kubectl apply -f https://raw.githubusercontent.com/kubearmor/KubeArmor/main/pkg/
 
 * By default KubeArmor runs in audit mode — it logs all activity but does not block anything. To enforce security, create KubeArmorPolicy manifests defining what processes and files should be blocked per pod, then set the action to Block
 
+### **GitOps - Automated Deployment with FluxCD**
+
+**1. Generate GitLab Project Access Token**
+* Navigate to your GitLab repository > **Settings** > **Access Tokens**.
+* Click **Add new token**, give it a name (e.g., `flux-bot`), and check the `api` and `write_repository` scopes.
+* Click **Create project access token** and copy the generated token. You will need this token for both the CI/CD pipeline and local Flux bootstrap process.
+<img width="1588" height="817" alt="image" src="https://github.com/user-attachments/assets/bbe4d563-f61b-4fa1-8dcb-1cdd4fc3978f" />
+<img width="1121" height="139" alt="image" src="https://github.com/user-attachments/assets/540233ef-107c-4931-adc7-b48a71ae931e" />
+
+**2. Save Token as a CI/CD Variable**
+* Navigate to Settings > **CI/CD** > **Variables** and click **Add variable**.
+* **Key**: `GITLAB_TOKEN`
+* **Value**: *(Paste your token here)*
+* Check the **Mask variable** option for security (so it won't be exposed in pipeline logs) and click **Add variable**.
+<img width="1448" height="84" alt="image" src="https://github.com/user-attachments/assets/cdc454a2-ea55-4c6f-853f-bd452eed0bda" />
+
+**3. Install and Configure FluxCD**
+* Install Flux CLI on your local machine (or master node) and verify.
+```
+curl -s https://fluxcd.io/install.sh | sudo bash
+flux --version
+```
+<img width="1426" height="210" alt="image" src="https://github.com/user-attachments/assets/5bf18177-8a06-4643-81b6-0527267bb1a5" />
+
+* Verify that your K3s cluster is ready and meets the prerequisites for Flux.
+```
+flux check --pre
+```
+<img width="1055" height="95" alt="image" src="https://github.com/user-attachments/assets/655094be-cd03-4e14-ab61-e56b93f55e0e" />
+
+* Export your GitLab Access Token 
+```
+export GITLAB_TOKEN="<YOUR_GITLAB_TOKEN>"
+```
+
+* Bootstrap FluxCD into the cluster. This command installs the Flux agents and links them to your GitLab repository. Replace <owner> and <repository> with your actual GitLab details.
+```
+flux bootstrap gitlab \
+  --owner=<owner> \
+  --repository=<repository> \
+  --branch=main \
+  --path=./k8s-cluster \
+  --personal
+```
+<img width="1469" height="370" alt="image" src="https://github.com/user-attachments/assets/91864943-8cd5-4d01-83fa-f8c384d3b947" />
+
+* Verify that all Flux components are running successfully in the cluster.
+```
+kubectl get pods -n flux-system
+```
+<img width="1060" height="139" alt="image" src="https://github.com/user-attachments/assets/499fc986-fca8-46bd-bdb3-b19528c91d85" />
+
+* Pull the newly created `flux-system` folder to your local machine to prevent Git conflicts.
+<img width="1223" height="420" alt="image" src="https://github.com/user-attachments/assets/c4b1d804-f6c9-4703-8ca4-e563d3998d9c" />
+
+**4. Updating the CI/CD Pipeline for GitOps**
+
+With FluxCD running, the pipeline no longer deploys directly to the server. Instead, it updates the repository, and FluxCD handles the deployment.
+
+* **Relocate Manifests:** Move your application manifests (e.g., `backend.yaml`) into the `k8s-cluster` folder so FluxCD can monitor them.
+<img width="1133" height="193" alt="image" src="https://github.com/user-attachments/assets/942fcdd1-8dae-470b-86f4-421162c66dc9" />
+
+* **Modify [.gitlab-ci.yml](http://gitlab.com/askari0102/wayshub-backend/-/blob/main/.gitlab-ci.yml):** Update your CI/CD script to perform the following steps:
+  1. Build the container image and push it to the registry.
+  2. Use `sed` to update the image tag inside the manifest with the latest commit SHA (e.g., `prod-$CI_COMMIT_SHORT_SHA`).
+  3. Commit and push the modified manifest back to the GitLab repository.
+<img width="1190" height="557" alt="image" src="https://github.com/user-attachments/assets/0c1146e6-8b8b-4c6c-8fd0-1faea3208a0e" />
+
+* **Automated Sync:** FluxCD will detect the updated text in the Git repository, pull the new image, and automatically recreate the pods.
+<img width="934" height="109" alt="image" src="https://github.com/user-attachments/assets/4a2ebbe6-c064-42c6-bebb-946ff13871d0" />
+<img width="1203" height="114" alt="image" src="https://github.com/user-attachments/assets/49d12591-c2d5-4433-a046-43c649fa826d" />
