@@ -1,7 +1,7 @@
 ## **Orchestration with Kubernetes**
 
 ----
-### **Setup k3s Kubernetes cluster**
+### **Setup k3s Kubernetes Cluster**
 
 **1. Prepare Three Servers Using Terraform.**
 * Provision one master node and two worker nodes on AWS using Terraform.
