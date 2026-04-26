@@ -67,10 +67,7 @@ disable:
   - servicelb
   - traefik
 ```
-<img width="1193" height="76" alt="image" src="https://github.com/user-attachments/assets/af57d57c-b2bc-4a03-968f-c09bbf2a274e" />
-
 * Create `config.yaml` in `/etc/rancher/k3s/` on both worker nodes with the same content, excluding `cluster-init: true`
-<img width="954" height="74" alt="image" src="https://github.com/user-attachments/assets/fc4129b7-9965-49b7-a20f-26de34cd5e6a" />
 
 * Restart k3s on all nodes to apply the changes
 ```
