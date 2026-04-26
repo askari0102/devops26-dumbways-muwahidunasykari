@@ -1,0 +1,49 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+  namespace: wayshub
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      initContainers:
+        - name: wait-for-db
+          image: busybox
+          command: ['sh', '-c', 'until nc -z mysql-service 3306; do echo waiting for mysql; sleep 2; done']
+        - name: migrate
+          image: askari0102/wayshub-backend:production
+          command: ["node_modules/.bin/sequelize", "db:migrate"]
+          envFrom:
+            - secretRef:
+                name: backend-secret
+      containers:
+        - name: backend
+          image: askari0102/wayshub-backend:production
+          ports:
+            - containerPort: 5000
+          envFrom:
+            - secretRef:
+                name: backend-secret
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: be-wayshub
+  namespace: wayshub
+spec:
+  selector:
+    app: backend
+  type: ClusterIP
+  ports:
+    - protocol: TCP
+      port: 5000
+      targetPort: 5000
